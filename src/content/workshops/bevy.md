@@ -1,7 +1,7 @@
 ---
 # layout: "../../layouts/WorkshopLayout.astro"
 title: "Let's build our first Bevy game!"
-# abstract: "Join us for a 4 hour workshop where we explore the Bevy game engine! We'll go through the process of creating an arcade game, starting with the Entity-Component-System (ECS) at Bevy's heart, and add features using Bevy building blocks until we have a full game."
+abstract: "Join us for a 4 hour workshop where we explore the Bevy game engine! We'll go through the process of creating an arcade game, starting with the Entity-Component-System (ECS) at Bevy's heart, and add features using Bevy building blocks until we have a full game."
 # time: "9:00 - 13:00"
 # slug: "bevy"
 # level: "intermediate"
