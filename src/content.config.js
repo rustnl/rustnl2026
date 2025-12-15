@@ -18,6 +18,7 @@ const workshops = defineCollection({
   schema: z.object({
     // tracks: z.array(z.string()),
     title: z.string(),
+    abstract: z.string(),
     // level: z.string(),
     // tags: z.array(z.string()),
     // duration: z.number(),

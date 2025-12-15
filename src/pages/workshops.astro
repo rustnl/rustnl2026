@@ -21,8 +21,8 @@ const trainers = await getCollection("trainers");
           {
             workshops.map((workshop) => (
               <Fragment>
-                <a href={`#${workshop.slug}`}>
-                  {workshop.slug}
+                <a href={`#${workshop.id}`}>
+                  {workshop.id}
                 </a>{' '}
                 &bullet;
               </Fragment>
@@ -40,8 +40,8 @@ const trainers = await getCollection("trainers");
                 <Workshop class="workshop">
                   <WorkshopDetail
                     hasTitle={true}
-                    {...workshop}
-                    description={workshop.compiledContent()}
+                    {...workshop.data}
+                    abstract={workshop.data.abstract}
                   />
                   <div class="space-y-3">
                     <strong>Workshop by</strong>
@@ -49,16 +49,16 @@ const trainers = await getCollection("trainers");
                       {trainers
                         .filter(
                           (trainer) =>
-                            trainer.workshop ==
-                            workshop.slug
+                            trainer.data.workshop.id ==
+                            workshop.id
                         )
                         .map((workshopTrainer) => (
-                          <Person tile {...workshopTrainer} />
+                          <Person tile {...workshopTrainer.data} />
                         ))}
                     </div>
                   </div>
                 </Workshop>
-                <Button link={`/workshops/${workshop.slug}`}>
+                <Button link={`/workshops/${workshop.id}`}>
                   Details & tickets
                 </Button>
               </div>
