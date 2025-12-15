@@ -32,7 +32,12 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
 ---
 
 <CommonLayout title={title} withLogo {...ignore}>
-  <Hero kicker="Workshop" title={title} lead={`by ${trainer_names}`} color="yellow">
+  <Hero
+    kicker="Workshop"
+    title={title}
+    lead={`by ${trainer_names}`}
+    color="yellow"
+  >
     {
       // level && (
       //   <div class="talk-level">
@@ -42,7 +47,7 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
     }
   </Hero>
   <OneColumn>
-    <div set:html={workshop.rendered?.html} />
+    <div class="markdown" set:html={workshop.rendered?.html} />
   </OneColumn>
   <div class="grid cols-12 container">
     <div class="col-start-3 col-end-11 persons">
@@ -54,18 +59,35 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
     </div>
   </div>
   <Cta title="Get your ticket" color="yellow">
+    <p>
+      All workshops are held on <b>[NEW DATE]</b> starting at <b>[NEW TIME]</b>. See the
+      <strong><a href="/events/workshops">workshop event page</a></strong> for the
+      location, time and other details.
+    </p>
+    <p>
+      Workshop tickets are available in combination with a conference ticket,
+      called 'Conference + workshop - Individuals' or 'Conference + workshop -
+      Employer-paid'.
+    </p>
     <div class="buttons">
       <Button link="https://event.onliveevent.nl/rustweek-2026">
         tickets
       </Button>
-      {
-        // day && (
-        //   <Button link={`/schedule/${day}/#${talk.id.split("/").pop()}`}>
-        //     Find in timetable
-        //   </Button>
-        // )
-      }
     </div>
+    <!-- <div class="space-y-3">
+        <Button
+          link="https://www.eventbrite.nl/e/rustweek-2025-tickets-1001676961757?aff=oddtdtcreator"
+          >Get your ticket</Button
+        >
+        <strong style="color:red;font-size: larger;">SOLD OUT</strong>
+      </div> -->
+    {
+      // day && (
+      //   <Button link={`/schedule/${day}/#${talk.id.split("/").pop()}`}>
+      //     Find in timetable
+      //   </Button>
+      // )
+    }
   </Cta>
 </CommonLayout>
 

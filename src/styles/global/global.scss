@@ -137,6 +137,10 @@ p {
     padding-inline-start: variables.$font-size-lg;
   }
 
+  li::marker {
+    color: var(--color-red-400);
+  }
+
   .bus-timetable {
     font-family: monospace;
   }
