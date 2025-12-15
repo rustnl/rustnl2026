@@ -27,7 +27,7 @@ const trainers = await getCollection("trainers");
     {
       workshops.map((workshop) => (
         <OneColumn>
-          <Workshop>
+          <Workshop id={workshop.id}>
             <WorkshopDetail
               hasTitle={true}
               {...workshop.data}

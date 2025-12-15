@@ -1,8 +1,14 @@
-<div class="workshop">
+---
+const id = Astro.props.id;
+---
+
+<div class="workshop" id={id} >
   <slot />
 </div>
 
 <style lang="scss" is:global>
+  @use '../../styles/breakpoint.scss';
+
   .workshop > * + * {
     margin-block-start: 1lh;
   }
@@ -14,6 +20,9 @@
   .workshop-people-list {
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+
+    @include breakpoint.wider_than(md) {
+      grid-template-columns: repeat(2, 1fr);
+    } 
   }
 </style>
