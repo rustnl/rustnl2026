@@ -44,8 +44,8 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
   <OneColumn>
     <div set:html={talk.rendered?.html} />
   </OneColumn>
-  <div class="grid cols-12 container">
-    <div class="col-start-3 col-end-11 persons">
+  <div class="lg:grid lg:cols-12 container">
+    <div class="lg:col-start-3 lg:col-end-11 persons">
       {
         speakers.map((speaker: any) => (
           <Person bio={speaker.rendered?.html} {...speaker.data} single />

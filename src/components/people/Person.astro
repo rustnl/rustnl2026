@@ -152,6 +152,7 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
 
 <style lang="scss">
   @use "../../styles/variables.scss";
+  @use '../../styles/breakpoint.scss';
 
   .person {
     position: relative;
@@ -161,8 +162,11 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
 
   .person.single {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    
+    @include breakpoint.wider_than(sm) {
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .person.single .image-container {
