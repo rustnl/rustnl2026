@@ -4,9 +4,10 @@ import Workshop from '../components/workshop/Workshop.astro';
 import CommonLayout from '../layouts/CommonLayout.astro';
 import Button from '../components/Button.astro';
 import Person from '../components/people/Person.astro';
+import { getCollection } from "astro:content";
 
-const workshops = await Astro.glob('./workshops/*.md');
-const trainers = await Astro.glob('./people/trainers/*.md');
+const workshops = await getCollection("workshops");
+const trainers = await getCollection("trainers");
 ---
 
 <CommonLayout title="Workshops" header="Workshops" withLogo>
@@ -20,8 +21,8 @@ const trainers = await Astro.glob('./people/trainers/*.md');
           {
             workshops.map((workshop) => (
               <Fragment>
-                <a href={`#${workshop.frontmatter.slug}`}>
-                  {workshop.frontmatter.slug}
+                <a href={`#${workshop.slug}`}>
+                  {workshop.slug}
                 </a>{' '}
                 &bullet;
               </Fragment>
@@ -39,7 +40,7 @@ const trainers = await Astro.glob('./people/trainers/*.md');
                 <Workshop class="workshop">
                   <WorkshopDetail
                     hasTitle={true}
-                    {...workshop.frontmatter}
+                    {...workshop}
                     description={workshop.compiledContent()}
                   />
                   <div class="space-y-3">
@@ -48,16 +49,16 @@ const trainers = await Astro.glob('./people/trainers/*.md');
                       {trainers
                         .filter(
                           (trainer) =>
-                            trainer.frontmatter.workshop ==
-                            workshop.frontmatter.slug
+                            trainer.workshop ==
+                            workshop.slug
                         )
                         .map((workshopTrainer) => (
-                          <Person tile {...workshopTrainer.frontmatter} />
+                          <Person tile {...workshopTrainer} />
                         ))}
                     </div>
                   </div>
                 </Workshop>
-                <Button link={`/workshops/${workshop.frontmatter.slug}`}>
+                <Button link={`/workshops/${workshop.slug}`}>
                   Details & tickets
                 </Button>
               </div>

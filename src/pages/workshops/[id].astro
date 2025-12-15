@@ -1,0 +1,95 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const workshops = await getCollection("workshops");
+  return workshops.map((workshop) => ({
+    params: { id: workshop.id },
+    props: { workshop },
+  }));
+}
+
+import CommonLayout from "../../layouts/CommonLayout.astro";
+import "../../styles/index.scss";
+import Person from "../../components/people/Person.astro";
+import Button from "src/components/Button.astro";
+import Cta from "src/components/Cta.astro";
+import Divider from "src/components/Divider.astro";
+import Hero from "src/components/Hero.astro";
+import Markdown from "src/components/Markdown.astro";
+import OneColumn from "src/components/OneColumn.astro";
+
+const { workshop } = Astro.props;
+const { title } = workshop.data;
+const people = await getCollection("trainers");
+
+const trainers = people
+  .filter((person) => person.data.workshop.id == workshop.id)
+  .map((trainer) => trainer);
+const trainer_names = trainers.map((trainer) => trainer.data.name).join(", ");
+const draft = false;
+const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
+---
+
+<CommonLayout title={title} withLogo {...ignore}>
+  <Hero kicker="Workshop" title={title} lead={`by ${trainer_names}`} color="yellow">
+    {
+      // level && (
+      //   <div class="talk-level">
+      //     <strong>Audience:</strong> <span class="tag">{level}</span>
+      //   </div>
+      // )
+    }
+  </Hero>
+  <OneColumn>
+    <div set:html={workshop.rendered?.html} />
+  </OneColumn>
+  <div class="grid cols-12 container">
+    <div class="col-start-3 col-end-11 persons">
+      {
+        trainers.map((trainer: any) => (
+          <Person bio={trainer.rendered?.html} {...trainer.data} single />
+        ))
+      }
+    </div>
+  </div>
+  <Cta title="Get your ticket" color="yellow">
+    <div class="buttons">
+      <Button link="https://event.onliveevent.nl/rustweek-2026">
+        tickets
+      </Button>
+      {
+        // day && (
+        //   <Button link={`/schedule/${day}/#${talk.id.split("/").pop()}`}>
+        //     Find in timetable
+        //   </Button>
+        // )
+      }
+    </div>
+  </Cta>
+</CommonLayout>
+
+<style>
+  .persons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .talk-level {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .talk-level .tag {
+    background-color: var(--color-yellow-400);
+    padding-inline: 0.75rem;
+    border-radius: 0.25rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+  }
+</style>
