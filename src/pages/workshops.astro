@@ -8,6 +8,7 @@ import { getCollection } from "astro:content";
 import Hero from "src/components/Hero.astro";
 import OneColumn from "src/components/OneColumn.astro";
 import HeroAnchors from "src/components/HeroAnchors.astro";
+import Divider from "src/components/Divider.astro";
 
 const workshops = await getCollection("workshops");
 const trainers = await getCollection("trainers");
@@ -22,79 +23,39 @@ const trainers = await getCollection("trainers");
     </p>
     <HeroAnchors anchors={workshops} />
   </Hero>
-  <OneColumn>
-    <div>
-      {
-        workshops.map((workshop) => (
-            <Workshop>
-              <WorkshopDetail
-                hasTitle={true}
-                {...workshop.data}
-                abstract={workshop.data.abstract}
-              />
-                <div class="workshop-people">
-                  <strong>Workshop by</strong>
-                  <div class="workshop-people-list">
-                    {trainers
-                      .filter((trainer) => trainer.data.workshop.id == workshop.id)
-                      .map((workshopTrainer) => (
-                        <Person tile {...workshopTrainer.data} />
-                      ))}
-                  </div>
-                  <Button link={`/workshops/${workshop.id}`}>Details & tickets</Button>
-                </div>
-            </Workshop>
-        ))
-      }
-    </div>
-  </OneColumn>
-  <!-- <section class="py-12 space-y-6">
-    <div class="grid xl:cols-12" id="workshops">
-      <div class="xl:col-start-3 xl:col-end-11 space-y-12">
-        <div
-          class="abouttext text-center md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10"
-          style="font-size: smaller;"
-        >
-          {
-            workshops.map((workshop) => (
-              <Fragment>
-                <a href={`#${workshop.id}`}>
-                  {workshop.id}
-                </a>{' '}
-                &bullet;
-              </Fragment>
-            ))
-          }
-        </div>
-
-        <p>
-          For the workshop <strong>location</strong> and other details, see the <strong><a href="/events/workshops">workshop event page</a></strong>.
-        </p>
-
-      </div>
-    </div>
-  </section> -->
+  <div class="workshops-list">
+    {
+      workshops.map((workshop) => (
+        <OneColumn>
+          <Workshop>
+            <WorkshopDetail
+              hasTitle={true}
+              {...workshop.data}
+              abstract={workshop.data.abstract}
+            />
+            <div class="workshop-people">
+              {/* <strong>Workshop by</strong> */}
+              <div class="workshop-people-list">
+                {trainers
+                  .filter((trainer) => trainer.data.workshop.id == workshop.id)
+                  .map((workshopTrainer) => (
+                    <Person tile {...workshopTrainer.data} />
+                  ))}
+              </div>
+              <Button link={`/workshops/${workshop.id}`}>
+                Details & tickets
+              </Button>
+            </div>
+          </Workshop>
+        </OneColumn>
+        <Divider />
+      ))
+    }
+  </div>
 </CommonLayout>
 
-<style lang="scss">
-
-
-  // @use '../styles/variables.scss';
-  // .trainer {
-  //   font-size: variables.$font-size-md;
-  //   // note: writing this as text-decoration shorthand does not work on safari
-  //   text-decoration-line: underline;
-  //   text-decoration-color: variables.$color-red-400;
-  //   text-decoration-thickness: 0.3rem;
-  // }
-
-  // .item {
-  //   &::before {
-  //     background-color: variables.$color-red-400;
-  //     content: '';
-  //     display: block;
-  //     height: 1px;
-  //     width: 100%;
-  //   }
-  // }
+<style lang="scss" is:global>
+  .workshops-list > * + * {
+    margin-block-start: 4.5rem;
+  }
 </style>

@@ -3,11 +3,6 @@
 </div>
 
 <style lang="scss" is:global>
-  .workshop {
-    border-block-end: 1px solid var(--color-yellow-400);
-    padding-block-end: 1lh;
-  }
-
   .workshop > * + * {
     margin-block-start: 1lh;
   }
@@ -19,6 +14,6 @@
   .workshop-people-list {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-columns: 1fr 1fr;
   }
 </style>
