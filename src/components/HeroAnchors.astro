@@ -1,0 +1,11 @@
+---
+interface Props {
+  anchors?: { id: string }[];
+}
+
+const { anchors } = Astro.props;
+---
+
+<div class="anchors">
+  {anchors ? anchors?.map((anchor) => <a href={`#${anchor.id}`}>{anchor.id}</a>) : <slot />}
+</div>

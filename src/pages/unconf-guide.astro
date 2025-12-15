@@ -8,34 +8,14 @@ import LocationDusRooms from "../components/LocationDusRooms.astro";
 import UnconfSchedule from "../components/schedule/UnconfSchedule.astro";
 import UnconfSponsors from "../components/unconf/UnconfSponsors.astro";
 import UnconfLeaders from "../components/unconf/UnconfLeaders.astro";
+import HeroAnchors from "src/components/HeroAnchors.astro";
 
 const unconfIntro = await Astro.glob("./unconf-intro.md");
 ---
 
-<style>
-  .anchors {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid var(--color-blue-100);
-    background-color: var(--color-blue-000);
-  }
-
-  .anchors a {
-    min-height: 3rem;
-    padding-inline: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .anchors a:not(:last-child) {
-    border-inline-end: inherit;
-  }
-</style>
-
 <CommonLayout title="Unconf participants guide">
   <Hero title="Unconf participants guide" color="yellow">
-    <div class="anchors">
+    <HeroAnchors>
       <a href="#venue">Venue</a>
       <a href="#unconf-details">Unconf schedule</a>
       <a href="#rooms">Rooms</a>
@@ -43,7 +23,7 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
       <a href="#sponsors">Sponsors</a>
       <a href="#group-leaders">Group leaders</a>
       <a href="#travel">Travel</a>
-    </div>
+    </HeroAnchors>
   </Hero>
   <OneColumn>
     <div class="markdown" set:html={unconfIntro[0].compiledContent()} />
@@ -162,18 +142,18 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
       <h2 id="all-hands">Co-located Rust All Hands</h2>
       <p>
         At the same venue, in the other wing of the same buliding, there will be
-        a parallel event: the Rust All Hands. Collaboration is encouraged!
-        Feel free to invite Rust project members to your sessions. If you want
-        to join any of the sessions of the Rust All-Hands, or if you want to organize joint
-        sessions, ask Mara, via Zulip or mara@rustnl.org. She coordinates the Rust All-Hands.
-        Please also respect the private nature of the Rust All-Hands sessions; do not walk into
-        the All-Hands wing and sessions uninvited.
+        a parallel event: the Rust All Hands. Collaboration is encouraged! Feel
+        free to invite Rust project members to your sessions. If you want to
+        join any of the sessions of the Rust All-Hands, or if you want to
+        organize joint sessions, ask Mara, via Zulip or mara@rustnl.org. She
+        coordinates the Rust All-Hands. Please also respect the private nature
+        of the Rust All-Hands sessions; do not walk into the All-Hands wing and
+        sessions uninvited.
       </p>
       <p>
         <strong>Rooms</strong><br />
-        The venue has 20+ airconditioned rooms, of which 10 are reserved for the
-        unconf. For lunch and socializing there are big inside (~350p) and outside
-        areas.
+        The venue has 20+ airconditioned rooms, of which 10 are reserved for the unconf.
+        For lunch and socializing there are big inside (~350p) and outside areas.
       </p>
       <p>
         Each unconf group will have a main room and a breakout room. The rooms
@@ -196,12 +176,14 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
         Please note that breakout rooms 2, 3 & 6 do <strong>not</strong>
         have a screen.
       </p>
-
     </div>
   </OneColumn>
 
   <div class="container">
-    <img style="margin: 2rem 0rem;width:100%;" src="/images/venues/dus-rooms-fri-sat.png"/>
+    <img
+      style="margin: 2rem 0rem;width:100%;"
+      src="/images/venues/dus-rooms-fri-sat.png"
+    />
   </div>
 
   <OneColumn>

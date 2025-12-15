@@ -14,33 +14,13 @@ const {
 library.add(faLocationDot, faClock);
 ---
 
-<div class="markdown workshop-detail">
-  <div class="space-y-6">
     <div>
-      {hasTitle && <h2 id={slug}>{title}</h2>}
+      {hasTitle && <h2 class="font-display" id={slug}>{title}</h2>}
       <!-- <div class="workshop-detail-item">
         <div class="icon"><Fragment set:html={clockIcon.html} /></div>
         <span>{time}</span>
       </div> -->
     </div>
     {!full && <p>{abstract}</p>}
-    {full && <div class="space-y-6" set:html={description} />}
-  </div>
-</div>
+    {full && <div set:html={description} />}
 
-<style lang="scss">
-  @use '../../styles/variables.scss';
-
-  .workshop-detail h2 {
-    // font-size: variables.$font-size-xl;
-    font-style: normal;
-    padding: 0;
-    margin: 0;
-  }
-
-  .workshop-detail-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-</style>

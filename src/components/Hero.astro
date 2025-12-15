@@ -27,7 +27,7 @@ const color400 = `var(--color-${color}-400)`;
   </div>
 </div>
 
-<style lang="scss" define:vars={{ color000, color100, color300, color400 }}>
+<style lang="scss" is:global define:vars={{ color000, color100, color300, color400 }}>
   .hero {
     background-color: var(--color400);
     margin-block-end: 3rem;
@@ -55,7 +55,7 @@ const color400 = `var(--color-${color}-400)`;
 
   .hero .ferris {
     aspect-ratio: 2677/1764;
-    background-image: url('/images/ferris.png');
+    background-image: url("/images/ferris.png");
     background-repeat: no-repeat;
     background-size: contain;
     bottom: -5rem;
@@ -84,5 +84,24 @@ const color400 = `var(--color-${color}-400)`;
   h1 {
     font-size: var(--font-size-3xl);
     text-wrap: balance;
+  }
+
+  .anchors {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--color-blue-100);
+    background-color: var(--color-blue-000);
+  }
+
+  .anchors a {
+    min-height: 3rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .anchors a:not(:last-child) {
+    border-inline-end: inherit;
   }
 </style>
