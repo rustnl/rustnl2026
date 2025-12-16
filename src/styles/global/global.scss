@@ -38,21 +38,13 @@ h6 {
 }
 
 h1 {
-  font-size: variables.$font-size-xl;
+  font-size: var(--font-size-3xl);
   line-height: 1.125;
-
-  @include breakpoint.wider_than(lg) {
-    font-size: variables.$font-size-3xl;
-  }
 }
 
 h2 {
-  font-size: variables.$font-size-lg;
+  font-size: var(--font-size-xl);
   line-height: 1.125;
-
-  @include breakpoint.wider_than(lg) {
-    font-size: variables.$font-size-2xl;
-  }
 }
 
 .font-display {
@@ -135,6 +127,10 @@ p {
   ul {
     list-style: disc;
     padding-inline-start: variables.$font-size-lg;
+  }
+
+  li::marker {
+    color: var(--color-red-400);
   }
 
   .bus-timetable {

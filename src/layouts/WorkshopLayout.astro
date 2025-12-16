@@ -69,26 +69,3 @@ const trainers = await Astro.glob('../pages/people/trainers/*.md');
   </section>
 </CommonLayout>
 
-<style lang="scss">
-  @use '../styles/variables.scss';
-
-  .kicker {
-    color: variables.$color-red-400;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  h1 {
-    padding: 0;
-  }
-
-  .workshop-by {
-    border-block: 1px solid variables.$color-red-400;
-    margin-block: 3rem;
-    padding-block: 3rem;
-
-    h3 {
-      margin: 0;
-    }
-  }
-</style>

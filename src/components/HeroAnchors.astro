@@ -1,0 +1,36 @@
+---
+interface Props {
+  anchors?: { id: string }[];
+}
+
+const { anchors } = Astro.props;
+---
+
+<div class="anchors">
+  {
+    anchors ? (
+      anchors?.map((anchor) => <a href={`#${anchor.id}`}>{anchor.id}</a>)
+    ) : (
+      <slot />
+    )
+  }
+</div>
+
+<style is:global lang="scss">
+  .anchors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .anchors a {
+    border: 1px solid var(--color-blue-100);
+    background-color: var(--color-blue-000);
+    min-height: 2.5rem;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-sm);
+  }
+</style>

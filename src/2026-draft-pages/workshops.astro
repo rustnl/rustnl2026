@@ -1,0 +1,61 @@
+---
+import WorkshopDetail from "../components/workshop/workshop-detail.astro";
+import Workshop from "../components/workshop/Workshop.astro";
+import CommonLayout from "../layouts/CommonLayout.astro";
+import Button from "../components/Button.astro";
+import Person from "../components/people/Person.astro";
+import { getCollection } from "astro:content";
+import Hero from "../components/Hero.astro";
+import OneColumn from "../components/OneColumn.astro";
+import HeroAnchors from "../components/HeroAnchors.astro";
+import Divider from "../components/Divider.astro";
+
+const workshops = await getCollection("workshops");
+const trainers = await getCollection("trainers");
+---
+
+<CommonLayout title="Workshops" header="Workshops" withLogo>
+  <Hero title="Workshops" color="yellow">
+    <p>
+      For the workshop <strong>location</strong> and other details, see the <strong
+        ><a href="/events/workshops">workshop event page</a></strong
+      >.
+    </p>
+    <HeroAnchors anchors={workshops} />
+  </Hero>
+  <div class="workshops-list">
+    {
+      workshops.map((workshop) => (
+        <OneColumn>
+          <Workshop id={workshop.id}>
+            <WorkshopDetail
+              hasTitle={true}
+              {...workshop.data}
+              abstract={workshop.data.abstract}
+            />
+            <div class="workshop-people">
+              {/* <strong>Workshop by</strong> */}
+              <div class="workshop-people-list">
+                {trainers
+                  .filter((trainer) => trainer.data.workshop.id == workshop.id)
+                  .map((workshopTrainer) => (
+                    <Person tile {...workshopTrainer.data} />
+                  ))}
+              </div>
+              <Button link={`/workshops/${workshop.id}`}>
+                Details & tickets
+              </Button>
+            </div>
+          </Workshop>
+        </OneColumn>
+        <Divider />
+      ))
+    }
+  </div>
+</CommonLayout>
+
+<style lang="scss" is:global>
+  .workshops-list > * + * {
+    margin-block-start: 4.5rem;
+  }
+</style>
