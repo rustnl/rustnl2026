@@ -5,10 +5,10 @@ import CommonLayout from "../layouts/CommonLayout.astro";
 import Button from "../components/Button.astro";
 import Person from "../components/people/Person.astro";
 import { getCollection } from "astro:content";
-import Hero from "src/components/Hero.astro";
-import OneColumn from "src/components/OneColumn.astro";
-import HeroAnchors from "src/components/HeroAnchors.astro";
-import Divider from "src/components/Divider.astro";
+import Hero from "../components/Hero.astro";
+import OneColumn from "../components/OneColumn.astro";
+import HeroAnchors from "../components/HeroAnchors.astro";
+import Divider from "../components/Divider.astro";
 
 const workshops = await getCollection("workshops");
 const trainers = await getCollection("trainers");
