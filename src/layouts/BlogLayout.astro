@@ -1,0 +1,31 @@
+---
+import CommonLayout from "./CommonLayout.astro";
+import OneColumn from "src/components/OneColumn.astro";
+import Hero from "src/components/Hero.astro";
+
+const { frontmatter } = Astro.props;
+const { title } = frontmatter;
+
+const format = new Intl.DateTimeFormat("en-US", {
+  dateStyle: "medium",
+});
+---
+
+<CommonLayout title={title} header={title} withLogo>
+    <Hero title={title} color="yellow" />
+    <OneColumn>
+      <p class="published">Published on {format.format(new Date(frontmatter.pubDate))}</p>
+        <div class="markdown">
+            <slot />
+        </div>
+    </OneColumn>
+</CommonLayout>
+
+<style lang="scss">
+  @use "../styles/variables.scss";
+
+  .published {
+      font-size: 0.8em;
+      margin-bottom: 1em;
+  }
+</style>
