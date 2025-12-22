@@ -11,7 +11,7 @@ const format = new Intl.DateTimeFormat("en-US", {
 });
 ---
 
-<CommonLayout title={title} header={title} withLogo>
+<CommonLayout title={title} header={title} ogDate={new Date(frontmatter.pubDate).toISOString().split('T')[0]} withLogo>
     <Hero title={title} color="yellow" />
     <OneColumn>
       <p class="published">Published on {format.format(new Date(frontmatter.pubDate))}</p>
