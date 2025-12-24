@@ -1,0 +1,212 @@
+---
+import Hero from "../components/Hero.astro";
+import CommonLayout from "../layouts/CommonLayout.astro";
+import OneColumn from "../components/OneColumn.astro";
+import Note from "../components/Note.astro";
+import LocationDusVenue from "../components/LocationDusVenue.astro";
+import LocationDusRooms from "../components/LocationDusRooms.astro";
+import UnconfSchedule from "../components/schedule/UnconfSchedule.astro";
+import UnconfSponsors from "../components/unconf/UnconfSponsors.astro";
+import UnconfLeaders from "../components/unconf/UnconfLeaders.astro";
+import HeroAnchors from "src/components/HeroAnchors.astro";
+
+const unconfIntro = await Astro.glob("./unconf-intro.md");
+---
+
+<CommonLayout title="Unconf participants guide">
+  <Hero title="Unconf participants guide" color="yellow">
+    <HeroAnchors>
+      <a href="#venue">Venue</a>
+      <a href="#unconf-details">Unconf schedule</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#all-hands">All-Hands</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#group-leaders">Group leaders</a>
+      <a href="#travel">Travel</a>
+    </HeroAnchors>
+  </Hero>
+  <OneColumn>
+    <div class="markdown" set:html={unconfIntro[0].compiledContent()} />
+    <br />
+    <div class="markdown">
+      <Note>
+        <p>
+          NOTE: All information on this page is for maintainers of invited
+          unconf groups. If you are not part of the unconf groups, please check
+          out the <a href="/">RustWeek 2026</a> homepage instead.
+        </p>
+      </Note>
+      <h2 id="venue">The unconference venue</h2>
+      <p>
+        The unconf is held at DUS Utrecht.<br />
+        Address: DUS, Sophialaan 1, Utrecht, The Netherlands.
+      </p>
+      <p>
+        <strong>Getting there</strong><br />
+        See the <a href="/dus">DUS venue page</a> on how to reach the venue by car,
+        bike, public transport or the RustWeek DUS-BUS.<br />
+      </p>
+      <p>
+        See the <a href="#floorplan">venue layout</a> and <a href="#rooms"
+          >room assignments</a
+        > section for more details about the venue.
+      </p>
+    </div>
+  </OneColumn>
+  <LocationDusVenue />
+  <div class="space-y-12">
+    <OneColumn>
+      <h2 id="weekschedule">Schedule for the week</h2>
+      <p>
+        If you are attending the RustWeek 2026 conference and the unconf, your
+        week will look like this:
+      </p>
+    </OneColumn>
+    <UnconfSchedule />
+  </div>
+  <OneColumn>
+    <div class="markdown">
+      <p>
+        <b>Location:</b>
+        Tuesday and Wednesday are at <a href="/kinepolis">Kinepolis</a>.
+        Thursday, Friday and Saturday are at <a href="/dus">DUS</a>.
+      </p>
+      <p>
+        RustWeek 2026 includes social activities organised by and for all
+        attending Rustaceans. You are very welcome to join these activities or
+        organise your own.
+      </p>
+      <p>
+        Check out the <a href="/">RustWeek 2026</a> homepage for details.
+      </p>
+      <h2 id="conf">Conference (Tue + Wed)</h2>
+      <p>
+        The 2-day conference is held next to the Utrecht Central Station at
+        Kinepolis Jaarbeurs on Tuesday and Wednesday.
+      </p>
+      <h2 id="unconf-details">Unconf (Thu, Fri and Sat)</h2>
+      <p>
+        <b>Covid policy:</b> Please review our <a
+          href="/covid-policy-all-hands-and-unconf">covid policy</a
+        > for the unconf.
+      </p>
+      <p>
+        The RustWeek unconf will begin on Thursday. There will be no plenary
+        start of the unconf, each unconf group runs their own schedule in their
+        own dedicated rooms.
+      </p>
+      <p>
+        Schedule for all days:<br />
+        <ul style="font-family: monospace;font-size: smaller;">
+          <li>09:00 - 09:30: Arrival and registration</li>
+          <li>09:30 - 13:00: Unconf sessions</li>
+          <li>13:00 - 14:00: Lunch</li>
+          <li>14:00 - 17:30: Unconf sessions</li>
+          <li>17:30 - 18:30: Drinks & departing from the venue</li>
+        </ul>
+      </p>
+      <p>
+        See the <a href="#venue">getting there</a> section for the location and bus
+        departure times.
+      </p>
+      <p>
+        For questions about logistics or other, your <a href="#group-leaders"
+          >group leader</a
+        > can reach out to Erik via erik@rustnl.org, or join the <a
+          href="https://discord.gg/9ezhugbhAM">RustWeek discord</a
+        > and ask there.
+      </p>
+    </div>
+  </OneColumn>
+  <UnconfSponsors />
+
+  <div class="space-y-12" id="floorplan">
+    <OneColumn>
+      <h2>Venue layout</h2>
+      <p>
+        The venue has a socializing and outdoor area, the All-Hands wing (pink)
+        and the Unconference wing (green). More information can be found on the <a
+          href="/dus#floor-plan">DUS venue page</a
+        >.
+      </p>
+    </OneColumn>
+    <div class="container">
+      <img style="margin: 2rem 0rem" src="/images/venues/plattegrond2.svg" />
+    </div>
+  </div>
+
+  <UnconfLeaders />
+
+  <OneColumn>
+    <div class="markdown">
+      <h2 id="all-hands">Co-located Rust All Hands</h2>
+      <p>
+        At the same venue, in the other wing of the same buliding, there will be
+        a parallel event: the Rust All Hands. Collaboration is encouraged! Feel
+        free to invite Rust project members to your sessions. If you want to
+        join any of the sessions of the Rust All-Hands, or if you want to
+        organize joint sessions, ask Mara, via Zulip or mara@rustnl.org. She
+        coordinates the Rust All-Hands. Please also respect the private nature
+        of the Rust All-Hands sessions; do not walk into the All-Hands wing and
+        sessions uninvited.
+      </p>
+      <p>
+        <strong>Rooms</strong><br />
+        The venue has 20+ airconditioned rooms, of which 10 are reserved for the unconf.
+        For lunch and socializing there are big inside (~350p) and outside areas.
+      </p>
+      <p>
+        Each unconf group will have a main room and a breakout room. The rooms
+        will have tables made out of cardboard that you can write on, a
+        flipover, and each group's main room has a large HDMI screen.
+      </p>
+    </div>
+  </OneColumn>
+  <LocationDusRooms />
+  <OneColumn>
+    <div class="markdown">
+      <h2 id="rooms">Room assignments</h2>
+      <br />
+      <ul>
+        <li>Bevy Engine: TBA</li>
+        <li>Rust Embedded Working Group: TBA</li>
+        <li>Safety-Critical Rust Consortium: TBA</li>
+      </ul>
+      <p>
+        Please note that breakout rooms 2, 3 & 6 do <strong>not</strong>
+        have a screen.
+      </p>
+    </div>
+  </OneColumn>
+
+  <div class="container">
+    <img
+      style="margin: 2rem 0rem;width:100%;"
+      src="/images/venues/dus-rooms-fri-sat.png"
+    />
+  </div>
+
+  <OneColumn>
+    <div class="markdown">
+      <h2 id="travel">Travel and Hotel</h2>
+      <p>
+        See the <a href="/getting-there">Getting there page</a> for details on travel
+        to Utrecht.
+      </p>
+      <!-- <p>
+        For hotel recommendations see our <a href="/hotels">hotels page</a>.
+      </p> -->
+      <p>
+        RustNL can help cover part of cost for travel and stay for upto 5
+        participants in each unconf group. The compensation is reserved for
+        participants that are not covered by their employer or other sponsor.
+        Please contact your group's leader(s) for details.
+      </p>
+      <h2 id="questions">Questions?</h2>
+      <p>
+        If you have any logistical or organisational questions, please reach out
+        to Erik via erik@rustnl.org.
+      </p>
+    </div>
+  </OneColumn>
+</CommonLayout>

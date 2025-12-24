@@ -59,12 +59,12 @@ import OneColumn from "src/components/OneColumn.astro";
 
       <p>Expert Table topics:</p>
       <ul>
-        <li>How to plan your Rust migration</li>
-        <li>Software life cycle costs</li>
-        <li>Hiring and training</li>
-        <li>Using Rust in existing projects</li>
-        <li>Safety Critical Rust</li>
-        <li>Embedded Rust</li>
+        <li>How to plan your Rust migration - by Matthias Endler</li>
+        <li>Software life cycle costs - by Martin Kooij</li>
+        <li>Introducing Rust in a conservative environment - by Julius Gustavsson</li>
+        <li>Hiring and training - tba</li>
+        <li>Safety Critical Rust - tba</li>
+        <li>Embedded Rust- tba</li>
       </ul>
     </div>
   </OneColumn>
@@ -81,14 +81,14 @@ import OneColumn from "src/components/OneColumn.astro";
         />
         <TimetableItem
           time="10.25"
-          title="Global State of Rust (35 min)"
-          speaker="To be announced"
+          title="Rustaceans on The Move - The Global Impact of Rust"
+          speaker="Lori Lorusso - Rust Foundation"
         />
         <TimetableItem time="11.00" title="Break" />
         <TimetableItem
           time="11.20"
-          title="Talk (20 min)"
-          speaker="To be announced"
+          title="Scaling up Rust development at the Dutch Electoral Council"
+          speaker="Mark Janssen - Dutch Electoral Council"
         />
         <TimetableItem
           time="11.50"
@@ -140,7 +140,7 @@ import OneColumn from "src/components/OneColumn.astro";
       </ButtonGroup>
     </div>
   </OneColumn>
-  
+
   <PeopleList title="Already confirmed for 2026" lead="">
     <Person
       name="Hugo van de Pol"
@@ -160,133 +160,89 @@ import OneColumn from "src/components/OneColumn.astro";
       title="Engineering team Embedded Software at ROCSYS"
       smalltile
     />
-  </PeopleList>
-
-  <PeopleList title="Last year's speakers and experts" lead="">
+    <Person
+      name="Lori Lorusso"
+      image="lori.jpeg"
+      title="Director of Outreach at Rust Foundation"
+      smalltile
+    />
     <Person
       name="Julius Gustavsson"
-      image="julius.jpeg"
+      image="julius.png"
       title="System Architect at Volvo Cars"
       smalltile
     />
     <Person
-      name="Niko Matsakis"
-      image="niko.png"
-      title="Senior Principal Engineer at Amazon Web Services"
-      smalltile
-    />
-    <Person
-      name="Jeffrey Vander Stoep"
-      image="jeffrey.png"
-      title="Software Engineer - Android Security at Google"
-      smalltile
-    />
-    <Person
-      name="Matthias Endler"
-      image="matthias.jpg"
-      title="Founder and Rust Consultant at corrode"
-      smalltile
-    />
-    <Person
-      name="Tiago Manczak"
-      image="tiago.jpeg"
-      title="Principal Firmware Engineer at Infineon Technologies"
-      smalltile
-    />
-    <Person
-      name="James Munns"
-      image="james.png"
-      title="CEO and Embedded Engineer at OneVariable"
-      smalltile
-    />
-    <Person
-      name="Hugo van de Pol"
-      image="hugo.jpeg"
-      title="Director at Tweede golf"
+      name="Mark Janssen"
+      image="empty.png"
+      title="Software Architect at the Dutch Electoral Council"
       smalltile
     />
   </PeopleList>
-
-  <Sponsors>
-    <div slot="header">
-      <h2>Industry Track partners</h2>
-      <p>
-        Interested in sponsoring? Download our <a
-          target="_blank"
-          href="/resources/sponsorship-prospectus-rustweek-2026.pdf"
-          >Sponsorship prospectus</a
-        > or <a href="mailto:industrytrack@tweedegolf.com"
-          >contact the Industry Track organization</a
-        >.
-      </p>
-    </div>
-    <SponsorTier name="Expert partners">
-      <SponsorTier>
-        <Sponsor
-          name="Rocsys"
-          tier="expert-partner"
-          image="rocsys2025.png"
-          link="https://rocsys.com/"
-        />
-        <Sponsor
-          name="Corrode"
-          tier="expert-partner"
-          image="corrode.svg"
-          link="https://corrode.dev/"
-        />
-      </SponsorTier>
+  <SponsorTier name="Expert partners">
+    <SponsorTier>
+      <Sponsor
+        name="Rocsys"
+        tier="expert-partner"
+        image="rocsys2025.png"
+        link="https://rocsys.com/"
+      />
+      <Sponsor
+        name="Corrode"
+        tier="expert-partner"
+        image="corrode.svg"
+        link="https://corrode.dev/"
+      />
     </SponsorTier>
-    <SponsorTier name="Industry partners">
-      <SponsorTier>
-        <Sponsor
-          name="Rust Foundation"
-          tier="industry-partner"
-          image="rustfoundation.png"
-          link="https://foundation.rust-lang.org/"
-        />
-        <Sponsor
-          name="AWS"
-          tier="industry-partner"
-          image="aws.png"
-          link="https://aws.amazon.com/"
-        />
-      </SponsorTier>
+  </SponsorTier>
+  <SponsorTier name="Industry partners">
+    <SponsorTier>
+      <Sponsor
+        name="Rust Foundation"
+        tier="industry-partner"
+        image="rustfoundation.png"
+        link="https://foundation.rust-lang.org/"
+      />
+      <Sponsor
+        name="AWS"
+        tier="industry-partner"
+        image="aws.png"
+        link="https://aws.amazon.com/"
+      />
     </SponsorTier>
-    <SponsorTier name="Powered by">
-      <SponsorTier>
-        <Sponsor
-          name="Tweede golf"
-          tier="industry-partner"
-          image="tweede-golf-v2.png"
-          link="https://tweedegolf.nl"
-        />
-        <Sponsor
-          name="RustNL"
-          tier="industry-partner"
-          image="../rustnl-logo-square.svg"
-          link="/about"
-        />
-      </SponsorTier>
+  </SponsorTier>
+  <SponsorTier name="Powered by">
+    <SponsorTier>
+      <Sponsor
+        name="Tweede golf"
+        tier="industry-partner"
+        image="tweede-golf-v2.png"
+        link="https://tweedegolf.nl"
+      />
+      <Sponsor
+        name="RustNL"
+        tier="industry-partner"
+        image="../rustnl-logo-square.svg"
+        link="/about"
+      />
     </SponsorTier>
-  </Sponsors>
-
-  <ButtonGroup>
-    <Button link="https://event.onliveevent.nl/rustweek-2026"
-      >Get ticket</Button
-    >
-  </ButtonGroup>
-
-  <style lang="scss">
-    @use "../styles/variables.scss";
-
-    .main {
-      width: min(96rem, 90%);
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  </style>
+  </SponsorTier>
 </HeroLayout>
+
+<ButtonGroup>
+  <Button link="https://event.onliveevent.nl/rustweek-2026">Get ticket</Button>
+</ButtonGroup>
+
+<style lang="scss">
+  @use "../styles/variables.scss";
+
+  .main {
+    width: min(96rem, 90%);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

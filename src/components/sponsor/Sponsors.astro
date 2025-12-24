@@ -1,8 +1,13 @@
 ---
+interface Props {
+  id?: string;
+}
 
+const { id = "" } =
+  Astro.props;
 ---
 
-<div class="sponsors space-y-12">
+<div class="sponsors space-y-12" id={id}>
     <div class="header">
         <slot name="header" />
     </div>

@@ -9,9 +9,6 @@ const { location }: Props = Astro.props;
 <div class:list={["menu", location]} aria-label="Main menu">
   <ul role="menubar">
     <li class="parent" role="menuitem">
-      <a href="/">Home</a>
-    </li>
-    <li class="parent" role="menuitem">
       <button>Schedule</button>
       <ul class="submenu" role="menu">
         <li class="child" role="menuitem">
@@ -70,39 +67,32 @@ const { location }: Props = Astro.props;
         >Sponsors</a
       >
     </li>
-    <!-- <li class="parent" role="menuitem"> -->
-    <!--   <button>Location</button> -->
-    <!--   <ul class="submenu" role="menu"> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/getting-there">Getting there</a> -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a -->
-    <!--         href="/#where" -->
-    <!--         onclick="document.querySelector('[data-menu-toggle]').click()" -->
-    <!--         >About Utrecht</a -->
-    <!--       > -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/kinepolis">Conference venue</a> -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/dus">Workshop venue</a> -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/dus">10-year celebration venue</a> -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/dus">Unconf & All-Hands venue</a> -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/hotels">Hotels</a> -->
-    <!--     </li> -->
-    <!--     <li class="child" role="menuitem"> -->
-    <!--       <a href="/accessibility">Accessibility</a> -->
-    <!--     </li> -->
-    <!--   </ul> -->
-    <!-- </li> -->
+    <li class="parent" role="menuitem">
+      <button>Location</button>
+      <ul class="submenu" role="menu">
+        <li class="child" role="menuitem">
+          <a href="/getting-there">Getting there</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a href="/utrecht">About Utrecht</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a href="/kinepolis">Conference venue</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a href="/beatrixgebouw">Workshop venue</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a href="/dus">Unconf & All-Hands venue</a>
+        </li>
+        <!-- <li class="child" role="menuitem">
+          <a href="/hotels">Hotels</a>
+        </li> -->
+        <li class="child" role="menuitem">
+          <a href="/accessibility">Accessibility</a>
+        </li>
+      </ul>
+    </li>
     <li class="parent">
       <button>About</button>
       <ul class="submenu">

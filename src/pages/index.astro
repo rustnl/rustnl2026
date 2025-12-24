@@ -72,7 +72,7 @@ const speakers = [taylor, greg, andreea, alice, andrew];
   <Location />
   <Sponsors id="sponsors">
     <div slot="header" class="markdown">
-      <h2>Last year's sponsors</h2>
+      <h2>Our sponsors</h2>
       <p>
         Interested in sponsoring? Download our <a
           target="_blank"
@@ -82,37 +82,85 @@ const speakers = [taylor, greg, andreea, alice, andrew];
       </p>
     </div>
     <SponsorTier>
+    <!-- <SponsorTier name="Bronze sponsors"> -->
+      <Sponsor
+        name="TandemDrive"
+        tier="bronze"
+        image="tandemdrive.png"
+        link="https://tandemdrive.com/"
+      />
+      <Sponsor
+        name="GitButler"
+        tier="bronze"
+        image="gitbutler.png"
+        link="https://gitbutler.com/"
+      />
+    <!-- </SponsorTier>
+    <SponsorTier name="Ecosystem partners"> -->
+      <Sponsor
+        name="Ferrous Systems"
+        tier="bronze"
+        image="ferrous.png"
+        link="https://ferrous-systems.com/"
+      />
+    <!-- </SponsorTier>
+    <SponsorTier name="Supporters"> -->
+      <Sponsor
+        name="RustJobs"
+        tier="bronze"
+        image="rustjobs.svg"
+        link="https://rustjobs.dev/"
+      />
+    <!-- </SponsorTier>
+    <SponsorTier name="Organizing partners"> -->
+      <Sponsor
+        name="Tweede golf"
+        tier="organizing-partner"
+        image="tweede-golf-v2.png"
+        link="https://tweedegolf.nl"
+      />
+      <Sponsor
+        name="Hexcat"
+        tier="organizing-partner"
+        image="hexcat.png"
+        link="https://hexcat.nl"
+      />
+    </SponsorTier>
+  </Sponsors>
+  <Sponsors>
+    <div slot="header" class="markdown">
+      <h2>Last year's headline sponsors</h2>
+    </div>
+    <SponsorTier>
       <Sponsor
         name="JetBrains"
-        tier="diamond"
+        tier="bronze"
         image="jetbrains.png"
         link="https://www.jetbrains.com/"
       />
       <Sponsor
         name="AWS"
-        tier="diamond"
+        tier="bronze"
         image="aws.png"
         link="https://aws.amazon.com/"
       />
       <Sponsor
         name="Huawei"
-        tier="diamond"
+        tier="bronze"
         image="huawei.png"
         link="https://www.huawei.com/"
       />
       <Sponsor
+        name="Arm"
+        tier="bronze"
+        image="arm.svg"
+        link="https://www.arm.com/"
+      />
+      <Sponsor
         name="Zed"
-        tier="diamond"
+        tier="bronze"
         image="zed.svg"
         link="https://zed.dev/"
-      />
-    </SponsorTier>
-    <SponsorTier name="">
-      <Sponsor
-        name="GOSIM Rust Spotlight"
-        tier="bronze"
-        image="gosim.svg"
-        link="https://spotlight.gosim.org/rust2025"
       />
       <Sponsor
         name="Google"
@@ -127,58 +175,16 @@ const speakers = [taylor, greg, andreea, alice, andrew];
         link="https://foundation.rust-lang.org/"
       />
       <Sponsor
-        name="Futurewei"
+        name="Espressif"
         tier="bronze"
-        image="futurewei.png"
-        link="https://futurewei.com/"
-      />
-      <Sponsor
-        name="Arm"
-        tier="bronze"
-        image="arm.svg"
-        link="https://www.arm.com/"
+        image="unconf/espressif.svg"
+        link="https://www.espressif.com/"
       />
       <Sponsor
         name="Infineon"
         tier="bronze"
         image="infineon.png"
         link="https://www.infineon.com/"
-      />
-      <Sponsor
-        name="Espressif"
-        tier="bronze"
-        image="unconf/espressif.svg"
-        link="https://espressif.com/"
-      />
-      <Sponsor
-        name="Flox"
-        tier="bronze"
-        image="flox.svg"
-        link="https://flox.dev/"
-      />
-      <Sponsor
-        name="Aleph Alpha"
-        tier="bronze"
-        image="aleph-alpha.svg"
-        link="https://aleph-alpha.com/"
-      />
-      <Sponsor
-        name="TandemDrive"
-        tier="bronze"
-        image="tandemdrive.png"
-        link="https://tandemdrive.com/"
-      />
-      <Sponsor
-        name="Tweede golf"
-        tier="organizing-partner"
-        image="tweede-golf-v2.png"
-        link="https://tweedegolf.nl"
-      />
-      <Sponsor
-        name="Hexcat"
-        tier="organizing-partner"
-        image="hexcat.png"
-        link="https://hexcat.nl"
       />
     </SponsorTier>
   </Sponsors>

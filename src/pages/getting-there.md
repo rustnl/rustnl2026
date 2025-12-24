@@ -4,7 +4,7 @@ title: "Getting There"
 slug: "getting-there"
 ---
 
-Our main venue, the conference venue, is [**Kinepolis Jaarbeurs**][1] in [Utrecht](/#where).    
+Our main venue, the conference venue, is [**Kinepolis Jaarbeurs**][1] in [Utrecht](/#where).
 
 <!-- For the unconf and All-Hands venue, called <strong>DUS</strong>, see [here](/dus). -->
 
@@ -23,7 +23,6 @@ other and traveling between cities by train is easy.
 <a href="#by-car">By Car</a>
 <div style="width: 0.5em; height: 0.5em; border-radius: 100%; background: #e74310"></div>
 <a href="#by-bike">By Bike</a>
-<div style="width: 0.5em; height: 0.5em; border-radius: 100%; background: #e74310"></div>
 </div>
 
 ## General
@@ -51,15 +50,16 @@ There's no need to buy a ticket for the national trains; just check in and
 out with your bank card, credit card, or phone.
 
 Many international trains stop in Utrecht.
-And Amsterdam, just a 30 minute train ride away, provides even more options.
+Other international trains stop in Amsterdam.
+From Amsterdam, there are 8 or more trains an hour to Utrecht taking about 30 minutes.
 
-You can also find [night trains][3] to Utrecht and Amsterdam.
+There are also long-distance [night trains][3] to both Utrecht and Amsterdam.
 
 ## By Plane
 
-The airport for Utrecht is **Amsterdam Schiphol Airport (AMS)**. 
+The airport for Utrecht is **Amsterdam Schiphol Airport (AMS)**.
 
-Directly from the airport, you can hop on the high frequent rail connection to Utrecht. A 24/7 [train connection][5] takes you directly to Utrecht Central Station in just half an hour. 
+Directly from the airport, you can hop on the high frequency (usually 8 per hour) rail connection to Utrecht. A 24/7 [train connection][5] takes you directly to Utrecht Central Station in just half an hour.
 
 There's no need to buy a ticket for the train; just check in and out with your
 bank card, credit card, or phone.

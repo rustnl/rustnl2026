@@ -4,7 +4,7 @@ title: "Venue: DUS Utrecht"
 slug: "dus"
 ---
 
-The workshops, unconference, 10-year celebration and All-Hands will be held in **DUS Utrecht**.
+The workshops, unconference and All-Hands will be held in **DUS Utrecht**.
 
 The address of the venue is:
 
@@ -12,17 +12,17 @@ The address of the venue is:
 > Sophialaan&nbsp;1, Utrecht\
 > The Netherlands**
 
-Note: The **conference** (Tue & Wed, May 13-14) is **not** held in this venue, but in [Kinepolis](/kinepolis).
+Note: The **conference** (Tue & Wed, May 19-20) is **not** held in this venue, but in [Kinepolis](/kinepolis).
 
 <img style="width: 100%" src="/images/venues/dus-outside-portrait.jpg" />
 
 ## Getting there: the RustWeek DUS-BUS!
 
-RustWeek has arranged buses to take you from from Utrecht Central Station to DUS. Keep an eye on the [bus schedule page](/bus) for the time schedule.
+RustWeek has arranged buses to take you from from Utrecht Central Station to DUS. We will publish the schedule for the buses later.
 
 Other options include:
 
-- By bike: the venue is a 20-min bike ride from the city centre. 
+- By bike: the venue is a 20-min bike ride from the city centre.
 - By public transport: you can reach the venue by public transport. It is a 17 min bus ride from the central station and a 13 min walk from the bus stop to the venue.
 - By car: navigate to Sophialaan&nbsp;1, Utrecht; the venue has free parking.
 

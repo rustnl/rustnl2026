@@ -1,36 +1,28 @@
 ---
-
+const id = Astro.props.id;
 ---
 
-<div class="workshop">
+<div class="workshop" id={id} >
   <slot />
 </div>
 
-<style lang="scss">
-  .workshop {
-    background-color: var(--color-yellow-400);
-    border: 1px solid var(--color-yellow-500);
-    padding: var(--space-6);
-    padding-top: 3rem;
+<style lang="scss" is:global>
+  @use '../../styles/breakpoint.scss';
 
-    > * + * {
-      margin-block-start: var(--space-6);
-    }
+  .workshop > * + * {
+    margin-block-start: 1lh;
+  }
 
-    a {
-      color: inherit;
-      text-decoration: underline;
-      display: inline-block;
-    }
+  .workshop-people > * + * {
+    margin-block-start: 0.25lh;
+  }
 
-    .socials {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-    }
+  .workshop-people-list {
+    display: grid;
+    gap: 2rem;
 
-    .speaker-detail {
-      text-align: left;
-    }
+    @include breakpoint.wider_than(md) {
+      grid-template-columns: repeat(2, 1fr);
+    } 
   }
 </style>
