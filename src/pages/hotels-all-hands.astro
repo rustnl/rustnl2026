@@ -16,13 +16,16 @@ import OneColumn from "../components/OneColumn.astro";
   <OneColumn>
     <div class="markdown">
       <p>
-        We have reserved blocks of rooms at a couple of hotels to ensure
+        We have reserved blocks of rooms at a three hotels to ensure
         availability for the All-Hands participants. Breakfast included and
         flexible cancellation.
       </p>
       <p>
-        The Moxy and HolidayInn hotel links below will take you to custom
-        booking page created for RustWeek.
+        Rooms are reserved from Sun May 17 to Sun May 24. If you plan to arrive before the 17th or depart after the 24th you can reach out to the hotel to extend your stay, see the hotel's booking page for contact details. There is a minimum of 3 of 4 nights, depending of the hotel's terms. 
+      </p>
+      <p>
+        The Moxy, Hampton by Hilton, and HolidayInn links below will take you to
+        custom booking page created for RustWeek.
       </p>
       <p>
         At 2L De Blend we don't have a reserved blocks of rooms, but as long as
@@ -43,28 +46,36 @@ import OneColumn from "../components/OneColumn.astro";
 
   <HotelList>
     <Hotel
+      name="2L De Blend"
+      link="https://2ldeblend.nl/"
+      image="deblend.jpg"
+      distance_kinepolis="22 min"
+      price_range="~€150 (studio)"
+      description="Hotel with studios and suites with a fully equipped kitchen. More affordable prices. Close to both conference and All-Hands venue. Apply <strong>'RustWeek2026'</strong> for a 20% discount on studios."
+    />
+    <Hotel
+      name="Holiday Inn Express"
+      link="https://www.ihg.com/redirect?path=rates&brandCode=EX&localeCode=en&regionCode=1&hotelCode=AMSUT&checkInDate=17&checkInMonthYear=042026&checkOutDate=24&checkOutMonthYear=042026&_PMID=99801505&GPC=ONL&cn=no&adjustMonth=false&showApp=true&monthIndex=00"
+      image="holiday-inn-express-utrecht.jpg"
+      distance_kinepolis="25 min"
+      price_range="€158"
+      description="Reasonably priced hotel, 25 min from the conference venue (walk + ~ 10 min bus) or a 15-min bike ride. 35 rooms reserved."
+    />
+    <Hotel
       name="Moxy Utrecht"
       link="https://app.marriott.com/reslink?id=1762352977355&key=GRP&app=resvlink"
       image="moxy.avif"
       distance_kinepolis="13 min"
-      price_range="202€"
+      price_range="€202"
       description="A trendy hotel with a modern vibe. Provides meeting rooms, co-working facilities and a bar. 35 rooms reserved."
     />
     <Hotel
-      name="Holiday Inn Express"
-      link="#todo"
-      image="holiday-inn-express-utrecht.jpg"
-      distance_kinepolis="TODO min"
-      price_range="~€155-160"
-      description="TODO"
-    />
-    <Hotel
-      name="2L De Blend"
-      link="https://2ldeblend.nl/nl/"
-      image="deblend.jpg"
-      distance_kinepolis="22 min"
-      price_range="~€140-175 (studio) – €200 (suite)"
-      description="Hotel with studios and suites with a fully equipped kitchen. More affordable prices. Close to both conference and All-Hands venue. Apply <strong>'RustWeek2026'</strong> for a 20% discount on studios."
+      name="Hampton by Hilton"
+      link="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=AMSUNHX&arrivalDate=2026-05-17&departureDate=2026-05-24&groupCode=CHHONL&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink"
+      image="hilton.jpeg"
+      distance_kinepolis="13 min"
+      price_range="~ €240"
+      description="Modern hotel very close to the central station of Utrecht. 10 min walk to the conference venue. Part of the Hoog Caterijne shopping complex. 20 rooms reserved."
     />
   </HotelList>
 </CommonLayout>
