@@ -10,7 +10,7 @@ import OneColumn from "../components/OneColumn.astro";
 import HeroAnchors from "../components/HeroAnchors.astro";
 import Divider from "../components/Divider.astro";
 
-const workshops = await getCollection("workshops");
+const workshops = (await getCollection("workshops")).filter((workshop) => workshop.data.published == true ? true : false)
 const trainers = await getCollection("trainers");
 ---
 

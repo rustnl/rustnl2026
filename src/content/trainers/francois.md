@@ -1,5 +1,4 @@
 ---
-layout: "../../../layouts/MarkdownLayout.astro"
 name: "François Mockers"
 image: "francois.png" # images go in public/images/people
 title: "Maintainer @ Bevy"

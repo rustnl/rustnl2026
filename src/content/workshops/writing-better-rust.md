@@ -1,10 +1,8 @@
 ---
 title: "Writing Better Rust"
 abstract: "It's easy to get lost in the depth of Rust's syntax and semantics. Your code works, sure, but does it follow best practices? And who can you even ask for feedback? How do you write good Rust?"
-# time: "9:00 - 13:00"
-# slug: "cli"
-# level: "intermediate"
-# beginnerFriendly: true
+level: "intermediate"
+published: true
 ---
 
 It's easy to get lost in the depth of Rust's syntax and semantics. Your code

@@ -1,5 +1,4 @@
 ---
-layout: "../../../layouts/MarkdownLayout.astro"
 name: "Alice Ivy Cecile"
 image: "alice_cecile.jpg" # images go in public/images/people
 title: "Bevy community leader & mad scientist"
