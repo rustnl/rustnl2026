@@ -2,11 +2,13 @@
 interface Props {
     title: string;
     ogImage?: string;
+    ogDate?: string;
 }
 
 const {
     title,
     ogImage = "https://2026.rustweek.org/images/rustweek2026-header-image-v2.png",
+    ogDate = "",
 } = Astro.props;
 ---
 
@@ -32,6 +34,9 @@ const {
         property="og:description"
         content="RustWeek 2026, The Netherlands - May 18 - 23 2026. The world's biggest Rust conference returns to beautiful Utrecht, welcoming over 900+ community members, professionals and the maintainers of Rust."
     />
+    { ogDate && 
+        <meta name="publish_date" property="og:publish_date" content={ogDate} />
+    }
     <meta name="image" property="og:image" content={ogImage} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

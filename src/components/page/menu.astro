@@ -51,9 +51,6 @@ const { location }: Props = Astro.props;
       </ul>
     </li>
     <li class="parent" role="menuitem">
-      <a href="/cfp">CfP</a>
-    </li>
-    <li class="parent" role="menuitem">
       <a
         href="/speakers"
       >
@@ -61,14 +58,23 @@ const { location }: Props = Astro.props;
       </a>
     </li>
     <li class="parent" role="menuitem">
-      <a
-        href="/#sponsors"
-        onclick="document.querySelector('[data-menu-toggle]').click()"
-        >Sponsors</a
-      >
+      <!-- <button>Get&nbsp;involved</button> -->
+      <button>Participate</button>
+      <ul class="submenu" role="menu">
+        <li class="child" role="menuitem">
+          <a href="/cfp">CfP</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a
+            href="/#sponsors"
+            onclick="document.querySelector('[data-menu-toggle]').click()"
+            >Become a sponsor</a
+          >
+        </li>
+      </ul>
     </li>
     <li class="parent" role="menuitem">
-      <button>Location</button>
+      <button>Practical</button>
       <ul class="submenu" role="menu">
         <li class="child" role="menuitem">
           <a href="/getting-there">Getting there</a>
@@ -93,11 +99,21 @@ const { location }: Props = Astro.props;
         </li>
       </ul>
     </li>
+    <li class="parent" role="menuitem">
+      <a href="/blog">Blog</a>
+    </li>
     <li class="parent">
       <button>About</button>
       <ul class="submenu">
         <li class="child">
           <a href="/about">About</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a
+            href="/#sponsors"
+            onclick="document.querySelector('[data-menu-toggle]').click()"
+            >Our sponsors</a
+          >
         </li>
         <li class="child">
           <a href="mailto:rustweek@rustnl.org">Contact</a>

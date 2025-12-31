@@ -1,0 +1,56 @@
+---
+import CommonLayout from "../layouts/CommonLayout.astro";
+import OneColumnText from "../components/OneColumnText.astro";
+import OneColumn from "src/components/OneColumn.astro";
+import Hero from "src/components/Hero.astro";
+const allPosts: any[] = Object.values(
+  import.meta.glob("./blog/*.md", { eager: true })
+);
+
+// This is really sad but JS is bad
+// We want to sort the posts by date in reverse.
+allPosts.sort((a: any, b: any) => {
+  const a_str = new Date(a.frontmatter.pubDate).toISOString();
+  const b_str = new Date(b.frontmatter.pubDate).toISOString();
+  return - a_str.localeCompare(b_str);
+});
+
+console.log(allPosts[0].frontmatter);
+
+const format = new Intl.DateTimeFormat("en-US", {
+  dateStyle: "medium",
+});
+---
+
+<CommonLayout title="Blog" header="Blog" withLogo>
+  <Hero title="Blog" color="yellow" />
+  <OneColumn>
+      <div>
+          This blog contains all the latest updates on RustWeek 2026!
+      </div>
+      <div class="posts">
+      {allPosts.map((post:any) =>
+        <div>
+          <a href={post.url}><h2>{post.frontmatter.title}</h2></a>
+          <p>{format.format(new Date(post.frontmatter.pubDate))}</p>
+        </div>
+      )}
+      </div>
+  </OneColumn>
+  <style lang="scss">
+    @use "../styles/variables.scss";
+
+    .posts > div {
+        margin: 2em 0;
+        h2:hover {
+            color: variables.$color-red-500;
+        }
+        a {
+          text-decoration: none;
+        }
+        a:hover > h2 {
+          text-decoration: underline;
+        }
+    }
+  </style>
+</CommonLayout>
