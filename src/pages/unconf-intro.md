@@ -16,6 +16,7 @@ The unconf is part of [RustWeek 2026](/), held in Utrecht, The Netherlands from 
 The unconference is for Rust maintainers of these groups:
 
 - Bevy Engine
+- Linebender
 - Rust Embedded Working Group
 - Safety-Critical Rust Consortium
 - ... your group? [contact us!](mailto:unconf@rustnl.org)
