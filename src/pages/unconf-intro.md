@@ -21,3 +21,7 @@ The unconference is for Rust maintainers of these groups:
 - Safety-Critical Rust Consortium
 - ... your group? [contact us!](mailto:unconf@rustnl.org)
 
+## Joining an unconf group
+
+The unconf is an invite-only event and invitations are handled by the [group leaders](#group-leaders); *not* by the RustWeek organization. Are you a maintainer, contributor to one of the communities, or eager to start contributing? Contact the group leader(s) through the communities’ channels and ask to join.
+
