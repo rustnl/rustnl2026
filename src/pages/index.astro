@@ -15,7 +15,7 @@ import { getCollection } from "astro:content";
 import OneColumn from "src/components/OneColumn.astro";
 import Cta from "src/components/Cta.astro";
 
-const people = await getCollection('people')
+const people = await getCollection("people");
 const { greg, taylor, andreea, alice, andrew } = useData(people);
 const speakers = [taylor, greg, andreea, alice, andrew];
 ---
@@ -82,7 +82,7 @@ const speakers = [taylor, greg, andreea, alice, andrew];
       </p>
     </div>
     <SponsorTier>
-    <!-- <SponsorTier name="Bronze sponsors"> -->
+      <!-- <SponsorTier name="Bronze sponsors"> -->
       <Sponsor
         name="TandemDrive"
         tier="bronze"
@@ -95,7 +95,13 @@ const speakers = [taylor, greg, andreea, alice, andrew];
         image="gitbutler.png"
         link="https://gitbutler.com/"
       />
-    <!-- </SponsorTier>
+      <Sponsor
+        name="Polars"
+        tier="bronze"
+        image="polars.png"
+        link="https://pola.rs/"
+      />
+      <!-- </SponsorTier>
     <SponsorTier name="Ecosystem partners"> -->
       <Sponsor
         name="Ferrous Systems"
@@ -103,7 +109,7 @@ const speakers = [taylor, greg, andreea, alice, andrew];
         image="ferrous.png"
         link="https://ferrous-systems.com/"
       />
-    <!-- </SponsorTier>
+      <!-- </SponsorTier>
     <SponsorTier name="Supporters"> -->
       <Sponsor
         name="RustJobs"
@@ -111,7 +117,13 @@ const speakers = [taylor, greg, andreea, alice, andrew];
         image="rustjobs.svg"
         link="https://rustjobs.dev/"
       />
-    <!-- </SponsorTier>
+      <Sponsor
+        name="Technolution"
+        tier="bronze"
+        image="technolution.png"
+        link="https://www.technolution.com/"
+      />
+      <!-- </SponsorTier>
     <SponsorTier name="Organizing partners"> -->
       <Sponsor
         name="Tweede golf"
