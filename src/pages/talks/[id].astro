@@ -14,18 +14,14 @@ import "../../styles/index.scss";
 import Person from "../../components/people/Person.astro";
 import Button from "src/components/Button.astro";
 import Cta from "src/components/Cta.astro";
-import Divider from "src/components/Divider.astro";
 import Hero from "src/components/Hero.astro";
-import Markdown from "src/components/Markdown.astro";
 import OneColumn from "src/components/OneColumn.astro";
 
 const { talk } = Astro.props;
 const { title, level, day } = talk.data;
 const people = await getCollection("people");
 
-const speakers = people
-  .filter((person) => person.data.talk.id == talk.id)
-  .map((speaker) => speaker);
+const speakers = people.filter((person) => person.data.talk?.id == talk.id);
 const speaker_names = speakers.map((speaker) => speaker.data.name).join(", ");
 const draft = false;
 const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
@@ -47,7 +43,7 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
   <div class="lg:grid lg:cols-12 container">
     <div class="lg:col-start-3 lg:col-end-11 persons">
       {
-        speakers.map((speaker: any) => (
+        speakers.map((speaker) => (
           <Person bio={speaker.rendered?.html} {...speaker.data} single />
         ))
       }

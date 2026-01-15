@@ -12,18 +12,16 @@ export async function getStaticPaths() {
 import CommonLayout from "../../layouts/CommonLayout.astro";
 import "../../styles/index.scss";
 import Person from "../../components/people/Person.astro";
-import Button from "src/components/Button.astro";
-import Cta from "src/components/Cta.astro";
-import Hero from "src/components/Hero.astro";
-import OneColumn from "src/components/OneColumn.astro";
+import Button from "../../components/Button.astro";
+import Cta from "../../components/Cta.astro";
+import Hero from "../../components/Hero.astro";
+import OneColumn from "../../components/OneColumn.astro";
 
 const { workshop } = Astro.props;
 const { title, level, published } = workshop.data;
 const people = await getCollection("trainers");
 
-const trainers = people
-  .filter((person) => person.data.workshop.id == workshop.id)
-  .map((trainer) => trainer);
+const trainers = people.filter((person) => person.data.workshop?.id === workshop.id);
 const trainer_names = trainers.map((trainer) => trainer.data.name).join(", ");
 const ignore = !published ? { "data-pagefind-ignore": "all" } : {};
 ---
@@ -49,7 +47,7 @@ const ignore = !published ? { "data-pagefind-ignore": "all" } : {};
   <div class="grid cols-12 container">
     <div class="col-start-3 col-end-11 persons">
       {
-        trainers.map((trainer: any) => (
+        trainers.map((trainer) => (
           <Person bio={trainer.rendered?.html} {...trainer.data} single />
         ))
       }
