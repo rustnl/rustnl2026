@@ -7,7 +7,7 @@ linkedin: ""
 twitter: ""
 mastodon: "https://mastodon.gamedev.place/@alice_i_cecile"
 github: "https://github.com/alice-i-cecile"
-workshop: bevy
+workshop: bevy-in-action
 ---
 
 Alice leads and coordinates Bevy's bubbling open source community as they build the next generation of game engine in Rust!
