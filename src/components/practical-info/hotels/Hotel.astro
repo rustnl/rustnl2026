@@ -3,12 +3,11 @@ interface Props {
   name: string;
   link: string;
   image: string;
-  distance_kinepolis: string;
+  distance: string;
   price_range: string;
-  description: string;
 }
 
-const { name, link, image, description, distance_kinepolis, price_range } =
+const { name, link, image, distance, price_range } =
   Astro.props;
 ---
 
@@ -25,9 +24,9 @@ const { name, link, image, description, distance_kinepolis, price_range } =
     <a href={link}><h4 class="font-display">{name}</h4></a>
     <ul>
       <li>{price_range} / night</li>
-      <li>{distance_kinepolis} from venue</li>
+      <li>{distance}</li>
     </ul>
-    <p class="description" set:html={description} />
+    <slot />
   </div>
 </div>
 

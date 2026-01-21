@@ -16,66 +16,170 @@ import OneColumn from "../components/OneColumn.astro";
   <OneColumn>
     <div class="markdown">
       <p>
-        We have reserved blocks of rooms at a three hotels to ensure
-        availability for the All-Hands participants. Breakfast included and
-        flexible cancellation.
+        Below are some hotel recommendations for your stay in Utrecht during RustWeek 2026.
       </p>
       <p>
-        Rooms are reserved from Sun May 17 to Sun May 24. If you plan to arrive before the 17th or depart after the 24th you can reach out to the hotel to extend your stay, see the hotel's booking page for contact details. There is a minimum of 3 of 4 nights, depending of the hotel's terms. 
+        The distances listed below are to the <a href="/kinepolis/">conference venue</a>,
+        which is very close to where the free shuttle busses to the <a href="/dus/">All Hands venue</a> will depart.
       </p>
       <p>
-        The Moxy, Hampton by Hilton, and HolidayInn links below will take you to
-        custom booking page created for RustWeek.
+        We have reserved blocks of rooms at Moxy, Hampton by Hilton, and HolidayInn.
+        The links for these hotels below will take you to custom booking page created for RustWeek.
       </p>
       <p>
-        At 2L De Blend we don't have a reserved blocks of rooms, but as long as
-        there is availability you can use a discount code to get a studio at a
-        reasonable price.
+        The reservations are for Sunday May 17 through Sunday May 24.
+        If you plan to arrive before the 17th or depart after the 24th you can
+        reach out to the hotel to extend your stay; see the hotel's booking page for contact details.
+        There is a minimum of 3 or 4 nights, depending on the hotel.
       </p>
       <p>
-        The distances mentioned on this page refer to the shortest path when
-        walking and/or making use of public transport.
+        The reserved rooms will be released in batches, starting at February 16th, then March 18th, and finally April 17th.
+        So, please book as early as possible if you want to make use of these.
       </p>
       <p>
-        If you're looking for more hotel options, have a look at our <a
-          href="/hotels">other hotel recommendations</a
-        >.
+        At 2L De Blend we don't have a reserved blocks of rooms,
+        but we do have a discount code to get a studio at a reasonable price.
       </p>
     </div>
   </OneColumn>
 
   <HotelList>
     <Hotel
-      name="2L De Blend"
-      link="https://2ldeblend.nl/"
-      image="deblend.jpg"
-      distance_kinepolis="22 min"
-      price_range="~€150 (studio)"
-      description="Hotel with studios and suites with a fully equipped kitchen. More affordable prices. Close to both conference and All-Hands venue. Apply <strong>'RustWeek2026'</strong> for a 20% discount on studios."
-    />
-    <Hotel
-      name="Holiday Inn Express"
-      link="https://www.ihg.com/redirect?path=rates&brandCode=EX&localeCode=en&regionCode=1&hotelCode=AMSUT&checkInDate=17&checkInMonthYear=042026&checkOutDate=24&checkOutMonthYear=042026&_PMID=99801505&GPC=ONL&cn=no&adjustMonth=false&showApp=true&monthIndex=00"
-      image="holiday-inn-express-utrecht.jpg"
-      distance_kinepolis="25 min"
-      price_range="€123-€145"
-      description="Reasonably priced hotel, 25 min from the conference venue (walk + ~ 10 min bus) or a 15-min bike ride. 35 rooms reserved."
-    />
-    <Hotel
       name="Moxy Utrecht"
       link="https://app.marriott.com/reslink?id=1762352977355&key=GRP&app=resvlink"
       image="moxy.avif"
-      distance_kinepolis="13 min"
-      price_range="€202"
-      description="A trendy hotel with a modern vibe. Provides meeting rooms, co-working facilities and a bar. 35 rooms reserved."
-    />
+      distance="3 min train + 10 min walk"
+      price_range="€202">
+    <p>
+      <strong>35 rooms reserved</strong> for All Hands attendees.
+    </p>
+    </Hotel>
     <Hotel
       name="Hampton by Hilton"
       link="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=AMSUNHX&arrivalDate=2026-05-17&departureDate=2026-05-24&groupCode=CHHONL&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink"
       image="hilton.jpeg"
-      distance_kinepolis="13 min"
-      price_range="~ €240"
-      description="Modern hotel very close to the central station of Utrecht. 10 min walk to the conference venue. Part of the Hoog Caterijne shopping complex. 20 rooms reserved."
-    />
+      distance="10 min walk"
+      price_range="€240">
+    <p>
+      <strong>20 rooms reserved</strong> for All Hands attendees.
+    </p>
+    <p>
+      Inside the Hoog Catharijne shopping mall, next to the Utrecht Centraal train station.
+    </p>
+    </Hotel>
+    <Hotel
+      name="Holiday Inn Express"
+      link="https://www.ihg.com/redirect?path=rates&brandCode=EX&localeCode=en&regionCode=1&hotelCode=AMSUT&checkInDate=17&checkInMonthYear=042026&checkOutDate=24&checkOutMonthYear=042026&_PMID=99801505&GPC=ONL&cn=no&adjustMonth=false&showApp=true&monthIndex=00"
+      image="holiday-inn-express-utrecht.jpg"
+      distance="10 min bus + 18 min walk"
+      price_range="€123-€145">
+    <p>
+      <strong>35 rooms reserved</strong> for All Hands attendees.
+    </p>
+    <p>
+      Slightly outside of Utrecht, at the highway.
+    </p>
+    </Hotel>
+    <Hotel
+      name="2L De Blend"
+      link="https://2ldeblend.nl/"
+      image="deblend.jpg"
+      distance="10 min bus + 10 min walk"
+      price_range="€150 (studio)"
+    >
+    <p>
+      Hotel with studios and suites with a fully equipped kitchen.
+      Roughly in the middle of the <a href="/kinepolis/">conference venue</a>
+      and the <a href="/dus/">All Hands venue</a>.
+    </p>
+    <p>
+      Apply code <strong>'RustWeek2026'</strong> for a 20% discount on studios.
+    </p>
+    </Hotel>
+    <Hotel
+      name="Bunk Utrecht"
+      link="https://wearebunk.com/utrecht/nl/"
+      image="bunk.jpg"
+      distance="15 min walk"
+      price_range="€50 (shared) – €150 (private)">
+    </Hotel>
+    <Hotel
+      name="Park Plaza"
+      link="https://www.parkplazautrecht.nl/"
+      image="park-plaza.jpg"
+      distance="10 min walk"
+      price_range="€215">
+    </Hotel>
+    <Hotel
+      name="NH Utrecht (Jaarbeursplein)"
+      link="https://www.nh-hotels.com/nl/hotel/nh-utrecht"
+      image="nh-utrecht.png"
+      distance="5 min walk"
+      price_range="€240">
+    </Hotel>
+    <Hotel
+      name="Crowne Plaza"
+      link="https://www.ihg.com/crowneplaza/hotels/nl/nl/utrecht/utcur/hoteldetail/"
+      image="crowne-plaza.jpeg"
+      distance="10 min walk"
+      price_range="€250">
+    <p>
+      Inside the Hoog Catharijne shopping mall, next to the Utrecht Centraal train station.
+    </p>
+    </Hotel>
+    <Hotel
+      name="Inntel Hotel Utrecht"
+      link="https://www.inntelhotelsutrechtcentre.nl/"
+      image="inntel.jpg"
+      distance="10 min walk"
+      price_range="€275">
+    </Hotel>
+    <Hotel
+      name="Van der Valk Utrecht"
+      link="https://www.vandervalkhotelutrecht.nl/"
+      image="vdv.jpg"
+      distance="10 min tram + 10 min walk"
+      price_range="€200">
+    <p>
+      Slightly outside of Utrecht, at the A12 highway; easy to reach by car.
+    </p>
+    </Hotel>
   </HotelList>
+
+  <!--
+  <OneColumn>
+    <div class="markdown">
+      <h2>Room release schedules</h2>
+      <h3>Holiday Inn Express</h3>
+      <p>
+        35 rooms reserved.
+        Time Frame / % Release of remaining rooms<br />
+        <pre>
+        - March 18 / 50%
+        - April 18 / 100%
+        </pre>
+      </p>
+      <h3>Moxy Utrecht</h3>
+      <p>
+        35 rooms reserved.
+        Time Frame / % Release of remaining rooms<br />
+        <pre>
+        - Feb 16 / 30%
+        - March 18 / 50%
+        - April 18 / 100%
+        </pre>
+      </p>
+      <h3>Hampton by Hilton</h3>
+      <p>
+        20 rooms reserved.
+        Time Frame / % Release of remaining rooms<br />
+        <pre>
+        - March 2 / 25%
+        - March 17 / 50%
+        - April 17 / 100%
+        </pre>
+      </p>
+    </div>
+    -->
+  </OneColumn>
 </CommonLayout>
