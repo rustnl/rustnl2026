@@ -9,8 +9,9 @@ The unconference and All-Hands will be held in **DUS Utrecht**.
 The address of the venue is:
 
 > **DUS Utrecht\
-> Sophialaan&nbsp;1, Utrecht\
-> The Netherlands**
+> Sophialaan&nbsp;1\
+> 3542AR Utrecht\
+> Nederland**
 
 Note: The **conference** (Tue & Wed, May 19-20) is **not** held in this venue, but in [Kinepolis](/kinepolis).
 

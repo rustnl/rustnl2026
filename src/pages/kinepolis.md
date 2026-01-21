@@ -10,7 +10,7 @@ The address of the venue is:
 
 > **Kinepolis Jaarbeurs\
 > Jaarbeursboulevard 300\
-> 3521 BC Utrecht\
+> 3521BC Utrecht\
 > Nederland**
 
  Note: please keep in mind that the **workshops** (Monday 18 May) are **not** held in the conference venue, but in the second venue, called [Beatrixgebouw](/beatrixgebouw).

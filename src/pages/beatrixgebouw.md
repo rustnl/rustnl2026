@@ -10,7 +10,7 @@ The address of the venue is:
 
 > **Jaarbeurs Beatrixgebouw\
 > Jaarbeursplein 6\
-> 3521 CA Utrecht\
+> 3521CA Utrecht\
 > Nederland**
 
 Check out our  [Getting There](/getting-there) page for instructions for getting to the conference venue, which is located in the same area as the workshop venue.
