@@ -118,6 +118,10 @@ p {
     margin-block-start: 1lh;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    margin-block-end: 0.5lh;
+  }
+
   a {
     text-decoration: underline;
     text-decoration-color: var(--color-black);
