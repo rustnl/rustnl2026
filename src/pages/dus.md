@@ -4,7 +4,7 @@ title: "Venue: DUS Utrecht"
 slug: "dus"
 ---
 
-The workshops, unconference and All-Hands will be held in **DUS Utrecht**.
+The unconference and All-Hands will be held in **DUS Utrecht**.
 
 The address of the venue is:
 
@@ -48,7 +48,7 @@ The catering area, both inside and outside, is perfect for eating and socializin
 
 ## Floor plan
 
-The building has two connected wings. The left (green) section hosts the workshops on Thursday and the unconf on Friday and Saturday. The right (pink) section hosts the All Hands.
+The building has two connected wings. The left (green) section hosts the unconference, and the right (pink) section hosts the Rust All Hands.
 
 <img style="width: 100%" src="/images/venues/plattegrond2.svg">
 
