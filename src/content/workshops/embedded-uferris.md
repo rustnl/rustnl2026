@@ -2,6 +2,7 @@
 title: "Empowered by the Ecosystem: Learning Embedded Rust with uFerris"
 abstract: "The embedded Rust ecosystem is dynamic and rapidly growing. It is powerful, yet can be overwhelming without a solid mental model. In this workshop, you’ll learn how to navigate the ecosystem and use it to your advantage, staying resilient as crates evolve."
 level: "intermediate"
+participants: 12
 published: true
 ---
 

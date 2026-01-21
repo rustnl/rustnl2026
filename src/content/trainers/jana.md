@@ -4,7 +4,7 @@ image: "jana.png" # images go in public/images/people
 title: "Compiler Engineer. Founder of Hexcat"
 linkedin: ""
 twitter: ""
-website: "https://donsz.nl/"
+url: "https://donsz.nl/"
 mastodon: ""
 github: "https://github.com/jdonszelmann"
 workshop: "rustc"

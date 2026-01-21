@@ -5,6 +5,7 @@ title: "Bevy community leader & mad scientist"
 bluesky: "https://bsky.app/profile/alice-i-cecile.bsky.social"
 linkedin: ""
 twitter: ""
+url: ""
 mastodon: "https://mastodon.gamedev.place/@alice_i_cecile"
 github: "https://github.com/alice-i-cecile"
 workshop: bevy-in-action

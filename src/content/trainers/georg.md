@@ -4,6 +4,7 @@ image: "georg.jpeg" # images go in public/images/people
 title: "Diesel Maintainer"
 linkedin: ""
 twitter: ""
+url: ""
 mastodon: "https://social.weiznich.de/@weiznich"
 github: "https://github.com/weiznich/"
 workshop: "diesel"

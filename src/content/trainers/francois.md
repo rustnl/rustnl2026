@@ -4,6 +4,7 @@ image: "francois.png" # images go in public/images/people
 title: "Maintainer @ Bevy"
 linkedin: "https://www.linkedin.com/in/fran%C3%A7ois-mockers"
 twitter: ""
+url: ""
 mastodon: "https://hachyderm.io/@FrancoisMockers"
 github: "https://github.com/mockersf"
 workshop: bevy-in-action
