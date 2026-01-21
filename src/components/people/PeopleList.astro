@@ -27,7 +27,7 @@ const { id, title, lead }: Props = Astro.props;
 <div class="container" id={id}>
   {
     title && (
-      <div class="header">
+      <div class="header markdown">
         <h2>{title}</h2>
         {lead && <p set:html={lead}></p>}
       </div>
