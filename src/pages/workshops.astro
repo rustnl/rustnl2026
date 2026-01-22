@@ -10,17 +10,17 @@ import OneColumn from "../components/OneColumn.astro";
 import HeroAnchors from "../components/HeroAnchors.astro";
 import Divider from "../components/Divider.astro";
 
-const workshops = await getCollection("workshops");
+const workshops = (await getCollection("workshops")).filter((workshop) => workshop.data.published == true ? true : false)
 const trainers = await getCollection("trainers");
 ---
 
 <CommonLayout title="Workshops" header="Workshops" withLogo>
   <Hero title="Workshops" color="yellow">
-    <p>
+    <!-- <p>
       For the workshop <strong>location</strong> and other details, see the <strong
         ><a href="/events/workshops">workshop event page</a></strong
       >.
-    </p>
+    </p> -->
     <HeroAnchors anchors={workshops} />
   </Hero>
   <div class="workshops-list">

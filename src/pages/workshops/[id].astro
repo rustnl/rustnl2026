@@ -12,23 +12,18 @@ export async function getStaticPaths() {
 import CommonLayout from "../../layouts/CommonLayout.astro";
 import "../../styles/index.scss";
 import Person from "../../components/people/Person.astro";
-import Button from "src/components/Button.astro";
-import Cta from "src/components/Cta.astro";
-import Divider from "src/components/Divider.astro";
-import Hero from "src/components/Hero.astro";
-import Markdown from "src/components/Markdown.astro";
-import OneColumn from "src/components/OneColumn.astro";
+import Button from "../../components/Button.astro";
+import Cta from "../../components/Cta.astro";
+import Hero from "../../components/Hero.astro";
+import OneColumn from "../../components/OneColumn.astro";
 
 const { workshop } = Astro.props;
-const { title } = workshop.data;
+const { title, level, published } = workshop.data;
 const people = await getCollection("trainers");
 
-const trainers = people
-  .filter((person) => person.data.workshop.id == workshop.id)
-  .map((trainer) => trainer);
+const trainers = people.filter((person) => person.data.workshop?.id === workshop.id);
 const trainer_names = trainers.map((trainer) => trainer.data.name).join(", ");
-const draft = false;
-const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
+const ignore = !published ? { "data-pagefind-ignore": "all" } : {};
 ---
 
 <CommonLayout title={title} withLogo {...ignore}>
@@ -39,11 +34,11 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
     color="yellow"
   >
     {
-      // level && (
-      //   <div class="talk-level">
-      //     <strong>Audience:</strong> <span class="tag">{level}</span>
-      //   </div>
-      // )
+      level && (
+        <div class="talk-level">
+          <strong>Audience:</strong> <span class="tag">{level}</span>
+        </div>
+      )
     }
   </Hero>
   <OneColumn>
@@ -52,7 +47,7 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
   <div class="grid cols-12 container">
     <div class="col-start-3 col-end-11 persons">
       {
-        trainers.map((trainer: any) => (
+        trainers.map((trainer) => (
           <Person bio={trainer.rendered?.html} {...trainer.data} single />
         ))
       }
@@ -60,14 +55,14 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
   </div>
   <Cta title="Get your ticket" color="yellow">
     <p>
-      All workshops are held on <b>[NEW DATE]</b> starting at <b>[NEW TIME]</b>. See the
-      <strong><a href="/events/workshops">workshop event page</a></strong> for the
-      location, time and other details.
+      All workshops are held on <b>Monday May 18</b> starting at <b>10:00</b>. 
+      <!-- See the <strong><a href="/events/workshops">workshop event page</a></strong> for the -->
+      <!-- location, time and other details. -->
     </p>
     <p>
       Workshop tickets are available in combination with a conference ticket,
-      called 'Conference + workshop - Individuals' or 'Conference + workshop -
-      Employer-paid'.
+      called 'Conference Ticket - Individuals' or 'Conference Ticket -
+      Employer-paid'. Then select 'Workshop participation'.
     </p>
     <div class="buttons">
       <Button link="https://event.onliveevent.nl/rustweek-2026">
