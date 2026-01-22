@@ -53,7 +53,7 @@ const trainers = defineCollection({
     title: z.string(),
     // org: z.string(),
     url: z.string(),
-    // bluesky: z.string(),
+    bluesky: z.string(),
     linkedin: z.string(),
     twitter: z.string(),
     mastodon: z.string(),

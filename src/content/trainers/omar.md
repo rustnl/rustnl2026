@@ -1,12 +1,13 @@
 ---
 name: "Omar Hiari"
 image: "omar.jpeg" # images go in public/images/people
-title: "Embedded Engineer"
+title: "Founder, The Embedded Rustacean"
 linkedin: "https://www.linkedin.com/in/omarhiari/"
-twitter: "https://twitter.com/apollolabsbin"
+twitter: "https://x.com/theembeddedrust"
 url: "https://www.theembeddedrustacean.com/"
 mastodon: ""
-github: "https://github.com/apollolabsdev"
+bluesky: "https://bsky.app/profile/theembeddedrust.bsky.social"
+github: "https://github.com/theembeddedrustacean"
 workshop: embedded-uferris
 ---
 

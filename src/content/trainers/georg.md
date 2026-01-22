@@ -3,6 +3,7 @@ name: "Georg Semmler"
 image: "georg.jpeg" # images go in public/images/people
 title: "Diesel Maintainer"
 linkedin: ""
+bluesky: ""
 twitter: ""
 url: ""
 mastodon: "https://social.weiznich.de/@weiznich"

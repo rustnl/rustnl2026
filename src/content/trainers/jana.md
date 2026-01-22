@@ -3,6 +3,7 @@ name: "Jana Dönszelmann"
 image: "jana.png" # images go in public/images/people
 title: "Compiler Engineer. Founder of Hexcat"
 linkedin: ""
+bluesky: ""
 twitter: ""
 url: "https://donsz.nl/"
 mastodon: ""
