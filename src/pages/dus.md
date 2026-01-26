@@ -42,7 +42,7 @@ The venue has 20+ airconditioned rooms.
 
 ## Socializing
 
-The catering area, both inside and outside, is perfect for eating and socializing, and hosting Rust's 10 year celebration party.
+The catering area, both inside and outside, is perfect for eating and socializing.
 
 <img style="width: 100%" src="/images/venues/dus-inside-landscape.jpg">
 <img style="width: 100%" src="/images/venues/dus-outside.jpg">
