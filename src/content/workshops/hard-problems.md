@@ -1,6 +1,6 @@
 ---
 title: "Working on hard problems; or: how I learned to stop worrying and love being confused"
-abstract: "Learn how to learn new things without getting overwhelmed with Jynn Nelson. Try your hand at the trickiest problems they've faced in their career in a supportive environment free of time pressure."
+abstract: "How to learn hard things: Push yourself out of your comfort zone by fixing tricky bugs from a wide range of the computing field. Learn new tools, debugging skills, and mental models for thinking about programs."
 level: "beginner to advanced"
 participants: 16
 published: true
