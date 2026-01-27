@@ -1,5 +1,5 @@
 ---
-title: "Writing Better Rust"
+title: "Writing Better Rust: Fully Using The Type System"
 abstract: "It's easy to get lost in the depth of Rust's syntax and semantics. Your code works, sure, but does it follow best practices? And who can you even ask for feedback? How do you write good Rust?"
 level: "intermediate"
 participants: 20
