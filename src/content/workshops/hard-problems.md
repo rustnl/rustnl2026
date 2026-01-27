@@ -1,6 +1,6 @@
 ---
-title: "Working on hard problems; or: how I learned to stop worrying and love being confused"
-abstract: "How to learn hard things: Push yourself out of your comfort zone by fixing tricky bugs from a wide range of the computing field. Learn new tools, debugging skills, and mental models for thinking about programs."
+title: "How to learn hard things"
+abstract: "Push yourself out of your comfort zone by fixing tricky bugs from a wide range of the computing field. Learn new tools, debugging skills, and mental models for thinking about programs."
 level: "beginner to advanced"
 participants: 16
 published: true
