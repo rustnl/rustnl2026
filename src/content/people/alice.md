@@ -8,7 +8,7 @@ bluesky: ""
 linkedin: "https://www.linkedin.com/in/aliceryhl"
 twitter: ""
 mastodon: ""
-talk: alice_talk
+talk: alice
 github: "Darksonn"
 ---
 

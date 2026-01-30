@@ -1,14 +1,15 @@
 ---
 name: "Greg Kroah-Hartman"
 image: "greg.jpeg"
-title: "Linux kernel developer "
+summary: "Fellow at the Linux Foundation and Linux kernel developer"
+title: ""
 org: "Linux Foundation"
 url: ""
 bluesky: ""
 linkedin: "https://www.linkedin.com/in/greg-kroah-hartman/"
 twitter: ""
 mastodon: ""
-talk: greg_talk
+talk: greg
 github: "https://github.com/gregkh"
 ---
 

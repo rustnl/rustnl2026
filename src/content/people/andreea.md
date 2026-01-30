@@ -8,7 +8,7 @@ bluesky: ""
 linkedin: "https://www.linkedin.com/in/andreea-costea-27bb7a42/"
 twitter: ""
 mastodon: ""
-talk: andreea_lessons
+talk: andreea
 github: ""
 ---
 

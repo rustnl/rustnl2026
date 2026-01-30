@@ -5,6 +5,7 @@ interface Props {
   name?: string;
   image?: string;
   title?: string;
+  summary?: string;
   bio?: string; // bio
   link?: string;
   tracks?: Array<string>;
@@ -24,6 +25,7 @@ const {
   image,
   bio,
   title,
+  summary = "",
   link = "",
   tracks,
   url,
@@ -97,7 +99,8 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
   <div class="info">
     <div>
       <h3 class="font-display">{name}</h3>
-      {title && <div class="title">{title}</div>}
+      {smalltile && summary && <div class="title">{summary}</div>}
+      {!summary && title && <div class="title">{title}</div>}
     </div>
     {
       !(tile || smalltile) && (
@@ -135,7 +138,7 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
         </div>
       )
     }
-    {!(tile || smalltile) && bio && <div set:html={bio} />}
+    {!(tile || smalltile) && bio && <div class="markdown" set:html={bio} />}
     {!smalltile && <slot />}
     <div class="tags">
       {
@@ -286,7 +289,7 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
     }
   }
 
-  .person .bio {
-    font-size: variables.$font-size-base;
+  .person .markdown {
+    font-size: variables.$font-size-md;
   }
 </style>

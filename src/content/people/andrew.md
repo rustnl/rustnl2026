@@ -8,7 +8,7 @@ bluesky: "https://bsky.app/profile/burntsushi.net"
 linkedin: ""
 twitter: ""
 mastodon: ""
-talk: andrew_talk
+talk: andrew
 github: "https://github.com/BurntSushi"
 ---
 

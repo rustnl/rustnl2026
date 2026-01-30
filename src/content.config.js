@@ -34,6 +34,7 @@ const people = defineCollection({
     name: z.string(),
     image: z.string(),
     title: z.string(),
+    summary: z.string().optional(),
     org: z.string(),
     url: z.string(),
     bluesky: z.string(),
