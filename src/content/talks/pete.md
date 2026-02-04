@@ -1,6 +1,6 @@
 ---
 tracks: 
- - industruy
+ - industry
 title: "Popping the Hood on Rust in the 2026 Toyota RAV4"
 level: ""
 tags: []
