@@ -1,7 +1,7 @@
 ---
 name: "Mark Janssen"
 image: "mark.jpg"
-title: "Software Architect"
+title: "Software Architect at Kiesraad (Dutch Electoral Council)"
 org: "Kiesraad (Dutch Electoral Council)"
 url: ""
 bluesky: "https://bsky.app/profile/praseodym123.bsky.social"

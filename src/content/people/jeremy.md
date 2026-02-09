@@ -1,7 +1,7 @@
 ---
 name: "Jeremy Lempereur"
 image: "jeremy.jpeg"
-title: "Software Engineer"
+title: "Software Engineer at Proton AG"
 org: "Proton AG"
 url: ""
 bluesky: ""

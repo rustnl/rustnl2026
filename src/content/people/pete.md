@@ -1,7 +1,7 @@
 ---
 name: "Pete LeVasseur"
 image: "pete.jpg"
-title: "Staff Software Engineer"
+title: "Staff Software Engineer at Woven by Toyota"
 org: "Woven by Toyota"
 url: "https://petelevasseur.com/"
 bluesky: "https://bsky.app/profile/awkwardmap.bsky.social"
