@@ -2,7 +2,7 @@
 name: "Matthias Endler"
 image: "matthias.jpg" # images go in public/images/people
 title: "Rust Consultant & 'Rust in Production' podcast host"
-linkedin: "https://www.linkedin.com/in/endlermatthias/"
+linkedin: "https://www.linkedin.com/in/matthiasendler/"
 bluesky: ""
 twitter: "https://twitter.com/matthiasendler"
 url: ""
