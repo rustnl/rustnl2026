@@ -8,6 +8,8 @@ Our Call for Proposals (CFP) opened on November 1 and is now closed. We received
 
 The selection committee will meet on February 4 to make final decisions. We will announce the selected speakers soon after.
 
+**Update Feb 3** the CFP selection meeting moved one week to February Wed 11 due to illness. Stay tuned!
+
 All submitters will receive word from us before we publicly announce the lineup, both accepted and rejected proposals. 
 
 Stay tuned!
