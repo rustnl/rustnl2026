@@ -23,8 +23,8 @@ import OneColumn from "src/components/OneColumn.astro";
       <h2>May 19 — Utrecht, NL</h2>
     </div>
     <p>
-      The <b>must-attend track for decision makers</b> exploring the adoption of
-      Rust <br /> in their organisation. <br />
+      The <b>must-attend track for decision makers</b> exploring the adoption of Rust
+      <br /> in their organisation. <br />
     </p>
     <div class="button-group cutout cutout-button-group">
       <a href="#tickets" class="button button-primary">Tickets</a>
@@ -39,12 +39,10 @@ import OneColumn from "src/components/OneColumn.astro";
         Date & time: <strong>Tuesday 19 May, 9:30 - 17:00 CET</strong>.<br />
       </p>
       <p>
-        <b>Morning session: Inspiring Talks</b><br />Last year's speaker lineup
-        included ecosystem leader Niko Matsakis, co-lead of the Rust language
-        design team, and Rust pioneer Julius Gustavsson from Volvo Cars. The
-        2026 morning program will be open to anyone with a valid <b
-          >RustWeek ticket</b
-        >.
+        <b>Morning session: Inspiring Talks</b><br /> The 2026 morning program will
+        be open to anyone with a valid
+        <b>RustWeek ticket</b>. Speakers include Pete LeVasseur from Woven by
+        Toyota and Lori Lorusso, Director of Outreach at the Rust Foundation.
       </p>
 
       <p>
@@ -61,7 +59,9 @@ import OneColumn from "src/components/OneColumn.astro";
       <ul>
         <li>How to plan your Rust migration - by Matthias Endler</li>
         <li>Software life cycle costs - by Martin Kooij</li>
-        <li>Introducing Rust in a conservative environment - by Julius Gustavsson</li>
+        <li>
+          Introducing Rust in a conservative environment - by Julius Gustavsson
+        </li>
         <li>Hiring and training - tba</li>
         <li>Safety Critical Rust - tba</li>
         <li>Embedded Rust- tba</li>
@@ -76,24 +76,29 @@ import OneColumn from "src/components/OneColumn.astro";
         <TimetableItem time="9.30" title="Opening" speaker="Hugo van de Pol" />
         <TimetableItem
           time="09.40"
-          title="Opening Keynote (35 min)"
-          speaker="To be announced"
+          title="Popping the Hood on Rust in the 2026 Toyota RAV4"
+          speaker="Pete LeVasseur - Woven by Toyota"
         />
         <TimetableItem
           time="10.25"
           title="Rustaceans on The Move - The Global Impact of Rust"
           speaker="Lori Lorusso - Rust Foundation"
         />
+        <TimetableItem
+          time="10.45"
+          title="Tales of a transformation journey at Proton"
+          speaker="Jeremy Lempereur - Proton AG"
+        />
         <TimetableItem time="11.00" title="Break" />
         <TimetableItem
-          time="11.20"
+          time="11.40"
           title="Scaling up Rust development at the Dutch Electoral Council"
           speaker="Mark Janssen - Dutch Electoral Council"
         />
         <TimetableItem
-          time="11.50"
-          title="Live Podcast Recording (55 min)"
-          speaker="Matthias Endler - Corrode.dev"
+          time="12.25"
+          title="7M smart meters running Rust"
+          speaker="TBA"
         />
         <TimetableItem time="12.45" title="Lunch" />
         <TimetableItem
@@ -106,14 +111,19 @@ import OneColumn from "src/components/OneColumn.astro";
           title="Expert Tables & Networking Round 1"
           speaker="Various industry experts"
         />
-        <TimetableItem time="15.15" title="Break" />
         <TimetableItem
-          time="15.30"
+          time="15.00"
+          title="Live Podcast recording"
+          speaker="Matthias Endler"
+        />
+        <TimetableItem time="15.50" title="Break" />
+        <TimetableItem
+          time="16.20"
           title="Expert Tables & Networking Round 2"
           speaker="Various industry experts"
         />
-        <TimetableItem time="16.30" title="Closing" speaker="Hugo van de Pol" />
-        <TimetableItem time="16.45" title="Drinks" />
+        <TimetableItem time="17.05" title="Closing" speaker="Hugo van de Pol" />
+        <TimetableItem time="17.20" title="Drinks" />
       </Timetable>
     </div>
   </OneColumn>
@@ -143,6 +153,36 @@ import OneColumn from "src/components/OneColumn.astro";
 
   <PeopleList title="Already confirmed for 2026" lead="">
     <Person
+      name="Pete LeVasseur"
+      image="pete.jpg"
+      title="Staff Software Engineer at Woven by Toyota"
+      smalltile
+    />
+    <Person
+      name="Lori Lorusso"
+      image="lori.jpeg"
+      title="Director of Outreach at Rust Foundation"
+      smalltile
+    />
+    <Person
+      name="Jeremy Lempereur"
+      image="jeremy.jpeg"
+      title="Software engineer at Proton AG"
+      smalltile
+    />
+    <Person
+      name="Mark Janssen"
+      image="mark.jpg"
+      title="Software Architect at the Dutch Electoral Council"
+      smalltile
+    />
+    <Person
+      name="Julius Gustavsson"
+      image="julius.png"
+      title="System Architect at Volvo Cars"
+      smalltile
+    />
+    <Person
       name="Hugo van de Pol"
       image="hugo.jpeg"
       title="Director at Tweede golf and Trifecta Tech Foundation"
@@ -158,24 +198,6 @@ import OneColumn from "src/components/OneColumn.astro";
       name="Martin Kooij"
       image="martin.jpg"
       title="Engineering team Embedded Software at ROCSYS"
-      smalltile
-    />
-    <Person
-      name="Lori Lorusso"
-      image="lori.jpeg"
-      title="Director of Outreach at Rust Foundation"
-      smalltile
-    />
-    <Person
-      name="Julius Gustavsson"
-      image="julius.png"
-      title="System Architect at Volvo Cars"
-      smalltile
-    />
-    <Person
-      name="Mark Janssen"
-      image="empty.png"
-      title="Software Architect at the Dutch Electoral Council"
       smalltile
     />
   </PeopleList>
