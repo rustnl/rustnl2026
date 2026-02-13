@@ -28,11 +28,11 @@ In case you haven’t yet, now is a great time to grab your tickets at https://e
 - Learning Rust as First Programming Language - Karin Lammers
 - Stabilizing decade-old features - Folkert de Vries
 - Tracking down undefined behaviour in Servo - Josh Bowman-Matthews
-- Compilers are just programs: Fixing a bug in the Rust compiler - Boxy N/A
+- Compilers are just programs: Fixing a bug in the Rust compiler - Boxy
 - One year of facet: reflections on reflection - Amos Wenger
 - Making sound - dragging a ten year old crate into 2026 - Yara Kleingeld
 - Typst: Designing for Incrementality - Laurenz Mädje
-- When is never? - Waffle -
+- When is never? - Waffle
 - Common Pitfalls of Rewriting Things In Rust - Cliff L. Biffle
 - Blitz: building a modular web engine - Nico Burns
 - Racing with Rust: building telemetry tools for racing simulators. - Harry van Haaren
@@ -52,3 +52,5 @@ They will be joining our invited speakers:
 - Taylor Cramer
 
 More details about all these talks will be published soon!
+
+And that's not all: In a couple of weeks, we'll announce the speakers for the Rust Project Track. Stay tuned!
