@@ -45,11 +45,13 @@ They will be joining our invited speakers:
 - Andreea Costea
 - Andrew ‘BurntSushi’ Gallant
 - Greg Kroah-Hartman
+- Taylor Cramer
+
+And our Industry Track speakers:
 - Jeremy Lempereur
 - Lori Lorusso
 - Mark Janssen
 - Pete LeVasseur
-- Taylor Cramer
 
 More details about all these talks will be published soon!
 
