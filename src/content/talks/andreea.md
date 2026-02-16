@@ -1,6 +1,6 @@
 ---
 tracks: 
- - main
+ - A-1
 title: "Lessons Learnt from using Rust as the Intro to Programming"
 level: ""
 tags: []
@@ -9,5 +9,3 @@ day: ""
 ---
 
 Talk abstract: to be announced.
-
-

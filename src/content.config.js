@@ -1,5 +1,5 @@
-import { defineCollection, reference, z } from 'astro:content';
-import { glob } from 'astro/loaders'; // Not available with legacy API
+import { defineCollection, reference, z } from "astro:content";
+import { glob } from "astro/loaders"; // Not available with legacy API
 
 const talks = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/talks" }),
@@ -10,7 +10,7 @@ const talks = defineCollection({
     tags: z.array(z.string()),
     duration: z.number(),
     day: z.string(),
-  })
+  }),
 });
 
 const workshops = defineCollection({
@@ -25,7 +25,7 @@ const workshops = defineCollection({
     // tags: z.array(z.string()),
     // duration: z.number(),
     // day: z.string(),
-  })
+  }),
 });
 
 const people = defineCollection({
@@ -62,7 +62,5 @@ const trainers = defineCollection({
     github: z.string(),
   }),
 });
-
-
 
 export const collections = { talks, workshops, people, trainers };
