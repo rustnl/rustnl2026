@@ -23,7 +23,10 @@ const speakers = await getCollection("people");
     </OneColumn>
     <PeopleList>
       {
-        speakers.map((speaker: any) => (
+        (() => {
+          speakers.sort((_a, _b) => Math.random() - Math.random());
+          return speakers
+        })().map((speaker: any) => (
           <Speaker talkId={speaker.data.talk.id} tile {...speaker.data} />
         ))
       }
