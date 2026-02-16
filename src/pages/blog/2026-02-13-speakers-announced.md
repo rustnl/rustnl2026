@@ -33,7 +33,7 @@ In case you haven’t yet, now is a great time to grab your tickets at https://e
 }
 </style>
 <table class="speakers">
-<tr><th colspan="2">Track A
+<tr><th colspan="2">Main track
 <tr><th>Day 1<th>Day 2
 <tr>
 <td>Taylor Cramer <em>&mdash;
@@ -65,8 +65,7 @@ In case you haven’t yet, now is a great time to grab your tickets at https://e
 </table>
 
 <table class="speakers">
-<tr><th colspan="2">Track B
-<tr><th>Day 1<th>Day 2
+<tr><th>Compiler Track (day 1)<th>Applied Rust Track (day 2)
 <tr>
 <td>Vlad&nbsp;Beskrovny & Lukas&nbsp;Wirth <em>One Language, Two IDE Engines
 <td>Kora & Cosmo&nbsp;Bobak <em>Writing a top-10 chess engine in Rust
