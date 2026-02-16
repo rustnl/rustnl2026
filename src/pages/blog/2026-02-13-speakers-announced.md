@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
 title: "RustWeek Speakers Announced!"
-pubDate: 2026-02-13
+pubDate: 2026-02-16
 ---
 
 We’ve been reading, rating, discussing, and re-rating your submissions for the past few weeks, but the wait is finally over. We’re really excited to announce the speakers that will be taking the stage at Rustweek 2026! 
