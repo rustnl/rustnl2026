@@ -1,24 +1,36 @@
 ---
 interface Props {
     style?: "cutout" | "normal";
+    align?: "left" | "center";
 }
 
-const { style = "normal"} = Astro.props;
+const { style = "normal", align="center"} = Astro.props;
 ---
 
-<div class:list={["button-group", style]}>
-    <slot />
+
+<div class="wrapper">
+    <div class:list={["button-group", style, align]}>
+        <slot />
+    </div>
 </div>
 
 <style lang="scss">
     @use "../styles/variables.scss";
     @use "../styles/breakpoint.scss";
 
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: fit-content;
+    }
+
     .button-group {
         display: flex;
         flex-wrap: wrap;
         gap: variables.space(3);
         justify-content: center;
+
 
         &.cutout::after {
             display: none;
