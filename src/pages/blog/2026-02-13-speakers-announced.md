@@ -61,7 +61,7 @@ In case you haven’t yet, now is a great time to grab your tickets at https://e
 <td>Josh Bowman-Matthews <em>Tracking down undefined behaviour in Servo
 <tr>
 <td>Andrew ‘BurntSushi’ Gallant <em>&mdash;
-<td>Alice Rhyl <em>&mdash;
+<td>Alice Ryhl <em>&mdash;
 </table>
 
 <table class="speakers">
