@@ -7,6 +7,7 @@ interface Props {
   name?: string;
   image?: string;
   title?: string;
+  org?: string;
   summary?: string;
   bio?: string; // bio
   link?: string;
@@ -28,6 +29,7 @@ const {
   image,
   bio,
   title,
+  org,
   summary = "",
   link = "",
   tracks,
@@ -90,7 +92,8 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
             {pronouns !== null && (<Pronouns pronouns={pronouns} />)}
         </div>
         {smalltile && summary && <div class="title">{summary}</div>}
-        {!summary && title && <div class="title">{title}</div>}
+        {!summary && title && <div class="title">{title} {org && (<Fragment>at {org}</Fragment>)}</div>}
+        {!summary && !title && org && <div class="title">{org}</div>}
     </div>
     {
       !(tile || smalltile) && (

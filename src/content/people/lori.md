@@ -1,7 +1,7 @@
 ---
 name: "Lori Lorusso"
 image: "lori.jpeg"
-title: "Director of Outreach at Rust Foundation"
+title: "Director of Outreach"
 org: "Rust Foundation"
 url: ""
 bluesky: ""
