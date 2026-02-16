@@ -1,0 +1,18 @@
+---
+interface Props {
+  pronouns: string;
+}
+const {pronouns}: Props = Astro.props;
+
+const parts = pronouns.toLocaleLowerCase().split("/").map(i => i.trim())
+---
+
+<span>
+    {parts.join("/")}
+</span>
+
+<style>
+span {
+    font-size: large;
+}
+</style>

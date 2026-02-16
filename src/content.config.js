@@ -43,6 +43,7 @@ const people = defineCollection({
     mastodon: z.string(),
     talk: reference("talks"),
     github: z.string(),
+    pronouns: z.string().optional(),
   }),
 });
 
@@ -60,6 +61,7 @@ const trainers = defineCollection({
     mastodon: z.string(),
     workshop: reference("workshops"),
     github: z.string(),
+    pronouns: z.string().optional(),
   }),
 });
 

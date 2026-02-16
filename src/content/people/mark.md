@@ -10,5 +10,6 @@ twitter: ""
 mastodon: "https://hsnl.social/@praseodym"
 talk: mark
 github: "https://github.com/praseodym"
+pronouns: "he/him"
 ---
 
