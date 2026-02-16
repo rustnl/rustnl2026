@@ -1,26 +1,33 @@
 ---
+interface Props {
+    style?: "cutout" | "normal";
+}
 
+const { style = "normal"} = Astro.props;
 ---
 
-<div class="button-group">
+<div class:list={["button-group", style]}>
     <slot />
 </div>
 
 <style lang="scss">
     @use "../styles/variables.scss";
+    @use "../styles/breakpoint.scss";
 
     .button-group {
         display: flex;
         flex-wrap: wrap;
         gap: variables.space(3);
         justify-content: center;
-    }
 
-    .button-group-center {
-        justify-content: center;
-    }
+        &.cutout::after {
+            display: none;
 
-    .button-group-start {
-      justify-content: flex-start;
+            @include breakpoint.wider_than(lg) {
+                display: block;
+                background-image: url('/svg/button-group-cutout-1.svg');
+                inset: -40%;
+            }
+        }
     }
 </style>

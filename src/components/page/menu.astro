@@ -1,4 +1,5 @@
 ---
+
 interface Props {
   location: "header" | "footer";
 }
@@ -9,7 +10,7 @@ const { location }: Props = Astro.props;
 <div class:list={["menu", location]} aria-label="Main menu">
   <ul role="menubar">
     <li class="parent" role="menuitem">
-      <button>Schedule</button>
+      <h2>Schedule</h2>
       <ul class="submenu" role="menu">
         <li class="child" role="menuitem">
           <a
@@ -64,7 +65,7 @@ const { location }: Props = Astro.props;
       <a href="/#sponsors">Sponsors</a>
     </li>
     <li class="parent" role="menuitem">
-      <button>Practical</button>
+      <h2>Practical</h2>
       <ul class="submenu" role="menu">
         <li class="child" role="menuitem">
           <a href="/getting-there">Getting there</a>
@@ -96,7 +97,7 @@ const { location }: Props = Astro.props;
       <a href="/blog">Blog</a>
     </li>
     <li class="parent">
-      <button>About</button>
+      <h2>About</h2>
       <ul class="submenu">
         <li class="child">
           <a href="/about">About</a>
@@ -166,8 +167,9 @@ const { location }: Props = Astro.props;
         margin: 0;
         padding: 0;
 
-        button {
-          text-align: left;
+        h2 {
+            font-size: variables.$font-size-lg;
+            text-align: left;
         }
       }
 

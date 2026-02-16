@@ -1,5 +1,6 @@
 ---
 import Menu from "./menu.astro";
+import Button from "../Button.astro";
 
 interface Props {
     withLogo?: boolean;
@@ -11,15 +12,15 @@ const { withLogo = true, withoutMenu = false }: Props = Astro.props;
 
 <div class="header">
     <div class="container">
-        { 
-            withLogo && ( 
-                <a class="logo" href="/"> 
-                    <img 
-                        src="/svg/logo.svg" 
-                        alt="Logo RustWeek 2026" 
-                    /> 
-                </a> 
-            ) 
+        {
+            withLogo && (
+                <a class="logo" href="/">
+                    <img
+                        src="/svg/logo.svg"
+                        alt="Logo RustWeek 2026"
+                    />
+                </a>
+            )
         }
         {
             !withoutMenu && (
@@ -33,10 +34,10 @@ const { withLogo = true, withoutMenu = false }: Props = Astro.props;
                 //     </div>
                 // </div>
 
-                <div class="hamburger button button-primary" data-menu-toggle></div>
+                <Button otherKeys={{"data-menu-toggle": true}} ty="hamburger" />
                 <div class="menu" data-menu>
-                    <Menu location="header" />                    
-                    <a href="https://event.onliveevent.nl/rustweek-2026" class="button button-primary">Tickets</a>
+                    <Menu location="header" />
+                    <Button link="https://event.onliveevent.nl/rustweek-2026">Tickets</Button>
                 </div>
                 <div class="overlay" data-menu-overlay></div>
             )
@@ -125,7 +126,7 @@ const { withLogo = true, withoutMenu = false }: Props = Astro.props;
         &.scrolled {
             background-color: var(--color-yellow-000);
         }
-        
+
         > div {
             align-items: center;
             height: variables.space(18);
@@ -141,24 +142,6 @@ const { withLogo = true, withoutMenu = false }: Props = Astro.props;
         .logo {
             img {
                 height: variables.space(14);
-            }
-        }
-
-        .hamburger {
-            margin-inline-start: auto;
-            height: variables.space(12);
-            padding-inline: 1rem;
-
-            @include breakpoint.wider_than(lg) {
-                display: none;
-            }
-
-            &::before {
-                content: "Menu";
-            }
-
-            &.open::before {
-                content: "Close";
             }
         }
 

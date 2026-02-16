@@ -13,6 +13,7 @@ import CommonLayout from "../../layouts/CommonLayout.astro";
 import "../../styles/index.scss";
 import Person from "../../components/people/Person.astro";
 import Button from "../../components/Button.astro";
+import ButtonGroup from "../../components/ButtonGroup.astro";
 import Cta from "../../components/Cta.astro";
 import Hero from "../../components/Hero.astro";
 import OneColumn from "../../components/OneColumn.astro";
@@ -55,7 +56,7 @@ const ignore = !published ? { "data-pagefind-ignore": "all" } : {};
   </div>
   <Cta title="Get your ticket" color="yellow">
     <p>
-      All workshops are held on <b>Monday May 18</b> starting at <b>10:00</b>. 
+      All workshops are held on <b>Monday May 18</b> starting at <b>10:00</b>.
       <!-- See the <strong><a href="/events/workshops">workshop event page</a></strong> for the -->
       <!-- location, time and other details. -->
     </p>
@@ -63,11 +64,11 @@ const ignore = !published ? { "data-pagefind-ignore": "all" } : {};
       Workshop tickets are available only in combination with a conference ticket. Choose 'Conference Ticket - Individuals' or 'Conference Ticket -
       Employer-paid', then select 'Workshop participation'. Proceed, and in the next steps select the workshop of your preference.
     </p>
-    <div class="buttons">
+    <ButtonGroup>
       <Button link="https://event.onliveevent.nl/rustweek-2026">
         Tickets
       </Button>
-    </div>
+    </ButtonGroup>
   </Cta>
 </CommonLayout>
 

@@ -13,6 +13,7 @@ import CommonLayout from "../../layouts/CommonLayout.astro";
 import "../../styles/index.scss";
 import Person from "../../components/people/Person.astro";
 import Button from "src/components/Button.astro";
+import ButtonGroup from "../../components/ButtonGroup.astro";
 import Cta from "src/components/Cta.astro";
 import Hero from "src/components/Hero.astro";
 import OneColumn from "src/components/OneColumn.astro";
@@ -50,7 +51,7 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
     </div>
   </div>
   <Cta title="Get your ticket" color="yellow">
-    <div class="buttons">
+    <ButtonGroup>
       <Button link="https://event.onliveevent.nl/rustweek-2026">
         tickets
       </Button>
@@ -61,7 +62,7 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
           </Button>
         )
       }
-    </div>
+    </ButtonGroup>
   </Cta>
 </CommonLayout>
 

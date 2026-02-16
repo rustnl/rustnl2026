@@ -5,6 +5,7 @@ import ScheduleSection from "./ScheduleSection.astro";
 import ScheduleItem from "./ScheduleItem.astro";
 import OrganizeOwnActivity from "./OrganizeOwnActivity.astro";
 import BottomNote from "./BottomNote.astro";
+import Button from "../Button.astro";
 ---
 
 <Schedule logo>
@@ -168,7 +169,7 @@ import BottomNote from "./BottomNote.astro";
         <a href="https://discord.gg/9ezhugbhAM" target="_blank" class="button button-primary">Join Discord</a>
     </div -->
     <div slot="extra" class="extra">
-        <a href="https://event.onliveevent.nl/rustweek-2026" class="button button-primary">Get your ticket</a>
+        <Button link="https://event.onliveevent.nl/rustweek-2026">Get your ticket</Button>
         <p>Do you have an idea for a social activity? Let us know via <a href="mailto:rustweek@rustnl.org">rustweek@rustnl.org</a>!</p>
     </div>
 </Schedule>

@@ -1,4 +1,7 @@
 ---
+import Button from './Button.astro';
+import { secondary } from './timetable/data';
+
 interface Props {
   anchors?: { id: string }[];
 }
@@ -9,7 +12,7 @@ const { anchors } = Astro.props;
 <div class="anchors">
   {
     anchors ? (
-      anchors?.map((anchor) => <a href={`#${anchor.id}`}>{anchor.id}</a>)
+      anchors?.map((anchor) => <Button ty="primary" link={`#${anchor.id}`}>{anchor.id}</Button>)
     ) : (
       <slot />
     )
@@ -21,16 +24,5 @@ const { anchors } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem;
-  }
-
-  .anchors a {
-    border: 1px solid var(--color-blue-100);
-    background-color: var(--color-blue-000);
-    min-height: 2.5rem;
-    padding-inline: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-sm);
   }
 </style>

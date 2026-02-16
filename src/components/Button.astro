@@ -1,22 +1,85 @@
 ---
 interface Props {
-    link: string;
-    ty?: "primary" | "secondary" | "primary-10";
+    link?: string;
+    ty?: "primary" | "secondary" | "hamburger";
     inFooter?: boolean;
     scale?: number;
+    otherKeys?: {[key: string]: any};
 }
 
-const { link, ty = "primary", inFooter = false, scale = 1 }: Props = Astro.props;
+const { link = "", ty = "primary", inFooter = false, scale = 1, otherKeys = {} }: Props = Astro.props;
 
 ---
 
 <a
-    class:list={["button button-primary", ty, inFooter ? "footer" : null]}
-    href={link}
+    class:list={["button", ty, inFooter ? "footer" : null]}
+    href={link !== ""? link: null}
+    {...otherKeys}
 >
     <slot>{link}</slot>
 </a>
 
 <style lang="scss" define:vars={{ scale }}>
-    @use "../styles/global/buttons.scss";
+    @use "../styles/variables.scss";
+    @use "../styles/breakpoint.scss";
+
+    .button {
+        align-items: center;
+        appearance: none;
+        border-radius: variables.space(6) 0 variables.space(6) 0;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 1.125rem;
+        font-size: variables.$font-size-md;
+        font-weight: 700;
+        line-height: 1;
+        min-height: variables.space(12);
+        padding-inline: variables.space(6);
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        transition-property: filter, scale;
+        transition-duration: 150ms;
+
+        &.hamburger {
+            margin-inline-start: auto;
+            height: variables.space(12);
+            padding-inline: 1rem;
+
+            @include breakpoint.wider_than(lg) {
+                display: none;
+            }
+
+            &::before {
+                content: "Menu";
+            }
+
+            &.open::before {
+                content: "Close";
+            }
+
+            background-color: variables.$color-red-400;
+            color: white;
+        }
+
+        &.primary {
+            background-color: variables.$color-red-400;
+            color: white;
+        }
+
+        &.secondary {
+            background-color: variables.$color-blue-400;
+            color: white;
+        }
+    }
+
+    .button:visited {
+        color: white;
+    }
+
+    .button:hover {
+        filter: brightness(90%);
+        scale: 1.025;
+    }
+
 </style>
