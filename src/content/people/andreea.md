@@ -10,6 +10,7 @@ twitter: ""
 mastodon: ""
 talk: andreea
 github: ""
+pronouns: "she/her"
 ---
 
 Andreea is an Assistant Professor in Programming Languages at TU Delft. Her research revolves around topics on program verification, automated programming, and program repair, with emphasis on building trustworthy software systems. 

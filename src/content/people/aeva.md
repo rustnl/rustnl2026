@@ -9,8 +9,9 @@ bluesky: "https://bsky.app/profile/aeva.online"
 twitter: ""
 mastodon: "https://infosec.exchange/@aeva"
 linkedin: "https://linkedin.com/in/aevaonline"
-github: "AevaOnline"
+github: "https://github.com/AevaOnline"
 talk: aeva
+pronouns: "she/her"
 ---
 
 Æva Black is a non-binary hacker, veteran of the first dot-com bubble,

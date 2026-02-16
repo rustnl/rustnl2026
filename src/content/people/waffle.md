@@ -10,6 +10,7 @@ twitter: ""
 mastodon: "https://im-in.space/@wffl"
 talk: waffle
 github: "https://github.com/WaffleLapkin"
+pronouns: "it/its"
 ---
 
 

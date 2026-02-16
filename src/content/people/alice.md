@@ -9,7 +9,8 @@ linkedin: "https://www.linkedin.com/in/aliceryhl"
 twitter: ""
 mastodon: ""
 talk: alice
-github: "Darksonn"
+github: "https://github.com/darksonn"
+pronouns: "she/her"
 ---
 
 Alice is a software engineer on the Android Rust team at Google, where she works

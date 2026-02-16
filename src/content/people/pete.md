@@ -10,6 +10,7 @@ twitter: "https://x.com/AwkwardMap"
 mastodon: ""
 talk: pete
 github: "https://github.com/PLeVasseur"
+pronouns: "he/him"
 ---
 
 Pete LeVasseur guides Rust adoption efforts at Woven by Toyota and

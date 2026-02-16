@@ -10,5 +10,5 @@ twitter: "https://x.com/o0ignition0o"
 mastodon: ""
 talk: jeremy
 github: "https://github.com/o0ignition0o"
+pronouns: "he/him"
 ---
-

@@ -10,6 +10,7 @@ linkedin: "https://www.linkedin.com/in/hazelweakly"
 twitter: ""
 github: ""
 talk: hazel
+pronouns: "she/her"
 ---
 
 Hazel spends her days working on building out teams of humans as well as the infrastructure, systems, and tooling to make life better for others.

@@ -10,6 +10,7 @@ twitter: ""
 mastodon: ""
 talk: cliff
 github: ""
+pronouns: "he/him"
 ---
 
 Cliff likes code that is clear, maintainable, and very fast, and tools that let him achieve this.

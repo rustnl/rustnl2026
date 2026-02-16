@@ -10,5 +10,5 @@ twitter: "https://x.com/LoriLorusso"
 mastodon: ""
 talk: lori
 github: ""
+pronouns: "she/her"
 ---
-
