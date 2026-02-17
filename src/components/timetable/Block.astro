@@ -11,7 +11,7 @@ interface Props {
     duration: number;
     color?: string;
     striped: boolean;
-    url?: string;
+    url?: string | null;
     ticket?: string;
     header?: string;
 }
@@ -23,7 +23,7 @@ const {
     duration,
     color,
     striped,
-    url,
+    url = null,
     ticket,
     header,
 }: Props = Astro.props;

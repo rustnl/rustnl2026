@@ -11,7 +11,7 @@ const bookmarkIcon = icon({ prefix: "fas", iconName: faBookmark.iconName });
 const bookmarkIconRegular = icon({ prefix: "far", iconName: regularBookmark.iconName });
 
 interface Props {
-    talk_slug?: string;
+    talk_slug?: string | null;
     title?: string;
     speakers?: {name: string, image: string}[]
     url?: string;
@@ -32,7 +32,7 @@ interface Props {
 const SHOW_ROOMS = false;
 
 const {
-    talk_slug,
+    talk_slug = null,
     title = "",
     speakers,
     room,
@@ -80,7 +80,7 @@ function get_speakers() {
 const talk = get_talk();
 
 const talk_title = title ? title : talk ? talk.frontmatter.title : striped? "TBD": "ERROR";
-const talk_url = url ?? `/talks/${talk_slug}`;
+const talk_url = url ?? (talk_slug?`/talks/${talk_slug}`:null);
 const talk_speakers = speakers ?? get_speakers();
 
 const timetable_url = `/schedule/${Astro.url.pathname.split("/").filter(i => i != "").pop()}#${talk_url?.split("/").pop()}`
