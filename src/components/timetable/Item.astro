@@ -79,7 +79,7 @@ function get_speakers() {
 
 const talk = get_talk();
 
-const talk_title = title ? title : talk ? talk.frontmatter.title : striped? "TBD": "ERROR";
+const talk_title = title ? title : talk ? talk.frontmatter.title : striped? "TBA": "ERROR";
 const talk_url = url ?? (talk_slug?`/talks/${talk_slug}`:null);
 const talk_speakers = speakers ?? get_speakers();
 
