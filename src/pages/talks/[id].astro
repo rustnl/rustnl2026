@@ -39,7 +39,7 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
     }
   </Hero>
   <OneColumn>
-    <div set:html={talk.rendered?.html} />
+    <div class="markdown" set:html={talk.rendered?.html} />
   </OneColumn>
   <div class="lg:grid lg:cols-12 container">
     <div class="lg:col-start-3 lg:col-end-11 persons">
