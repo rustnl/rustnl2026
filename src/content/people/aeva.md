@@ -26,5 +26,5 @@ continue supporting the sustainability and security of free and open source
 software.
 
 Æva's signature red-and-black aesthetic has darkened conference stages around
-the world since 2005. When not behind a computer screen, they can be found on a
+the world since 2005. When not behind a computer screen, she can be found on a
 motorcycle or looking for new ways to support their local queer community.
