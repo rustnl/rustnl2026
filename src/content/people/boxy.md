@@ -9,7 +9,7 @@ linkedin: ""
 twitter: ""
 mastodon: ""
 talk: boxy
-github: "github.com/BoxyUwU "
+github: "https://github.com/BoxyUwU "
 pronouns: "she/her"
 ---
 
