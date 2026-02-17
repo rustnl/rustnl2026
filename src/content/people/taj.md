@@ -10,6 +10,7 @@ twitter: ""
 mastodon: ""
 talk: wasm
 github: "https://github.com/taj-p"
+pronouns: "he/him"
 ---
 
 Taj is a Technical Lead at Canva paving the adoption of Rust within the organisation.
