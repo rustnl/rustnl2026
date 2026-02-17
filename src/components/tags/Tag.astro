@@ -23,8 +23,12 @@ const {name}: Props = Astro.props;
             return "ecosystem track";
           case "industry":
             return "industry track";
+          case "organisation":
+            return "organisation";
+          case "mc":
+            return "mc";
           default:
-            throw Error(`unknown tag {i}`)
+            throw Error(`unknown tag ${i}`)
         }
       })(name)
 
