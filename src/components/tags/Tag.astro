@@ -1,0 +1,57 @@
+---
+interface Props {
+  name: string;
+}
+const {name}: Props = Astro.props;
+
+---
+<span class={`tag ${name}`}>
+  <span>{
+      ((i) => {
+        switch (i) {
+          case "A-1":
+            return "main track"
+          case "A-2":
+            return "main track"
+          case "B-1":
+          return "compiler track"
+          case "B-2":
+            return "applied rust track"
+          case "project":
+            return "project track";
+          case "ecosystem":
+            return "ecosystem track";
+          case "industry":
+            return "industry track";
+          default:
+            throw Error(`unknown tag {i}`)
+        }
+      })(name)
+
+      }</span>
+</span>
+
+<style lang="scss">
+@use "../../styles/variables.scss";
+@use '../../styles/breakpoint.scss';
+
+.tag {
+    align-items: center;
+    background-color: var(--color-blue-100);
+    border-radius: variables.space(1);
+    display: flex;
+    font-size: variables.$font-size-md;
+    line-height: 1;
+    min-height: variables.space(8);
+    padding-inline: variables.space(3);
+
+    &.project {
+      background-color: var(--color-red-100);
+    }
+
+    &.industry,
+    &.gosim-spotlight {
+      background-color: var(--color-yellow-100);
+    }
+  }
+</style>

@@ -5,12 +5,13 @@ summary: "Fellow at the Linux Foundation and Linux kernel developer"
 title: ""
 org: "Linux Foundation"
 url: ""
-bluesky: ""
+bluesky: "http://www.kroah.com/log/"
 linkedin: "https://www.linkedin.com/in/greg-kroah-hartman/"
 twitter: ""
 mastodon: ""
 talk: greg
 github: "https://github.com/gregkh"
+pronouns: "he/him"
 ---
 
 Greg Kroah-Hartman is a Fellow at the Linux Foundation and is

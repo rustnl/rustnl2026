@@ -19,32 +19,73 @@ import Hero from "src/components/Hero.astro";
 import OneColumn from "src/components/OneColumn.astro";
 
 const { talk } = Astro.props;
-const { title, level, day } = talk.data;
+let { title, level, day, draft } = talk.data;
 const people = await getCollection("people");
 
+function comma_separate(iterable: Iterable<string>): string {
+  let res = "";
+  let last = ""
+  let num_added = 0;
+
+  for (const i of iterable) {
+    if (last !== "") {
+      num_added += 1;
+      if (res === "") {
+        res = last
+      } else {
+        res += `, ${last}`
+      }
+    }
+    last = i
+  }
+
+  if (num_added === 0) {
+    res = last
+  } else if (num_added === 1) {
+    res += ` and ${last}`
+  } else {
+    res += `, and ${last}`
+  }
+
+  return res
+}
+
 const speakers = people.filter((person) => person.data.talk?.id == talk.id);
-const speaker_names = speakers.map((speaker) => speaker.data.name).join(", ");
-const draft = false;
+const speaker_names = comma_separate(speakers.map((speaker) => speaker.data.name));
 const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
+
+if (draft) {
+  title = "TBA";
+}
 ---
 
 <CommonLayout title={title} withLogo {...ignore}>
-  <Hero kicker="Talk" title={title} lead={`by ${speaker_names}`} color="yellow">
-    {
-      level && (
-        <div class="talk-level">
-          <strong>Audience:</strong> <span class="tag">{level}</span>
+    <OneColumn>
+        <div class="title">
+            <h2 class="font-display">{title}</h2>
+            <h3>by {speaker_names}</h3>
         </div>
-      )
-    }
-  </Hero>
+        {
+            level && (
+            <div class="talk-level">
+                <strong>Audience:</strong> <span class="tag">{level}</span>
+            </div>
+            )
+        }
+    </OneColumn>
+
   <OneColumn>
-    <div set:html={talk.rendered?.html} />
+      {!draft && (
+        <div class="markdown" set:html={talk.rendered?.html} />
+      )}
   </OneColumn>
   <div class="lg:grid lg:cols-12 container">
     <div class="lg:col-start-3 lg:col-end-11 persons">
       {
-        speakers.map((speaker) => (
+        (() => {
+            speakers.sort((_a, _b) => Math.random() - Math.random());
+            return speakers
+        })().map((speaker) => (
           <Person bio={speaker.rendered?.html} {...speaker.data} single />
         ))
       }
@@ -67,6 +108,17 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
 </CommonLayout>
 
 <style>
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+
+    h3 {
+        font-weight: normal;
+    }
+}
+
   .persons {
     display: flex;
     flex-direction: column;

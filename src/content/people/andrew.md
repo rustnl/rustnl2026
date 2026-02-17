@@ -10,6 +10,7 @@ twitter: ""
 mastodon: ""
 talk: andrew
 github: "https://github.com/BurntSushi"
+pronouns: "he/him"
 ---
 
 Andrew has been a member of the Rust project on the libs-api team since 2015. He

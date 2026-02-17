@@ -1,7 +1,7 @@
 ---
 name: "Mark Janssen"
 image: "mark.jpg"
-title: "Software Architect at Kiesraad (Dutch Electoral Council)"
+title: "Software Architect"
 org: "Kiesraad (Dutch Electoral Council)"
 url: ""
 bluesky: "https://bsky.app/profile/praseodym123.bsky.social"
@@ -10,5 +10,5 @@ twitter: ""
 mastodon: "https://hsnl.social/@praseodym"
 talk: mark
 github: "https://github.com/praseodym"
+pronouns: "he/him"
 ---
-

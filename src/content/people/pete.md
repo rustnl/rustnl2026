@@ -1,7 +1,7 @@
 ---
 name: "Pete LeVasseur"
 image: "pete.jpg"
-title: "Staff Software Engineer at Woven by Toyota"
+title: "Staff Software Engineer"
 org: "Woven by Toyota"
 url: "https://petelevasseur.com/"
 bluesky: "https://bsky.app/profile/awkwardmap.bsky.social"
@@ -10,6 +10,7 @@ twitter: "https://x.com/AwkwardMap"
 mastodon: ""
 talk: pete
 github: "https://github.com/PLeVasseur"
+pronouns: "he/him"
 ---
 
 Pete LeVasseur guides Rust adoption efforts at Woven by Toyota and

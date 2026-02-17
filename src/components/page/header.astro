@@ -54,6 +54,7 @@ const { withLogo = true, withoutMenu = false }: Props = Astro.props;
         menu?.classList.toggle("open");
         overlay?.classList.toggle("open");
         toggle?.classList.toggle("open");
+        header?.classList.toggle("open");
     }
 
     toggle?.addEventListener("click", toggleMenu);
@@ -116,12 +117,21 @@ const { withLogo = true, withoutMenu = false }: Props = Astro.props;
 
     .header {
         background-color: variables.$color-yellow-400;
-        position: sticky;
+
+        position: relative;
+        @include breakpoint.wider_than(lg) {
+            position: sticky;
+        }
+
         transition-duration: 150ms;
         transition-property: background-color, height;
         z-index: 100;
         top: 0;
         left: 0;
+
+        &.open {
+            position: sticky;
+        }
 
         &.scrolled {
             background-color: var(--color-yellow-000);

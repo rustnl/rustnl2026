@@ -1,10 +1,13 @@
 ---
 import Icon from "../Icon.astro";
+import Pronouns from "./Pronouns.astro";
+import Tag from "../tags/Tag.astro";
 
 interface Props {
   name?: string;
   image?: string;
   title?: string;
+  org?: string;
   summary?: string;
   bio?: string; // bio
   link?: string;
@@ -18,6 +21,7 @@ interface Props {
   tile?: boolean;
   smalltile?: boolean;
   single?: boolean;
+  pronouns?: string | null;
 }
 
 const {
@@ -25,6 +29,7 @@ const {
   image,
   bio,
   title,
+  org,
   summary = "",
   link = "",
   tracks,
@@ -34,6 +39,7 @@ const {
   mastodon,
   github,
   bluesky,
+  pronouns = null,
   tile = false,
   smalltile = false,
   single = false,
@@ -44,23 +50,6 @@ let github_link = github
     ? github
     : `https://github.com/${github}`
   : null;
-
-function convertTrack(i: string): string {
-  switch (i) {
-    case "deep_dive":
-      return "deep dive track";
-    case "main":
-      return "main track";
-    case "project":
-      return "project track";
-    case "ecosystem":
-      return "ecosystem track";
-    case "industry":
-      return "industry track";
-  }
-
-  return i;
-}
 
 const empty_path = "/images/people/empty.png";
 const imageFile = image ? `/images/people/${image}` : empty_path;
@@ -98,13 +87,20 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
   </div>
   <div class="info">
     <div>
-      <h3 class="font-display">{name}</h3>
-      {smalltile && summary && <div class="title">{summary}</div>}
-      {!summary && title && <div class="title">{title}</div>}
+        <div class="title">
+            <h3 class="font-display">{name}</h3>
+            {pronouns !== null && (<Pronouns pronouns={pronouns} />)}
+        </div>
+        {smalltile && summary && <div class="title">{summary}</div>}
+        {!summary && title && <div class="title">{title} {org && (<Fragment>at {org}</Fragment>)}</div>}
+        {!summary && !title && org && <div class="title">{org}</div>}
     </div>
     {
       !(tile || smalltile) && (
         <div class="socials">
+            {!(!linkedin && !twitter && !mastodon && !github_link && !bluesky && !url) && (
+              <b>Links:</b>
+            )}
           {linkedin && (
             <a href={linkedin}>
               <Icon name="linkedin" />
@@ -143,10 +139,8 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
     <div class="tags">
       {
         tracks &&
-          tracks.map((track) => (
-            <span class={`tag ${track}`}>
-              <span>{convertTrack(track)}</span>
-            </span>
+          tracks.map((name) => (
+            <Tag name={name} />
           ))
       }
     </div>
@@ -165,7 +159,7 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
 
   .person.single {
     display: grid;
-    
+
     @include breakpoint.wider_than(sm) {
       gap: 2rem;
       grid-template-columns: 1fr 1fr;
@@ -174,7 +168,6 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
 
   .person.single .image-container {
     border-block-end: 0;
-    background-color: var(--color-green-000);
   }
 
   .socials {
@@ -220,6 +213,14 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
   }
 
 
+  .person .info .title {
+    display: flex;
+    direction: row;
+    align-items: center;
+    gap: 0.5em;
+    vertical-align: center;
+  }
+
   .person .info {
     font-size: var(--font-size-md);
     padding-block: 1.5rem;
@@ -234,7 +235,6 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
     border: 0;
     font-size: var(--font-size-body);
     font-family: inherit;
-    border: 1px solid var(--color-green-000);
     font-weight: 700;
     padding: 0.5rem;
   }
@@ -267,26 +267,6 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
 
   .person .socials a {
     line-height: 1;
-  }
-
-  .person .tag {
-    align-items: center;
-    background-color: var(--color-blue-100);
-    border-radius: variables.space(1);
-    display: flex;
-    font-size: variables.$font-size-md;
-    line-height: 1;
-    min-height: variables.space(8);
-    padding-inline: variables.space(3);
-
-    &.project {
-      background-color: var(--color-red-100);
-    }
-
-    &.industry,
-    &.gosim-spotlight {
-      background-color: var(--color-yellow-100);
-    }
   }
 
   .person .markdown {

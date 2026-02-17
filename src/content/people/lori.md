@@ -1,7 +1,7 @@
 ---
 name: "Lori Lorusso"
 image: "lori.jpeg"
-title: "Director of Outreach at Rust Foundation"
+title: "Director of Outreach"
 org: "Rust Foundation"
 url: ""
 bluesky: ""
@@ -10,5 +10,5 @@ twitter: "https://x.com/LoriLorusso"
 mastodon: ""
 talk: lori
 github: ""
+pronouns: "she/her"
 ---
-

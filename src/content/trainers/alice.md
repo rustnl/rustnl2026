@@ -1,6 +1,6 @@
 ---
 name: "Alice Ivy Cecile"
-image: "alice_cecile.jpg" # images go in public/images/people
+image: "alice-cecile.jpg" # images go in public/images/people
 title: "Bevy community leader & mad scientist"
 bluesky: "https://bsky.app/profile/alice-i-cecile.bsky.social"
 linkedin: ""

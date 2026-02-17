@@ -14,16 +14,19 @@ const speakers = await getCollection("people");
   <div>
     <img data-pagefind-meta="image[src]" style="display: none;" />
     <Hero title="Speakers" color="yellow" />
-    <OneColumn>
+    <OneColumn style="center">
       <div class="markdown pb-12">
         <p>
-          Our CfP is now closed. We will announce the speaker lineup soon!
+          Our CfP is now closed.
         </p>
       </div>
     </OneColumn>
     <PeopleList>
       {
-        speakers.map((speaker: any) => (
+        (() => {
+          speakers.sort((_a, _b) => Math.random() - Math.random());
+          return speakers
+        })().filter(i => !i.data.draft).map((speaker: any) => (
           <Speaker talkId={speaker.data.talk.id} tile {...speaker.data} />
         ))
       }

@@ -9,8 +9,9 @@ bluesky: "https://bsky.app/profile/aeva.online"
 twitter: ""
 mastodon: "https://infosec.exchange/@aeva"
 linkedin: "https://linkedin.com/in/aevaonline"
-github: "AevaOnline"
+github: "https://github.com/AevaOnline"
 talk: aeva
+pronouns: "she/her"
 ---
 
 Æva Black is a non-binary hacker, veteran of the first dot-com bubble,
@@ -25,5 +26,5 @@ continue supporting the sustainability and security of free and open source
 software.
 
 Æva's signature red-and-black aesthetic has darkened conference stages around
-the world since 2005. When not behind a computer screen, they can be found on a
+the world since 2005. When not behind a computer screen, she can be found on a
 motorcycle or looking for new ways to support their local queer community.
