@@ -13,7 +13,7 @@ const { title } = frontmatter;
 ---
 
 <CommonLayout title={title} header={title} withLogo>
-    <Hero title={title} color="yellow" />    
+    <Hero title={title} color="yellow" />
     <OneColumn>
         <div class="markdown">
             <slot />
@@ -22,11 +22,11 @@ const { title } = frontmatter;
             <Button link="/unconf-guide">Guide for participants</Button>
         </div>
     </OneColumn>
-    <OneColumn class="space-y-12">
+    <OneColumn >
         <Divider />
     </OneColumn>
     <UnconfSponsors />
-    <OneColumn class="space-y-12">
+    <OneColumn >
         <Divider />
     </OneColumn>
     <UnconfLeaders />
