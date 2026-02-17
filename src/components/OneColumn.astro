@@ -1,5 +1,17 @@
-<section class="container md:grid md:cols-12">
-  <div class="md:col-start-3 md:col-end-11 xl:col-start-4 xl:col-end-10">
+<section class="container">
+  <div>
     <slot />
   </div>
 </section>
+
+<style>
+    section {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: min(35em, 100%);
+
+        div {
+
+        }
+    }
+</style>
