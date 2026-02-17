@@ -17,7 +17,7 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
 
     function getTime() {
         return dayjs();
-        // return dayjs("13:30", time_format);
+        // return dayjs("15:30", time_format);
     }
 
     let blink_colon = false;
@@ -98,6 +98,7 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
     };
 
     const current_time = document.querySelectorAll('[data-current-time]');
+    let prev_time = ""
 
     async function updateTime() {
         const now = getTime();
@@ -105,11 +106,18 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
         blink_colon = !blink_colon;
         current_time.forEach(e => {
             let time = now.format(time_format);
+            time = time.replaceAll(":", "<span class='timeblink'>:</span>");
+
             if (blink_colon) {
-                time = time.replaceAll(":", " ");
+              e.classList.add("hidden")
+            } else {
+              e.classList.remove("hidden")
             }
 
-            (e as HTMLElement).innerText = time.trim();
+            if (prev_time !== time) {
+              (e as HTMLElement).innerHTML = time;
+              prev_time = time;
+            }
         });
     }
 
@@ -122,6 +130,7 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
 </script>
 
 <KioskLayout title="live schedule">
+    <div class="outer">
     <div class="main">
         <div class="top">
             <div class="last-updated"></div>
@@ -141,20 +150,35 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
             </div>
         </div>
     </div>
+    </div>
 </KioskLayout>
+
+<style is:global>
+.hidden .timeblink {
+    visibility: hidden;
+}
+</style>
 
 <style lang="scss">
     @use '../../styles/variables.scss';
 
+    .outer {
+        display: grid;
+        grid-template-columns: auto min(120em, 100%) auto;
+        align-items: center;
+    }
+
     .main {
+        grid-column: 2;
         height: 100%;
+        font-family: 'Work Sans', sans-serif;
 
         .top {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
-            margin: 0em 2em;
+            margin: 0em 6em 0em 0em;
             padding: 0;
 
             .last-updated {
@@ -174,7 +198,7 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
             }
 
             .time {
-                font-size: 13vw;
+                font-size: 15em;
                 font-variant-numeric: tabular-nums;
             }
 
@@ -185,11 +209,11 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
                 text-align: right;
 
                 .what {
-                    font-size: 8vw;
+                    font-size: 10em;
                     color: variables.$color-red-500;
                 }
                 .until {
-                    font-size: 5vw;
+                    font-size: 5em;
                 }
             }
         }

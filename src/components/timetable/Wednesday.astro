@@ -19,7 +19,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={main}
     />
     <Item
-        talk="miguel"
+        talk_slug="greg"
         color="yellow"
         track={1}
         time="9:40"
@@ -27,14 +27,14 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={main}
     />
     <Item
-        talk="matt"
+        talk_slug="moon"
         color="yellow"
         track={1}
         time="10:25"
         duration={35}
         room={main}
     />
-    <TrackIndicator afterDivider="9:30" track="Deep dive track" color="blue" first />
+    <TrackIndicator afterDivider="9:30" track="Applied Rust track" color="blue" first />
     <Item
         title="Opening"
         color="blue"
@@ -44,7 +44,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="fabian"
+        talk_slug="chess"
         color="blue"
         track={2}
         time="9:40"
@@ -52,7 +52,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="jack"
+        talk_slug="gergely"
         color="blue"
         track={2}
         time="10:25"
@@ -69,25 +69,25 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={tertiary}
     />
     <Item
-        talk="errs"
+        striped
         color="red"
         track={3}
         time="9:40"
-        duration={60}
+        duration={35}
         room={tertiary}
     />
     <Item
-        talk="apiraino"
+        striped
         color="red"
         track={3}
-        time="10:45"
-        duration={15}
+        time="10:25"
+        duration={35}
         room={tertiary}
     />
     <Divider start="11:00" end="11:40"> Break </Divider>
     <TrackIndicator afterDivider="11:40" track="Main track" color="yellow" />
     <Item
-        talk="joe"
+        talk_slug="yara"
         color="yellow"
         track={1}
         time="11:40"
@@ -95,16 +95,16 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={main}
     />
     <Item
-        talk="martin"
+        talk_slug="karin"
         color="yellow"
         track={1}
         time="12:25"
         duration={20}
         room={main}
     />
-    <TrackIndicator afterDivider="11:40" track="Deep dive track" color="blue" />
+    <TrackIndicator afterDivider="11:40" track="Applied Rust track" color="blue" />
     <Item
-        talk="waffle"
+        talk_slug="wasm"
         color="blue"
         track={2}
         time="11:40"
@@ -112,7 +112,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="emmanuel"
+        talk_slug="mordecai"
         color="blue"
         track={2}
         time="12:25"
@@ -121,7 +121,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
     />
     <TrackIndicator afterDivider="11:40" track="Rust Project track" color="red" />
     <Item
-        talk="jacob"
+        striped
         color="red"
         track={3}
         time="11:40"
@@ -129,7 +129,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={tertiary}
     />
     <Item
-        talk="ed"
+        striped
         color="red"
         track={3}
         time="12:25"
@@ -139,7 +139,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
     <Divider start="12:45" end="14:00"> Lunch </Divider>
     <TrackIndicator afterDivider="14:00" track="Main track" color="yellow" />
     <Item
-        talk="ciara"
+        talk_slug="aeva"
         color="yellow"
         track={1}
         time="14:00"
@@ -147,7 +147,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={main}
     />
     <Item
-        talk="martinkooij"
+        talk_slug="arya"
         color="yellow"
         track={1}
         time="14:45"
@@ -155,16 +155,16 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={main}
     />
     <Item
-        talk="valdemar"
+        talk_slug="alice-cecile"
         color="yellow"
         track={1}
         time="15:30"
         duration={20}
         room={main}
     />
-    <TrackIndicator afterDivider="14:00" track="Deep dive track" color="blue" />
+    <TrackIndicator afterDivider="14:00" track="Applied Rust track" color="blue" />
     <Item
-        talk="arthurcohen"
+        talk_slug="nico"
         color="blue"
         track={2}
         time="14:00"
@@ -172,7 +172,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="tim"
+        talk_slug="michael"
         color="blue"
         track={2}
         time="14:45"
@@ -180,7 +180,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="conrad"
+        talk_slug="harry"
         color="blue"
         track={2}
         time="15:30"
@@ -189,7 +189,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
     />
     <TrackIndicator afterDivider="14:00" track="Rust Project track" color="red" />
     <Item
-        talk="ralf"
+        striped
         color="red"
         track={3}
         time="14:00"
@@ -197,7 +197,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={tertiary}
     />
     <Item
-        talk="oli"
+        striped
         color="red"
         track={3}
         time="14:45"
@@ -205,7 +205,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={tertiary}
     />
     <Item
-        talk="boxy"
+        striped
         color="red"
         track={3}
         time="15:30"
@@ -215,7 +215,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
     <Divider start="15:50" end="16:20"> Break </Divider>
     <TrackIndicator afterDivider="16:20" track="Main track" color="yellow" />
     <Item
-        talk="victor"
+        talk_slug="josh"
         color="yellow"
         track={1}
         time="16:20"
@@ -223,16 +223,16 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={main}
     />
     <Item
-        talk="alice"
+        talk_slug="alice"
         color="yellow"
         track={1}
         time="17:05"
         duration={35}
         room={main}
     />
-    <TrackIndicator afterDivider="16:20" track="Deep dive track" color="blue" />
+    <TrackIndicator afterDivider="16:20" track="Applied Rust track" color="blue" />
     <Item
-        talk="dion"
+        talk_slug="laurenz"
         color="blue"
         track={2}
         time="16:20"
@@ -240,7 +240,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="cliff"
+        talk_slug="adam"
         color="blue"
         track={2}
         time="17:05"
@@ -249,7 +249,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
     />
     <TrackIndicator afterDivider="16:20" track="Rust Project track" color="red" />
     <Item
-        talk="predrag"
+        striped
         color="red"
         track={3}
         time="16:20"
@@ -257,7 +257,7 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         room={tertiary}
     />
     <Item
-        talk="niko"
+        striped
         color="red"
         track={3}
         time="17:05"

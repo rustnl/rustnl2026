@@ -142,13 +142,16 @@ function removeBefore(document: Document, last_start: Range) {
 
         let start = dataset.start.trim();
 
+        // console.log(parseTime(start), last_start)
+
         if (lt(parseTime(start), last_start)) {
-            e.remove()
+            // e.remove()
         }
     })
 
     return document
 }
+
 
 ---
 

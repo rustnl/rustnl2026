@@ -77,8 +77,12 @@ const end_time = `${tmp.getHours()}:${minutes}`;
                 <span class="duration">({diff_m}&nbsp;min)</span>
             </div>
             <div>
-                <div class="icon"><Fragment set:html={locationIcon.html} /></div>
-                {room}
+                {room !== "" && (
+                <Fragment>
+                    <div class="icon"><Fragment set:html={locationIcon.html} /></div>
+                    {room}
+                </Fragment>
+                )}
             </div>
         </div>
         <slot />
@@ -116,7 +120,7 @@ const end_time = `${tmp.getHours()}:${minutes}`;
         position: relative;
         border: solid 1px;
         border-top-width: 4px;
-        
+
         display: flex;
         flex-direction: column;
         text-decoration: none;
@@ -125,7 +129,7 @@ const end_time = `${tmp.getHours()}:${minutes}`;
             border: solid 10px var(--color-two) !important;
         }
     }
-    
+
     .content {
         margin: 8px 16px 16px 16px;
         flex: 1;
