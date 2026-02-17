@@ -5,7 +5,7 @@ title: "One Language, Two IDE Engines"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 What makes an IDE different from a compiler — and why does Rust stretch that distinction to its limits?

@@ -5,7 +5,7 @@ title: "Tracking down undefined behaviour in Servo"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 Servo is a web rendering engine written in Rust that relies on a lot of unsafe code. What actually happens when that unsafe code breaks the language's rules?

@@ -5,7 +5,7 @@ title: "Shaping Tomorrow’s Software Engineers"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 Discover Rust's potential to shape the future of software engineering in academia!

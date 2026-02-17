@@ -5,7 +5,7 @@ title: "Racing with Rust: building telemetry tools for racing simulators. "
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 Car-simulator racing has seen a recent surge in activity, more users, and even more competitive driving at the E-sports levels.

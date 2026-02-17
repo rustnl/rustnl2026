@@ -5,7 +5,7 @@ title: "Out of tree access to compiler state"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 The rust compiler develops a rich understanding of your source code. In addition to using this to produce an executable, this is also use to power many tools (such as `rustdoc`, `miri`, and `clippy`) that ship with the rust toolchain.

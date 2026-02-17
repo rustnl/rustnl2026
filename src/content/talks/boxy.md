@@ -5,7 +5,7 @@ title: "Compilers are just programs: Fixing a bug in the Rust compiler "
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 Compilers are often considered to be significantly more complex and esoteric than "normal" programs, magical black boxes not to be developed or understood by the average programmer.
 

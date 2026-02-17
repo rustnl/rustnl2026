@@ -5,7 +5,7 @@ title: "Obsessive Optimization with String Interning"
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 Low-level performance optimization is a challenging endeavor. 

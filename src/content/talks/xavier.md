@@ -5,7 +5,7 @@ title: "When Iterators Aren't Zero Cost"
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 Here’s something that surprises many new Rust developers: iterators can be *faster* than hand-written loops. The compiler sees the pattern, LLVM works its magic, and the result outperforms manual code.
 

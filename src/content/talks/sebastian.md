@@ -5,7 +5,7 @@ title: "Writing shaders for graphics in plain Rust"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 Rust-GPU is a rustc codegen backend that compiles embedded rust code to GPU shaders.

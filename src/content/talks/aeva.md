@@ -5,7 +5,7 @@ title: "Between Computer Code And Legal Code: Open Source's Influence"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 In this talk, Aeva Black — engineer, policy advisor, and former U.S. government open source security lead — will share a personal journey that reorients the relationship between code and power.

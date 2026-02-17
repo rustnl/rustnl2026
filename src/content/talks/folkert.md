@@ -5,7 +5,7 @@ title: "Stabilizing decade-old features "
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 

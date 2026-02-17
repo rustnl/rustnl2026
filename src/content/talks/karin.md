@@ -5,7 +5,7 @@ title: "Learning Rust as First Programming Language "
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 What is it like to learn Rust as your first programming language? This talk covers the process, motivation, tools and tips & tricks for learning Rust as a total beginner. It is based on the experiences of the speaker, who started with Rust at the end of 2024 with no programming experience.

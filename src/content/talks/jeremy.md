@@ -5,7 +5,7 @@ title: "Tales of a transformation journey at Proton"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 About five years ago, Proton took a direction that eventually led us to use Rust across the org.

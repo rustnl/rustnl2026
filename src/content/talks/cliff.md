@@ -5,7 +5,7 @@ title: "Common Pitfalls of Rewriting Things In Rust"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 While a lot of systems code can be expressed easily in Rust, there are common patterns from C, C++, and Go that are just more effort to copy than they're worth.
