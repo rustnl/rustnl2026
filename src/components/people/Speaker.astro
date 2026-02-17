@@ -27,7 +27,7 @@ let talkTitle: string = "";
 if (talkId) {
     const talk = await getEntry("talks", talkId);
     tracks = talk ? talk.data.tracks : [];
-    talkTitle = talk ? talk.data.title : "";
+    talkTitle = talk ? (talk.data.draft? "TBA": talk.data.title) : "";
 }
 ---
 
