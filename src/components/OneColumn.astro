@@ -1,17 +1,25 @@
-<section class="container">
+---
+interface Props {
+  style?: "center" | "left"
+}
+
+const {style = "left"}: Props = Astro.props;
+
+---
+<section class:list={["container", style]}>
   <div>
     <slot />
   </div>
 </section>
 
 <style>
-    section {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: min(35em, 100%);
-
-        div {
-
-        }
+section {
+    &.center {
+        text-align: center;
     }
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: min(40em, 100%);
+}
 </style>
