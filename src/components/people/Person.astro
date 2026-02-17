@@ -98,7 +98,9 @@ const imageFile = image ? `/images/people/${image}` : empty_path;
     {
       !(tile || smalltile) && (
         <div class="socials">
-            <b>Links:</b>
+            {!(!linkedin && !twitter && !mastodon && !github_link && !bluesky && !url) && (
+              <b>Links:</b>
+            )}
           {linkedin && (
             <a href={linkedin}>
               <Icon name="linkedin" />
