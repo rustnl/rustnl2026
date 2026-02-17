@@ -5,7 +5,8 @@ title: "The trials of qualifying Rust"
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "tuesday"
+draft: true
 ---
 
 Ferrocene is the first qualified Rust compiler for use in safety-critical industries. It is a fully open source "blackbox" where the tools included are qualified, but not qualified independently (The question whether LLVM is qualified tends to come back a lot!)

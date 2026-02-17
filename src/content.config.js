@@ -10,6 +10,7 @@ const talks = defineCollection({
     tags: z.array(z.string()),
     duration: z.number(),
     day: z.string(),
+    draft: z.boolean().optional(),
   }),
 });
 
@@ -44,6 +45,7 @@ const people = defineCollection({
     talk: reference("talks"),
     github: z.string(),
     pronouns: z.string().optional(),
+    draft: z.boolean().optional(),
   }),
 });
 

@@ -26,7 +26,7 @@ const speakers = await getCollection("people");
         (() => {
           speakers.sort((_a, _b) => Math.random() - Math.random());
           return speakers
-        })().map((speaker: any) => (
+        })().filter(i => !i.data.draft).map((speaker: any) => (
           <Speaker talkId={speaker.data.talk.id} tile {...speaker.data} />
         ))
       }

@@ -19,7 +19,7 @@ import Hero from "src/components/Hero.astro";
 import OneColumn from "src/components/OneColumn.astro";
 
 const { talk } = Astro.props;
-const { title, level, day } = talk.data;
+let { title, level, day, draft } = talk.data;
 const people = await getCollection("people");
 
 function comma_separate(iterable: Iterable<string>): string {
@@ -52,8 +52,11 @@ function comma_separate(iterable: Iterable<string>): string {
 
 const speakers = people.filter((person) => person.data.talk?.id == talk.id);
 const speaker_names = comma_separate(speakers.map((speaker) => speaker.data.name));
-const draft = false;
 const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
+
+if (draft) {
+  title = "TBA";
+}
 ---
 
 <CommonLayout title={title} withLogo {...ignore}>
@@ -72,7 +75,9 @@ const ignore = draft ? { "data-pagefind-ignore": "all" } : {};
     </OneColumn>
 
   <OneColumn>
-    <div class="markdown" set:html={talk.rendered?.html} />
+      {!draft && (
+        <div class="markdown" set:html={talk.rendered?.html} />
+      )}
   </OneColumn>
   <div class="lg:grid lg:cols-12 container">
     <div class="lg:col-start-3 lg:col-end-11 persons">
