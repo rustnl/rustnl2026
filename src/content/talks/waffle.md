@@ -5,7 +5,7 @@ title: "When is never?"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 The never type has been unstable for 10 years... but *why*?

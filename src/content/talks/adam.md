@@ -5,7 +5,7 @@ title: "Creativity loves constraint (solvers) "
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 Learn the maths behind constraint solvers, how to implement it efficiently with Rust linear algebra crates, and how we've built our new open-source, WebAssembly-compatible constraint solver.

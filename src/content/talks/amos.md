@@ -5,7 +5,7 @@ title: "One year of facet: reflections on reflection"
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 The https://github.com/facet-rs/facet project is over a year old at this point (the point this talk would be given) — is it stable yet?

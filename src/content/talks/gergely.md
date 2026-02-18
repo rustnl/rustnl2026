@@ -5,7 +5,7 @@ title: "Field report on scripting Rust"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 I needed to embed a scripting language within Rust, to drive a program of mine. To do so, I embarked on an Epic Quest to discover what's available, how they work, how they perform, and how much joy they spark when working with them.

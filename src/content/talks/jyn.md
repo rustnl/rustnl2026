@@ -5,7 +5,7 @@ title: "Precise, consistent, and reliable code coverage "
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 Most existing coverage tools are aimed at "good enough" measurements, where percentages are used as a rough estimate, and the change in percentage is used to determine whether a code change hurts or helps total coverage.

@@ -11,7 +11,7 @@ const bookmarkIcon = icon({ prefix: "fas", iconName: faBookmark.iconName });
 const bookmarkIconRegular = icon({ prefix: "far", iconName: regularBookmark.iconName });
 
 interface Props {
-    talk?: string;
+    talk_slug?: string | null;
     title?: string;
     speakers?: {name: string, image: string}[]
     url?: string;
@@ -29,9 +29,10 @@ interface Props {
     header?: string;
 }
 
+const SHOW_ROOMS = false;
 
 const {
-    talk,
+    talk_slug = null,
     title = "",
     speakers,
     room,
@@ -47,25 +48,47 @@ const {
     header,
 }: Props = Astro.props;
 
-const matches = import.meta.glob("../../pages/talks/*.md", { eager: true });
-const files = Object.values(matches);
-let file: any = null;
-if (talk !== null) {
-    file = files.find((v: any) => {
-        return v.url.split("/")[2] == talk;
-    });
+
+function get_talk() {
+  let talk: any = null;
+  if (talk_slug !== null) {
+      const matches = import.meta.glob("../../content/talks/*.md", { eager: true });
+      const files = Object.values(matches);
+
+      talk = files.find((v: any) => {
+        const filename_parts = v.file.split("/")
+        return filename_parts[filename_parts.length - 1].replace(/\.md$/, '') == talk_slug;
+      });
+  }
+
+  return talk
+}
+function get_speakers() {
+  let speakers: any[] = [];
+  const matches = import.meta.glob("../../content/people/*.md", { eager: true });
+  const files: any[] = Object.values(matches);
+
+  for (const speaker of files) {
+    if (speaker.frontmatter.talk == talk_slug) {
+      speakers.push(speaker.frontmatter)
+    }
+  }
+
+  return speakers
 }
 
-const talk_title = title ? title : file ? file.frontmatter.talkTitle : "ERROR";
-const talk_url = url ?? file?.url;
-const talk_speakers = speakers ?? file?.frontmatter?.speakers ?? [];
+const talk = get_talk();
+
+const talk_title = title ? title : talk ? talk.frontmatter.title : striped? "TBA": "ERROR";
+const talk_url = url ?? (talk_slug?`/talks/${talk_slug}`:null);
+const talk_speakers = speakers ?? get_speakers();
 
 const timetable_url = `/schedule/${Astro.url.pathname.split("/").filter(i => i != "").pop()}#${talk_url?.split("/").pop()}`
 ---
 
 <Block
     header={header}
-    room={room}
+    room={SHOW_ROOMS? room: ""}
     track={track}
     time={time}
     duration={duration}

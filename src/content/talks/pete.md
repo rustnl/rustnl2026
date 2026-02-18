@@ -5,7 +5,7 @@ title: "Popping the Hood on Rust in the 2026 Toyota RAV4"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 The journey to large scale Rust adoption begins with not just a single

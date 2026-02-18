@@ -12,6 +12,9 @@ const { location }: Props = Astro.props;
     <li class="parent" role="menuitem">
       <h2>Schedule</h2>
       <ul class="submenu" role="menu">
+        <!--     <li> -->
+        <!--       <a href="/events/pre-registration" role="menuitem"><span>mon</span>Pre-registration</a> -->
+        <!--     </li> -->
         <li class="child" role="menuitem">
           <a
             href="/#week-schedule"
@@ -20,23 +23,17 @@ const { location }: Props = Astro.props;
           >
         </li>
         <li class="child" role="menuitem">
-          <a href="/workshops">Workshops</a>
+            <a href="/workshops"><span>mon</span>Workshops</a>
+        </li>
+        <li class="child" role="menuitem">
+            <a href="/schedule/tuesday"><span>tue</span>Conference day 1</a>
+        </li>
+        <li class="child" role="menuitem">
+            <a href="/schedule/wednesday"><span>wed</span>Conference day 2</a>
         </li>
         <li class="child" role="menuitem">
           <a href="/industry">Industry Track</a>
         </li>
-        <!--     <li> -->
-        <!--       <a href="/events/pre-registration" role="menuitem"><span>mon</span>Pre-registration</a> -->
-        <!--     </li> -->
-        <!--     <li> -->
-        <!--       <a href="/schedule/tuesday" role="menuitem"><span>tue</span>Conference day 1</a> -->
-        <!--     </li> -->
-        <!--     <li> -->
-        <!--       <a href="/schedule/wednesday" role="menuitem"><span>wed</span>Conference day 2</a> -->
-        <!--     </li> -->
-        <!--     <li> -->
-        <!--       <a href="/events/workshops" role="menuitem"><span>thu</span>Workshops</a> -->
-        <!--     </li> -->
         <!--     <li> -->
         <!--         <a href="/events/hackathon" role="menuitem"><span>fri</span>Hackathon</a> -->
         <!--     </li> -->
@@ -186,7 +183,7 @@ const { location }: Props = Astro.props;
           background-color: variables.$color-yellow-400;
           border-radius: 0.5rem;
           font-family: monospace;
-          font-size: variables.$font-size-sm;
+          font-size: variables.$font-size-md;
         }
       }
 

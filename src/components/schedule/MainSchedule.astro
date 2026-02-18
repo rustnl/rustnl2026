@@ -6,6 +6,7 @@ import ScheduleItem from "./ScheduleItem.astro";
 import OrganizeOwnActivity from "./OrganizeOwnActivity.astro";
 import BottomNote from "./BottomNote.astro";
 import Button from "../Button.astro";
+import ButtonGroup from "../ButtonGroup.astro";
 ---
 
 <Schedule logo>
@@ -49,7 +50,7 @@ import Button from "../Button.astro";
                 <span slot="attendees">800 attendees</span>
                 <span slot="time">08:30–19:00</span>
                 <Fragment slot="activities">
-                    <p style="width: 80%;margin-left: auto;margin-right: auto;"><br />25 talks / 3 tracks</p>
+                    <p style="width: 80%;margin-left: auto;margin-right: auto;"><br /><a href="/schedule/tuesday">23 talks / 3 tracks</a></p>
                     <BottomNote>
                         &nbsp; <!-- <a href="/schedule/wednesday">Talk schedule</a> -->
                     </BottomNote>
@@ -66,7 +67,7 @@ import Button from "../Button.astro";
                 <span slot="attendees">800 attendees</span>
                 <span slot="time">08:30–19:00</span>
                 <Fragment slot="activities">
-                    <p style="width: 80%;margin-left: auto;margin-right: auto;"><br />25 talks / 3 tracks</p>
+                    <p style="width: 80%;margin-left: auto;margin-right: auto;"><br /><a href="/schedule/wednesday">27 talks / 3 tracks</a></p>
                     <BottomNote>
                         &nbsp; <!-- <a href="/schedule/wednesday">Talk schedule</a> -->
                     </BottomNote>
@@ -77,7 +78,7 @@ import Button from "../Button.astro";
 
     <ScheduleDay>
         <ScheduleSection>
-            <span slot="location">TBD, Utrecht,&nbsp;NL</span>
+            <span slot="location">TBA, Utrecht,&nbsp;NL</span>
 
             <ScheduleItem>
                 <span slot="header">Hackathon</span>
@@ -169,7 +170,11 @@ import Button from "../Button.astro";
         <a href="https://discord.gg/9ezhugbhAM" target="_blank" class="button button-primary">Join Discord</a>
     </div -->
     <div slot="extra" class="extra">
-        <Button link="https://event.onliveevent.nl/rustweek-2026">Get your ticket</Button>
+        <ButtonGroup>
+            <Button link="/schedule/tuesday" ty="secondary">Tuesday schedule</Button>
+            <Button link="/schedule/wednesday" ty="secondary">Wednesday schedule</Button>
+            <Button link="https://event.onliveevent.nl/rustweek-2026">Get your ticket</Button>
+        </ButtonGroup>
         <p>Do you have an idea for a social activity? Let us know via <a href="mailto:rustweek@rustnl.org">rustweek@rustnl.org</a>!</p>
     </div>
 </Schedule>

@@ -5,7 +5,7 @@ title: "When uom isn't enough: Handling units of measurement in production CAD"
 level: ""
 tags: []
 duration: 15 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 As it turns out, handling units of measurement in the real world is actually really hard!

@@ -24,7 +24,7 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={main}
     />
     <Item
-        talk="alex"
+        talk_slug="taylor"
         color="yellow"
         track={1}
         time="9:40"
@@ -32,7 +32,7 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={main}
     />
     <Item
-        talk="rose"
+        talk_slug="waffle"
         color="yellow"
         track={1}
         time="10:25"
@@ -41,7 +41,7 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
     />
     <TrackIndicator
         afterDivider="9:30"
-        track="Ecosystem track"
+        track="Compiler track"
         color="blue"
         first
     />
@@ -52,24 +52,22 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         time="9:30"
         duration={10}
         room={secondary}
-        id="ecosystem"
     />
     <Item
-        talk="jos"
+        talk_slug="ides"
         color="blue"
         track={2}
         time="9:40"
         duration={35}
         room={secondary}
     />
-    <MultiItem
-        talks={["gu", "denis", "manuel_drehwald"]}
+    <Item
+        talk_slug="folkert"
         color="blue"
         track={2}
         time="10:25"
         duration={35}
         room={secondary}
-        ticket="GOSIM Spotlight"
     />
     <TrackIndicator
         afterDivider="9:30"
@@ -78,47 +76,42 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         first
     />
     <Item
-        title="Opening & registration"
+        title="Opening"
         color="red"
         track={3}
         time="9:30"
-        duration={30}
+        duration={10}
         room={tertiary}
-        ticket="Industry ticket required"
         url="/industry"
     />
     <Item
-        title="Our Vision for Rust"
-        speakers={[{ name: "Niko Matsakis", image: "niko.png" }]}
+        talk_slug = "pete"
         color="red"
         track={3}
-        time="10:00"
-        duration={20}
+        time="9:40"
+        duration={35}
         room={tertiary}
-        ticket="Industry ticket required"
     />
     <Item
-        talk="julius"
+        talk_slug="lori"
         color="red"
         track={3}
-        time="10:20"
-        duration={20}
+        time="10:25"
+        duration={15}
         room={tertiary}
-        ticket="Industry ticket required"
     />
     <Item
-        talk="mark"
+        talk_slug="jeremy"
         color="red"
         track={3}
-        time="10:40"
-        duration={20}
+        time="10:45"
+        duration={15}
         room={tertiary}
-        ticket="Industry ticket required"
     />
     <Divider start="11:00" end="11:40"> Break </Divider>
     <TrackIndicator afterDivider="11:40" track="Main track" color="yellow" />
     <Item
-        talk="raph"
+        talk_slug="stefan"
         color="yellow"
         track={1}
         time="11:40"
@@ -126,16 +119,16 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={main}
     />
     <Item
-        talk="shane"
+        talk_slug="rose"
         color="yellow"
         track={1}
         time="12:25"
         duration={20}
         room={main}
     />
-    <TrackIndicator afterDivider="11:40" track="Ecosystem track" color="blue" />
+    <TrackIndicator afterDivider="11:40" track="Compiler track" color="blue" />
     <Item
-        talk="bart"
+        talk_slug="boxy"
         color="blue"
         track={2}
         time="11:40"
@@ -143,40 +136,37 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={secondary}
     />
     <Item
-        talk="david"
+        talk_slug="bastian"
         color="blue"
         track={2}
         time="12:25"
         duration={20}
         room={secondary}
-        ticket="GOSIM Spotlight"
     />
     <TrackIndicator afterDivider="11:40" track="Industry track" color="red" />
     <Item
-        title="Expert Tables Round 1"
+        talk_slug="mark"
         color="red"
         track={3}
         time="11:40"
-        duration={50}
-        room={quaternary}
-        description="Choose a topic and learn from a seasoned Rust expert as well as your industry peers."
-        ticket="Industry ticket required"
+        duration={35}
+        room={tertiary}
         url="/industry"
+        ticket=""
     />
     <Item
-        title="Expert Tables recap"
+        title = "7M smart meters running Rust "
         color="red"
         track={3}
-        time="12:30"
-        duration={15}
+        time="12:25"
+        duration={20}
         room={tertiary}
-        ticket="Industry ticket required"
         url="/industry"
     />
     <Divider start="12:45" end="14:00"> Lunch </Divider>
     <TrackIndicator afterDivider="14:00" track="Main track" color="yellow" />
     <Item
-        talk="michal"
+        talk_slug="andreea"
         color="yellow"
         track={1}
         time="14:00"
@@ -184,7 +174,7 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={main}
     />
     <Item
-        talk="caroline"
+        talk_slug="cliff"
         color="yellow"
         track={1}
         time="14:45"
@@ -192,34 +182,33 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={main}
     />
     <Item
-        talk="stephen"
+        talk_slug="amos"
         color="yellow"
         track={1}
         time="15:30"
         duration={20}
         room={main}
     />
-    <TrackIndicator afterDivider="14:00" track="Ecosystem track" color="blue" />
+    <TrackIndicator afterDivider="14:00" track="Compiler track" color="blue" />
     <Item
-        talk="kevin"
+        talk_slug="sebastian"
         color="blue"
         track={2}
         time="14:00"
         duration={35}
         room={secondary}
     />
-    <MultiItem
-        talks={["manuel", "xiaolong"]}
+    <Item
+        talk_slug="jyn"
         color="blue"
         track={2}
         time="14:45"
         duration={35}
         room={secondary}
-        ticket="GOSIM Spotlight"
     />
 
     <Item
-        talk="aria"
+        talk_slug="xavier"
         color="blue"
         track={2}
         time="15:30"
@@ -228,39 +217,40 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
     />
     <TrackIndicator afterDivider="14:00" track="Industry track" color="red" />
     <Item
-        title="Expert Tables Round 2"
+        title="Opening afternoon program"
+        speakers={[{name: "Hugo van de Pol", image: "hugo.jpeg"}]}
         color="red"
         track={3}
         time="14:00"
-        duration={60}
+        duration={15}
+        room={quaternary}
+        ticket = "Requires an industry track ticket"
+    />
+    <Item
+        title="Expert Tables & Networking Round 1"
+        color="red"
+        track={3}
+        time="14:15"
+        duration={45}
         room={quaternary}
         description="Choose a topic and learn from a seasoned Rust expert as well as your industry peers."
-        ticket="Industry ticket required"
+        ticket = "Requires an industry track ticket"
         url="/industry"
     />
     <Item
-        title="Expert Tables recap"
+        title="Live podcast recording"
+        speakers={[{name: "Matthias Endler", image: "matthias.jpg"}]}
         color="red"
         track={3}
         time="15:00"
-        duration={15}
-        room={tertiary}
-        ticket="Industry ticket required"
+        duration={50}
+        room={quaternary}
         url="/industry"
-    />
-    <Item
-        talk="jeffrey"
-        color="red"
-        track={3}
-        time="15:15"
-        duration={30}
-        room={tertiary}
-        ticket="Industry ticket required"
     />
     <Divider start="15:50" end="16:20"> Break </Divider>
     <TrackIndicator afterDivider="16:20" track="Main track" color="yellow" />
     <Item
-        talk="stefan"
+        talk_slug="hazel"
         color="yellow"
         track={1}
         time="16:20"
@@ -268,55 +258,51 @@ import { breaks, main, secondary, tertiary, quaternary } from "./data.ts";
         room={main}
     />
     <Item
-        talk="pietro"
+        talk_slug="andrew"
         color="yellow"
         track={1}
         time="17:05"
         duration={35}
         room={main}
     />
-    <TrackIndicator afterDivider="16:20" track="Ecosystem track" color="blue" />
+    <TrackIndicator afterDivider="16:20" track="Compiler track" color="blue" />
     <Item
-        talk="salsa"
+        talk_slug="alona"
         color="blue"
         track={2}
         time="16:20"
         duration={35}
         room={secondary}
     />
-    <MultiItem
-        talks={["michal2", "nadri", "josh"]}
+    <Item
+        talk_slug="aissata"
         color="blue"
         track={2}
         time="17:05"
         duration={35}
         room={secondary}
-        ticket="GOSIM Spotlight"
     />
-    <TrackIndicator afterDivider="16:20" track="Extra track" color="purple" />
+    <TrackIndicator afterDivider="16:20" track="Industry track" color="purple" />
     <Item
-        title="Live Recording of 'Rust in Production'"
-        speakers={[
-            { name: "Matthias Endler", image: "matthias.jpg" },
-            { name: "Niko Matsakis", image: "niko.png" },
-        ]}
-        color="purple"
+        title="Expert Tables & Networking Round 2"
+        color="red"
         track={3}
         time="16:20"
         duration={45}
-        room={tertiary}
+        room={quaternary}
+        description="Choose a topic and learn from a seasoned Rust expert as well as your industry peers."
+        url="/industry"
+        ticket = "Requires an industry track ticket"
     />
     <Item
-        title="Live Recording 'Accessibility and Rust'"
-        speakers={[
-            { name: "Luuk van der Duim", image: "empty.png" },
-            { name: "Matt Campbell", image: "matt-campbell.jpg" },
-        ]}
-        color="purple"
+        title="Closing"
+        speakers={[{name: "Hugo van de Pol", image: "hugo.jpeg"}]}
+        color="red"
         track={3}
         time="17:05"
-        duration={35}
-        room={tertiary}
+        duration={15}
+        room={quaternary}
+        ticket = "Requires an industry track ticket"
     />
     <Divider start="17:40" end="19:00"> Drinks </Divider>
 </Timetable>

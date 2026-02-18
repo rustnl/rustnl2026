@@ -5,7 +5,7 @@ title: "Programming Your Own DSL in Rust – Experiences from Developing µcad"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 In 2025, we developed µcad (pronounced micro-cad), a domain-specific language for CAD for describing geometries.

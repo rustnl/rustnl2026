@@ -5,7 +5,7 @@ title: "Writing a top-10 chess engine in Rust"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 We’ll cover some of the most interesting or unique problems we encounter writing competitive chess engines and how Rust is excellently suited for solving these problems, 

@@ -15,32 +15,32 @@ const {day}: Props = Astro.props;
         <div class="slot">
             <div class="description" >
                 <p>
-                    This is the schedule for the talks on <b>{day == "tuesday"? "Tuesday 13 May" : "Wednesday 14 May"}</b>. There are two main conference days with talks.
-                    Throughout the week there are all kinds of other activities as well. You can find an overview of the entire week <a href="/overview">here</a>.
+                    This is the schedule for the talks on <b>{day == "tuesday"? "Tuesday 19 May" : "Wednesday 20 May"}</b>. There are two main conference days with talks.
+                    Throughout the week there are all kinds of other activities as well. You can find an overview of the entire week <a href="/#week-schedule">here</a>.
 
                     <!-- You can also watch streams of these tracks <a href={`/live/${day}`}>here</a> -->
                 </p>
-                <p>
+                <!-- <p>
                     For descriptions of the tracks and other activities on this day, <a href={day == "tuesday" ? "/events/conf-day1" : "/events/conf-day2" }>see this page</a>.
-                </p>
+                </p> -->
             </div>
 
             <div class="tabbar">
-                <a href="/schedule/tuesday" class:list={[day == "tuesday"?"active":"inactive"]}>Tue 13 May</a>
-                <a href="/schedule/wednesday" class:list={[day == "wednesday"?"active":"inactive"]}>Wed 14 May</a>
+                <a href="/schedule/tuesday" class:list={[day == "tuesday"?"active":"inactive"]}>Tue 19 May</a>
+                <a href="/schedule/wednesday" class:list={[day == "wednesday"?"active":"inactive"]}>Wed 20 May</a>
             </div>
 
             <slot />
         </div>
 
         <div class="footer-nav">
-            <span>You are currently on <b>{day == "tuesday"? "Tuesday 13 May":"Wednesday 14 May"}</b>'s talk schedule.</span>
+            <span>You are currently on <b>{day == "tuesday"? "Tuesday 19 May":"Wednesday 20 May"}</b>'s talk schedule.</span>
 
             <div class="buttons">
                 <Button link={day == "tuesday"?"/schedule/wednesday":"/schedule/tuesday"}>
                     {day == "tuesday"? "Wednesday": "Tuesday"}'s schedule
                 </Button>
-                <Button link="/overview">
+                <Button link="/#week-schedule">
                     Week overview
                 </Button>
             </div>

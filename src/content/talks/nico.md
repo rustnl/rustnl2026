@@ -5,7 +5,7 @@ title: "Blitz: building a modular web engine "
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 
 Blitz is a new no-javascript web browser engine in Rust. 

@@ -5,7 +5,7 @@ title: "Lessons Learnt from using Rust as the Intro to Programming"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "tuesday"
 ---
 
 Rust is rarely the first language that comes to mind for introductory programming courses. Its strong type system, ownership model, and explicit handling of memory and errors can appear daunting to beginners. Yet these same features offer a unique opportunity to teach foundational concepts from the very start.

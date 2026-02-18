@@ -5,7 +5,7 @@ title: "Debunking Rust Wasm Performance Myths: Why We Moved Core Business Logic 
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 There is an ongoing myth in the web community that states you should only reach for WebAssembly when you're doing "heavy computation"—image processing, games, AI, or complex simulations — because the overhead of Foreign-Function Interface (FFI) across the JS/Wasm barrier is supposedly too high for everything else.
 

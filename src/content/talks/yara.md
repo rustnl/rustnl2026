@@ -5,7 +5,7 @@ title: "Making sound - dragging a ten year old crate into 2026"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: ""
+day: "wednesday"
 ---
 Rodio is the oldest and most popular Rust Audio library. It turned ten last year! Over all those years Rust and its ecosystem have grown astonishingly. That made it possible to rework Rodio into a more capable, faster, and friendlier crate.
 
