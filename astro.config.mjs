@@ -1,19 +1,19 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    api: "modern-compiler"
-                }
-            }
-        }
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
     },
-    redirects: {
-        "/schedule": "/schedule/wednesday",
-        "/events": "/overview#list",
-        "/live": "/live/wednesday"
-    }
+  },
+  redirects: {
+    "/schedule": "/schedule/tuesday",
+    "/events": "/overview#list",
+    "/live": "/live/tuesday",
+  },
 });
