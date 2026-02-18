@@ -49,7 +49,7 @@ In case you haven’t yet, now is a great time to grab your tickets at https://e
 <td>Karin Lammers <em>Learning Rust as First Programming Language
 <tr>
 <td>Andreea Costea <em>Lessons Learnt from using Rust as the Intro to Programming
-<td>Æva Black <em>&mdash;
+<td>Æva Black <em>Between Computer Code And Legal Code: Open Source's Influence
 <tr>
 <td>Cliff L. Biffle <em>Common Pitfalls of Rewriting Things In Rust
 <td>Arya Dradjica <em>Obsessive Optimization with String Interning
@@ -106,3 +106,5 @@ In case you haven’t yet, now is a great time to grab your tickets at https://e
 </table>
 
 More details about all these talks will be published soon! Stay tuned!
+
+<em>Update: The schedule and talk descriptions have been published! See <a href="/schedule/">the Schedule</a>!</em>
