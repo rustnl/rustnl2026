@@ -17,6 +17,7 @@ import ButtonGroup from "../../components/ButtonGroup.astro";
 import Cta from "src/components/Cta.astro";
 import Hero from "src/components/Hero.astro";
 import OneColumn from "src/components/OneColumn.astro";
+import SpeakerList from "../../components/people/PeopleList.astro"
 
 const { talk } = Astro.props;
 let { title, level, day, draft } = talk.data;
@@ -79,18 +80,13 @@ if (draft) {
         <div class="markdown" set:html={talk.rendered?.html} />
       )}
   </OneColumn>
-  <div class="lg:grid lg:cols-12 container">
-    <div class="lg:col-start-3 lg:col-end-11 persons">
+  <SpeakerList ty="single-column">
       {
-        (() => {
-            speakers.sort((_a, _b) => Math.random() - Math.random());
-            return speakers
-        })().map((speaker) => (
+        speakers.map((speaker) => (
           <Person bio={speaker.rendered?.html} {...speaker.data} single />
         ))
       }
-    </div>
-  </div>
+  </SpeakerList>
   <Cta title="Get your ticket" color="yellow">
     <ButtonGroup>
       <Button link="https://event.onliveevent.nl/rustweek-2026">

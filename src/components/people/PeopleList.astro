@@ -3,28 +3,13 @@ interface Props {
     id?: string,
     title?: string,
     lead?: string,
+    ty?: "single-column" | "overview"
 }
 
-const { id, title, lead }: Props = Astro.props;
+const { id, title, lead, ty = "overview" }: Props = Astro.props;
 ---
 
-<style lang="scss">
-  .header {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-block-end: 1.5rem;
-  }
-
-  .people {
-    display: grid;
-    gap: 4.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-</style>
-
-<div class="container" id={id}>
+<div class:list={["container", ty]} id={id}>
   {
     title && (
       <div class="header markdown">
@@ -37,3 +22,28 @@ const { id, title, lead }: Props = Astro.props;
     <slot />
   </div>
 </div>
+
+<style>
+  .header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-block-end: 1.5rem;
+  }
+
+  .people {
+    gap: 4.5rem;
+
+    .overview & {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .single-column & {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: min(40em, 100%);
+    }
+  }
+</style>
