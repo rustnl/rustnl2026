@@ -1,8 +1,8 @@
 ---
 name: "Harry van Haaren"
 image: "harry-van-haaren.jpg"
-title: "Racing Cars and Software Performance"
-org: "Always Fast"
+title: "Racing Cars and Software Performance, works on 'Always Fast' as a hobby project"
+org: ""
 url: ""
 bluesky: ""
 mastodon: ""
