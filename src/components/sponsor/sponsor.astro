@@ -7,23 +7,26 @@ let className = "size-md";
 switch (tier) {
     case "headline":
     case "diamond":
-        className = "size-xl";
+        className = "size-xxl";
         break;
     case "gold":
-        className = "size-l";
+        className = "size-xl";
         break;
     case "ecosystem-partner":
     case "silver":
+        className = "size-l";    
+        break;
+    case "bronze":
     case "organizing-partner":
         className = "size-md";
         break;
-    case "nl-sponsor":
-    case "workshop-partner":
-    case "industry-partner":
     case "supporter":
-    case "last-year":
     case "ecosystem-supporter":
         className = "size-s";
+        break;
+    case "workshop-partner":
+    case "industry-partner":
+        className = "size-xs";
         break;
     default:
         className = "size-md";
@@ -80,24 +83,28 @@ switch (tier) {
             height: 100%;
         }
 
+        &.size-xxl {
+            max-width: 28rem;
+        }
+
         &.size-xl {
-            max-width: 30rem;
+            max-width: 24rem;
         }
 
         &.size-l {
-            max-width: 25rem;
-        }
-
-        &.size-md {
             max-width: 20rem;
         }
 
+        &.size-md {
+            max-width: 18rem;
+        }
+
         &.size-s {
-            max-width: 15rem;
+            max-width: 16rem;
         }
 
         &.size-xs {
-            max-width: 10rem;
+            max-width: 12rem;
         }
     }
 </style>
