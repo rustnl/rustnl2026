@@ -4,9 +4,10 @@ interface Props {
     title?: string,
     lead?: string,
     ty?: "single-column" | "overview"
+    random?: boolean,
 }
 
-const { id, title, lead, ty = "overview" }: Props = Astro.props;
+const { id, title, lead, random=true, ty = "overview" }: Props = Astro.props;
 ---
 
 <div class:list={["container", ty]} id={id}>
@@ -18,10 +19,21 @@ const { id, title, lead, ty = "overview" }: Props = Astro.props;
       </div>
     )
   }
-  <div class="people">
+  <div class:list={["people", random?"shuffle":null]}>
     <slot />
   </div>
 </div>
+
+<script>
+for (const parent of document.getElementsByClassName("shuffle")) {
+  const divs = parent.children;
+  const frag = document.createDocumentFragment();
+  while (divs.length) {
+      frag.appendChild(divs[Math.floor(Math.random() * divs.length)]);
+  }
+  parent.appendChild(frag);
+}
+</script>
 
 <style>
   .header {
