@@ -7,7 +7,7 @@ url: ""
 bluesky: "https://bsky.app/profile/alice-i-cecile.bsky.social"
 linkedin: ""
 twitter: ""
-mastodon: "https://elk.zone/mastodon.gamedev.place/"
+mastodon: "https://mastodon.gamedev.place/@alice_i_cecile"
 talk: alice-cecile
 github: "https://github.com/alice-i-cecile/"
 pronouns: "she/her"
