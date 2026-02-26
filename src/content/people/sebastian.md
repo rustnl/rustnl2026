@@ -1,7 +1,7 @@
 ---
 name: "Sebastian Sydow"
-image: "sebastian-sydow.png"
-title: "Rust-GPU Maintainer"
+image: "Sebastian Sydow.jpg"
+title: "Firestar99, Rust-GPU Maintainer"
 org: "Vectorware"
 url: ""
 bluesky: ""
@@ -13,4 +13,4 @@ github: "https://github.com/Firestar99/"
 pronouns: "he/him"
 ---
 
-Computer graphics engineer turned compiler dev, now working on Rust-GPU
+Firestar99 is a computer graphics engineer turned compiler dev, now working on Rust-GPU.

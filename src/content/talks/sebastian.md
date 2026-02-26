@@ -1,7 +1,7 @@
 ---
 tracks: 
  - B-1
-title: "Writing shaders for graphics in plain Rust"
+title: "Writing GPU shaders in plain Rust"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
