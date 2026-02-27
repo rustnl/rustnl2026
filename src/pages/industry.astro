@@ -27,8 +27,8 @@ import OneColumn from "src/components/OneColumn.astro";
       <br /> in their organisation. <br />
     </p>
     <ButtonGroup style="cutout">
-        <Button link="#tickets">Tickets</Button>
-        <Button link="#schedule" ty="secondary">Schedule</Button>
+      <Button link="#tickets">Tickets</Button>
+      <Button link="#schedule" ty="secondary">Schedule</Button>
     </ButtonGroup>
   </Fragment>
 
@@ -62,7 +62,7 @@ import OneColumn from "src/components/OneColumn.astro";
         <li>
           Introducing Rust in a conservative environment - by Julius Gustavsson
         </li>
-        <li>Hiring and training - tba</li>
+        <li>Hiring Rust Engineers - by Alex Garella</li>
         <li>Safety Critical Rust - tba</li>
         <li>Embedded Rust- tba</li>
       </ul>
@@ -200,6 +200,12 @@ import OneColumn from "src/components/OneColumn.astro";
       title="Engineering team Embedded Software at ROCSYS"
       smalltile
     />
+    <Person
+      name="Alex Garella"
+      image="alex-garella.png"
+      title="Founder of RustJobs.dev"
+      smalltile
+    />
   </PeopleList>
   <SponsorTier name="Expert partners">
     <SponsorTier>
@@ -214,6 +220,18 @@ import OneColumn from "src/components/OneColumn.astro";
         tier="expert-partner"
         image="corrode.svg"
         link="https://corrode.dev/"
+      />
+      <Sponsor
+        name="Volvo Cars"
+        tier="expert-partner"
+        image="volvo.png"
+        link="https://www.volvocars.com/"
+      />
+      <Sponsor
+        name="RustJobs.dev"
+        tier="expert-partner"
+        image="rustjobs.svg"
+        link="https://rustjobs.dev/"
       />
     </SponsorTier>
   </SponsorTier>
@@ -249,7 +267,6 @@ import OneColumn from "src/components/OneColumn.astro";
       />
     </SponsorTier>
   </SponsorTier>
-
 </HeroLayout>
 
 <style lang="scss">
