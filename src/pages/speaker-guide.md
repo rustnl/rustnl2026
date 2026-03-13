@@ -37,9 +37,11 @@ so there should be no need to explain basic properties of the language.
 ## What can I use for slides?
 
 The easiest option is to send us a PDF with your slides beforehand. If you'd like to use another format, please let us know beforehand.
+You can also use your own laptop, but do make extra sure to come in the break before your talk so we can make sure it all works!
 
-If you have any special requests, such as using your own laptop, live demoing, screencasting from a phone, or anything else,
+If you have any special requests, such as a complicated live demo, screencasting from a phone, or anything else,
 please contact us well in advance of the conference so we can notify the venue as well.
+That way, the recording crew can also know what to expect so it looks good in the final video.
 
 Here are some additional factoids and tips:
 
@@ -47,7 +49,7 @@ Here are some additional factoids and tips:
 - The laptop provided by the venue won't be connected to the internet, so if you provide a PDF or a PowerPoint file, make sure to embed all videos, fonts and other assets into the file.
 - If you present from your own laptop make sure that we can connect an HDMI cable to it. If it does not have an HDMI port, please bring your own dongle.
 - Even if you present from your own laptop, you can send us a PDF or similar format as backup.
-- We don't need to approve your slides, but if you want feedback on them, for example to check whether they are a good fit for the expected audience, you send them to us.
+- We don't need to approve your slides, but if you want feedback on them, for example to check whether they are a good fit for the expected audience, you *can* send them to us.
 
 ## Will the talk be live streamed and recorded?
 
