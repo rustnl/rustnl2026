@@ -17,8 +17,7 @@ If you have done so already, email us so we can refund it.
 
 You can find the time of the talks in the [tuesday](/schedule/tuesday) or [wednesday](/schedule/wednesday) timetables.
 
-> **We'd like to ask you to come to the stage in the break before your talk!**  
-> Or, at the latest, 5 minutes before your talk starts.
+> **We'd like to ask you to come to the stage in the break before your talk!**
 
 This is so we can give you a microphone and check that your slides are set up properly.
 
