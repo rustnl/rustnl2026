@@ -3,18 +3,31 @@ layout: "../layouts/PageLayout.astro"
 title: "Speaker Guide"
 ---
 
-If you're looking at this page, we'd like to thank you for speaking at RustWeek 2025! As a speaker, you might have some questions about the conference. We're happy to answer any questions you have, but here are at least some frequently asked question you can look at.
+If you're looking at this page, we'd like to thank you for speaking at RustWeek 2025! As a speaker, you might have some questions about the conference.
+We're happy to answer any questions you have, but here are at least some frequently asked question you can look at.
 
 If you have any questions not answered on this page, you can send an email to <jana@rustnl.org>.
 
+## Do I need a ticket?
+
+As a speaker, you do not need to buy a conference ticket.
+If you have done so already, email us so we can refund it.
+
 ## When am I speaking?
 
-You can find the time of the talks in the [timetable](/schedule/tuesday). We'd like to ask you to come to the stage in the break before your talk so we can give you a microphone and check that your slides are set up properly.
+You can find the time of the talks in the [tuesday](/schedule/tuesday) or [wednesday](/schedule/wednesday) timetables.
+
+> **We'd like to ask you to come to the stage in the break before your talk!**  
+> Or, at the latest, 5 minutes before your talk starts.
+
+This is so we can give you a microphone and check that your slides are set up properly.
 
 ## How long should my talk be?
 
 Depending on the time slot allocated for your talk, it should be 15 or 30 minutes.
 After that time, we always scheduled a gap of 5 to 10 minutes for audience questions.
+In other words: if you have a 30 minutes talk,
+that's actually a 35 minute slot: you don't have to account for questions in those 30 minutes.
 
 ## Who should my talk be aimed at?
 
