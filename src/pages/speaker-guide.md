@@ -3,7 +3,7 @@ layout: "../layouts/PageLayout.astro"
 title: "Speaker Guide"
 ---
 
-If you're looking at this page, we'd like to thank you for speaking at RustWeek 2025! As a speaker, you might have some questions about the conference.
+If you're looking at this page, we'd like to thank you for speaking at RustWeek 2026! As a speaker, you might have some questions about the conference.
 We're happy to answer any questions you have, but here are at least some frequently asked question you can look at.
 
 If you have any questions not answered on this page, you can send an email to <jana@rustnl.org>.
