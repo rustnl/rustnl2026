@@ -8,6 +8,13 @@ We're happy to answer any questions you have, but here are at least some frequen
 
 If you have any questions not answered on this page, you can send an email to <jana@rustnl.org>.
 
+We have a discord server. Something attendants might like asking you questions there after your talk.
+We will also post information if things happen at the conference that affect the talks for example.
+If you join we'll give you a speaker roll (maybe ping us if we forget).
+Note though, that any essential information will be duplicated on email.
+It is not *required* to join the discord.
+This is the join link: <https://discord.gg/FSwaWZdk6k>
+
 ## Do I need a ticket?
 
 As a speaker, you do not need to buy a conference ticket.
