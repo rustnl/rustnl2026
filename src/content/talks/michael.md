@@ -1,6 +1,6 @@
 ---
 tracks:
- - B-2
+ - applied-rust
 title: "Programming Your Own DSL in Rust – Experiences from Developing µcad"
 level: ""
 tags: []

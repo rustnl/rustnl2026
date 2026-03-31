@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Field report on scripting Rust"
 level: ""
 tags: []

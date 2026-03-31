@@ -1,6 +1,6 @@
 ---
 tracks: 
- - A-2
+ - main
 title: "Talk title TBA"
 level: ""
 tags: []

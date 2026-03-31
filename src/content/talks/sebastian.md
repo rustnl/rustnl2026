@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-1
+ - compiler
 title: "Writing GPU shaders in plain Rust"
 level: ""
 tags: []

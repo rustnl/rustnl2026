@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Typst: Designing for Incrementality"
 level: ""
 tags: []

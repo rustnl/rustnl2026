@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Writing a top-10 chess engine in Rust"
 level: ""
 tags: []

@@ -1,6 +1,6 @@
 ---
 tracks:
- - B-1
+ - compiler
 title: "The trials of qualifying Rust"
 level: ""
 tags: []

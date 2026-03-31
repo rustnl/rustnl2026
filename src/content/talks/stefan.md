@@ -1,6 +1,6 @@
 ---
 tracks: 
- - A-1
+ - main
 title: "Knock, knock. Race condition! Who's there? - A Refactoring Story"
 level: ""
 tags: []

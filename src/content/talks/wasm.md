@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Debunking Rust Wasm Performance Myths: Why We Moved Core Business Logic to Rust at Canva"
 level: ""
 tags: []

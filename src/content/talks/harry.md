@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Racing with Rust: building telemetry tools for racing simulators. "
 level: ""
 tags: []
