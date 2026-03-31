@@ -8,7 +8,7 @@ const { title } = frontmatter;
 ---
 
 <CommonLayout title={title} header={title} withLogo>
-    <Hero title={title} color="yellow" />
+    { title && <Hero title={title} color="yellow" /> }
     <OneColumn>
         <div class="markdown">
             <slot />
