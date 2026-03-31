@@ -110,16 +110,23 @@ p {
 }
 
 .markdown {
+  margin-bottom: 2lh;
+
   @include breakpoint.wider_than(lg) {
     font-size: var(--font-size-lg);
   }
 
   > *:not(h1, h2, h3, h4, h5, h6) + * {
-    margin-block-start: 1lh;
+    margin-block-start: 0.5lh;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    margin-block-start: 1.5lh;
     margin-block-end: 0.5lh;
+  }
+
+  h1:first-child {
+    margin-block-start: 0lh;
   }
 
   a {
