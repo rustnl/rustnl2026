@@ -47,12 +47,11 @@ const {name}: Props = Astro.props;
     min-height: variables.space(8);
     padding-inline: variables.space(3);
 
-    &.project {
+    &.compiler, &.rust-project {
       background-color: var(--color-red-100);
     }
 
-    &.industry,
-    &.gosim-spotlight {
+    &.industry {
       background-color: var(--color-yellow-100);
     }
   }
