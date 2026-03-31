@@ -1,7 +1,7 @@
 ---
 tracks: 
  - main
-title: "Talk title TBA"
+title: "Completion-based IO"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
