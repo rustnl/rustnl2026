@@ -2,7 +2,7 @@
 name: "Alice Ryhl"
 image: "alice.jpg"
 title: "Tokio maintainer, Rust for Linux core team, Android Rust Team at Google"
-org: "Google"
+org: ""
 url: "https://ryhl.io/"
 bluesky: ""
 linkedin: "https://www.linkedin.com/in/aliceryhl"
