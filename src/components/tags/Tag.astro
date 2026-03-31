@@ -47,12 +47,16 @@ const {name}: Props = Astro.props;
     min-height: variables.space(8);
     padding-inline: variables.space(3);
 
-    &.compiler, &.rust-project {
-      background-color: var(--color-red-100);
+    &.rust-project {
+      background-color: var(--color-purple-100);
+    }
+
+    &.compiler, &.applied-rust {
+      background-color: var(--color-yellow-100);
     }
 
     &.industry {
-      background-color: var(--color-yellow-100);
+      background-color: var(--color-red-100);
     }
   }
 </style>
