@@ -19,15 +19,20 @@ import Hero from "../../components/Hero.astro";
 import OneColumn from "../../components/OneColumn.astro";
 
 const { workshop } = Astro.props;
-const { title, level, published } = workshop.data;
+const { title, level, published, img } = workshop.data;
 const people = await getCollection("trainers");
+
+// og:image tag needs full url, not a relative one
+// TODO create dev + production environment variables for base url
+const ogImageBaseUrl = "https://2026.rustweek.org/images/workshops/";
+// const ogImageBaseUrl = "http://localhost:4321/images/workshops/";
 
 const trainers = people.filter((person) => person.data.workshop?.id === workshop.id);
 const trainer_names = trainers.map((trainer) => trainer.data.name).join(", ");
 const ignore = !published ? { "data-pagefind-ignore": "all" } : {};
 ---
 
-<CommonLayout title={title} withLogo {...ignore}>
+<CommonLayout title={title} withLogo {...ignore} ogImage={`${ogImageBaseUrl}${img}`}>
   <Hero
     kicker="Workshop"
     title={title}

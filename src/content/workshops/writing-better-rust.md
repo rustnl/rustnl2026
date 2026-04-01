@@ -4,6 +4,7 @@ abstract: "It's easy to get lost in the depth of Rust's syntax and semantics. Yo
 level: "intermediate"
 participants: 20
 published: true
+img: "writing-better-rust.png"
 ---
 
 It's easy to get lost in the depth of Rust's syntax and semantics. Your code
