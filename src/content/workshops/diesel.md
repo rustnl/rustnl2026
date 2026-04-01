@@ -3,6 +3,7 @@ title: "Building Web applications with Diesel"
 abstract: "Diesel is a performant and type-safe query builder and ORM (object relational mapper) for Rust. In this hands-on workshop, you will learn how Diesel can be used to build web applications in Rust."
 level: "intermediate"
 participants: 16
+img: "diesel.png"
 published: true
 ---
 

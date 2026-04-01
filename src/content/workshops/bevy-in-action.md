@@ -3,6 +3,7 @@ title: "Bevy in Action: Build, Polish, and Deploy a Match‑Three Game"
 abstract: "After a quick introduction to Bevy and its Entity‑Component‑System (ECS) architecture, attendees will start from a pre‑made match‑three prototype, and work in small teams to incrementally add gameplay features, polish the game, deploy to various platforms and experiment with Bevy. Have fun hacking, and expect to learn about best practices for debugging, iterating and releasing in Bevy and Rust."
 level: "intermediate"
 participants: 40
+img: "bevy-in-action.png"
 published: true
 ---
 

@@ -23,6 +23,7 @@ const workshops = defineCollection({
     level: z.string(),
     published: z.boolean(),
     participants: z.number(),
+    img: z.string(),
     // tags: z.array(z.string()),
     // duration: z.number(),
     // day: z.string(),
