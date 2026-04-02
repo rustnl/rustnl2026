@@ -1,6 +1,7 @@
 ---
 layout: "../layouts/PageLayout.astro"
-title: "Launch Party"
+title: "Funding Open-Source Maintainers - Launch Party"
+hero: "Launch Party"
 slug: "fund-launch"
 ---
 
