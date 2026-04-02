@@ -18,7 +18,10 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name="description" content={ogDescription} />
+    <meta
+        name="description"
+        content="RustWeek 2026, The Netherlands - May 18 - 23 2026"
+    />
     <link rel="icon" href="/svg/rustnl-logo-square.svg" type="image/svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,10 +32,7 @@ const {
     <slot />
     <meta property="og:url" content="https://rustweek.org/" />
     <meta property="og:title" content={title} />
-    <meta
-        name="description"
-        content="RustWeek 2026, The Netherlands - May 18–23 2026"
-    />
+    <meta property="og:description" content={ogDescription} />
     { ogDate &&
         <meta name="publish_date" property="og:publish_date" content={ogDate} />
     }
