@@ -4,11 +4,11 @@ import OneColumn from "src/components/OneColumn.astro";
 import Hero from "src/components/Hero.astro";
 
 const { frontmatter } = Astro.props;
-const { title, hero = null, ogDescription } = frontmatter;
+const { title, hero = null, ogDescription, ogImage } = frontmatter;
 
 ---
 
-<CommonLayout title={title} header={title} withLogo ogDescription={ogDescription}>
+<CommonLayout title={title} header={title} withLogo ogImage={ogImage} ogDescription={ogDescription}>
     { (hero || title) && <Hero title={hero || title} color="yellow" /> }
     <OneColumn>
         <div class="markdown">
