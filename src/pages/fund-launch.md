@@ -20,7 +20,7 @@ helping them continue the essential (and often invisible) work that powers the e
 
 **What:** Launch Party (Short Talks + Drinks)<br />
 **When:** Wednesday 20 May 2026, 19:00 (after RustWeek's [second conference day](/schedule/wednesday))<br />
-**Where:** Location to be announced (near Utrecht Centraal)<br />
+**Where:** Utrecht, The Netherlands (venue TBA, near Utrecht Central Station)<br />
 
 👉 **Register your interest here:** https://share.formgrid.com/qhjyGdhPQDRrgc4b
 
