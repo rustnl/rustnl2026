@@ -1,6 +1,6 @@
 ---
 name: "Benno Lossin"
-image: "benno.png"
+image: "benno.jpg"
 title: "Rust for Linux core team"
 org: ""
 url: "https://bennolossin.github.io/blog"
