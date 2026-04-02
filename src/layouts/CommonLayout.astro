@@ -11,6 +11,7 @@ interface Props {
   withoutMenu?: boolean;
   ogImage?: string;
   ogDate?: string;
+  ogDescription?: string;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   withoutMenu = false,
   ogImage,
   ogDate = "",
+  ogDescription = "",
 } = Astro.props;
 ---
 
@@ -119,7 +121,7 @@ const {
 </style>
 
 <html lang="en">
-  <Head title={`${title} - RustWeek 2026`} ogImage={ogImage} ogDate={ogDate} />
+  <Head title={`${title} - RustWeek 2026`} ogImage={ogImage} ogDate={ogDate} ogDescription={ogDescription} />
   <body>
     <Header withLogo={withLogo} withoutMenu={withoutMenu} />
     <main class="space-y-16 lg:space-y-12">

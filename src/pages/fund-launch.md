@@ -3,6 +3,7 @@ layout: "../layouts/PageLayout.astro"
 title: "Funding Open-Source Maintainers - Launch Party"
 hero: "Launch Party"
 slug: "fund-launch"
+ogDescription: "Join us to celebrate the start of NLnet's efforts to deliver structural support for load-bearing leadership and maintenance roles in the free and open source community."
 ---
 
 # Funding Open-Source Maintainers
