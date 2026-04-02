@@ -6,7 +6,7 @@ slug: "fund-launch"
 
 # Funding Open-Source Maintainers
 
-Join us to celebrate the start of NLnet's new initiative to deliver structural support for
+Join us to celebrate the start of NLnet's efforts to deliver structural support for
 load-bearing leadership and maintenance roles in the free and open source community.
 
 This event marks the launch of [NLnet's Rust Maintainers Fund](https://nlnet.nl/maintainers/rust/),
