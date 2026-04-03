@@ -62,7 +62,7 @@ import OneColumn from "src/components/OneColumn.astro";
           Introducing Rust in a conservative environment - by Julius Gustavsson
         </li>
         <li>Hiring Rust Engineers - by Alex Garella</li>
-        <li>Safety Critical Rust - tba</li>
+        <li>Applying Rust in regulated environments - Till Adam</li>
         <li>Embedded Rust- tba</li>
       </ul>
     </div>
@@ -112,8 +112,8 @@ import OneColumn from "src/components/OneColumn.astro";
         />
         <TimetableItem
           time="15.00"
-          title="Live Podcast recording"
-          speaker="Matthias Endler"
+          title="Live recording of 'Rust in Production: Oxidizing the Linux Kernel'"
+          speaker="Matthias Endler, Greg Kroah-Hartman, Alice Ryhl"
         />
         <TimetableItem time="15.50" title="Break" />
         <TimetableItem
@@ -205,6 +205,24 @@ import OneColumn from "src/components/OneColumn.astro";
       title="Founder of RustJobs.dev"
       smalltile
     />
+    <Person
+      name="Till Adam"
+      image="till.jpeg"
+      title="CCO at KDAB, Board Member at Ferrous Systems"
+      smalltile
+    />
+    <Person
+      name="Greg Kroah-Hartman"
+      image="greg.jpeg"
+      title="Fellow at the Linux Foundation"
+      smalltile
+    />
+    <Person
+      name="Alice Ryhl"
+      image="alice.jpg"
+      title="Tokio maintainer, Rust for Linux core team, Android Rust Team at Google"
+      smalltile
+    />
   </PeopleList>
   <SponsorTier name="Expert partners">
     <SponsorTier>
@@ -219,6 +237,12 @@ import OneColumn from "src/components/OneColumn.astro";
         tier="expert-partner"
         image="corrode.svg"
         link="https://corrode.dev/"
+      />
+      <Sponsor
+        name="Microsoft"
+        tier="expert-partner"
+        image="microsoft.svg"
+        link="https://www.microsoft.com/"
       />
       <Sponsor
         name="Volvo Cars"
@@ -255,16 +279,16 @@ import OneColumn from "src/components/OneColumn.astro";
         link="https://rustfoundation.org/"
       />
       <Sponsor
-        name="OxidOS"
-        tier="industry-partner"
-        image="oxidos.png"
-        link="https://oxidos.io/"
-      />
-      <Sponsor
         name="TMC"
         tier="industry-partner"
         image="tmc.png"
         link="https://www.themembercompany.com/"
+      />
+      <Sponsor
+        name="Wyliodrin"
+        tier="industry-partner"
+        image="wyliodrin.svg"
+        link="https://wyliodrin.com/"
       />
     </SponsorTier>
   </SponsorTier>
