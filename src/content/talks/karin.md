@@ -1,6 +1,6 @@
 ---
 tracks: 
- - A-2
+ - main
 title: "Learning Rust as First Programming Language "
 level: ""
 tags: []

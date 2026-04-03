@@ -1,6 +1,6 @@
 ---
 tracks:
- - B-2
+ - applied-rust
 title: "Creativity loves constraint (solvers) "
 level: ""
 tags: []

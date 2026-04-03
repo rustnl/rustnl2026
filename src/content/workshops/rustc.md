@@ -4,4 +4,5 @@ abstract: "In this workshop we're going to be learn about how rust's warnings an
 level: "intermediate"
 participants: 16
 published: true
+img: "rustc.png"
 ---

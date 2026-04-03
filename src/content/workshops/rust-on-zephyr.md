@@ -4,6 +4,7 @@ abstract: "The Zephyr RTOS is a mature operating system ecosystem, with support 
 level: "advanced"
 participants: 20
 published: true
+img: "rust-on-zephyr.png"
 ---
 
 The Zephyr RTOS is a mature operating system ecosystem, with support for over 900 boards, and numerous features. Recently, it has become possible to develop applications in Rust running on Zephyr. There are a lot of pieces involved in doing this, both in setting up a development environment for Zephyr, configuring and building Zephyr, as well as integrating this with a Rust application.

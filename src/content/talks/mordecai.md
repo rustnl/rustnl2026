@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Shaping Tomorrow’s Software Engineers"
 level: ""
 tags: []

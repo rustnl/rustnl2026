@@ -1,6 +1,6 @@
 ---
 tracks: 
- - B-2
+ - applied-rust
 title: "Blitz: building a modular web engine "
 level: ""
 tags: []

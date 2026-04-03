@@ -4,6 +4,7 @@ abstract: "Rust is a great fit for refactoring and extending existing C applicat
 level: "intermediate"
 published: true
 participants: 16
+img: "integrate-rust-into-c.png"
 ---
 
 This is a hands-on workshop where you will start with an existing C microcontroller application and learn how to extend it with Rust: How to integrate Rust into the build, how to add support for Rust's runtime, how call back and forth between the languages and how to make use of its breadth ecosystem. You will be the one making these steps - but no worries, you will be guided well along the way.

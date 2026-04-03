@@ -1,6 +1,6 @@
 ---
 tracks: 
- - A-1
+ - main
 title: "Lessons Learnt from using Rust as the Intro to Programming"
 level: ""
 tags: []

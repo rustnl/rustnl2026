@@ -2,7 +2,7 @@
 name: "Taylor Cramer"
 image: "taylor.webp"
 title: "Crubit Development Lead at Google, former\u00A0member of the Rust lang team"
-org: "Google"
+org: ""
 url: ""
 bluesky: ""
 linkedin: "https://www.linkedin.com/in/cramertj/"

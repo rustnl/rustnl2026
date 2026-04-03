@@ -9,16 +9,14 @@ const {name}: Props = Astro.props;
   <span>{
       ((i) => {
         switch (i) {
-          case "A-1":
+          case "main":
             return "main track"
-          case "A-2":
-            return "main track"
-          case "B-1":
+          case "compiler":
           return "compiler track"
-          case "B-2":
+          case "applied-rust":
             return "applied rust track"
-          case "project":
-            return "project track";
+          case "rust-project":
+            return "rust project track";
           case "ecosystem":
             return "ecosystem track";
           case "industry":
@@ -49,13 +47,16 @@ const {name}: Props = Astro.props;
     min-height: variables.space(8);
     padding-inline: variables.space(3);
 
-    &.project {
-      background-color: var(--color-red-100);
+    &.rust-project {
+      background-color: var(--color-purple-100);
     }
 
-    &.industry,
-    &.gosim-spotlight {
+    &.compiler, &.applied-rust {
       background-color: var(--color-yellow-100);
+    }
+
+    &.industry {
+      background-color: var(--color-red-100);
     }
   }
 </style>
