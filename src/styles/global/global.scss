@@ -71,7 +71,7 @@ blockquote {
   padding-left: 1em;
 }
 
-blockquote > p {
+blockquote>p {
   margin-block-start: variables.space(6);
 }
 
@@ -116,11 +116,16 @@ p {
     font-size: var(--font-size-lg);
   }
 
-  > *:not(h1, h2, h3, h4, h5, h6) + * {
+  >*:not(h1, h2, h3, h4, h5, h6)+* {
     margin-block-start: 0.5lh;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-block-start: 1.5lh;
     margin-block-end: 0.5lh;
   }
@@ -154,5 +159,9 @@ p {
 
   em {
     font-style: italic;
+  }
+
+  code {
+    font-size: calc(var(--font-size-lg) * 0.85);
   }
 }
