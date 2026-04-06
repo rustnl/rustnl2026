@@ -1,0 +1,47 @@
+---
+import CommonLayout from "./CommonLayout.astro";
+import OneColumn from "../components/OneColumn.astro";
+import Button from "../components/Button.astro";
+import Divider from "../components/Divider.astro";
+import SubEvents from "../components/event/SubEvents.astro";
+import Event from "../components/event/Event.astro";
+import Hero from "src/components/Hero.astro";
+
+const tracks = await Astro.glob("../pages/events/tracks/*.md");
+
+tracks.sort((a, b) => {
+    return (a.frontmatter.priority ?? 1) - (b.frontmatter.priority ?? 1)
+});
+
+const activities = await Astro.glob("../pages/events/activities/*.md");
+const { frontmatter } = Astro.props;
+const { title, hero = null, hasActivities, hasTracks, dates } = frontmatter;
+---
+
+<CommonLayout title={title} withLogo>
+    { (hero || title) && <Hero title={hero || title} color="yellow" /> }
+    <OneColumn>
+        <Event {...frontmatter}>
+            <div class="markdown">
+                <slot />
+                {
+                    hasTracks && (
+                        <Divider />
+                        <SubEvents tracks={tracks} date={dates[0]} />
+                    )
+                }
+                {
+                    dates.map((date: any) => (
+                        hasActivities && (
+                            <Divider />
+                            <SubEvents tracks={activities} date={date} />
+                        )
+                    ))
+                }
+            </div>
+        </Event>
+        <div class="py-12">
+            <Button link="/overview#list">List of events</Button>
+        </div>
+    </OneColumn>
+</CommonLayout>
