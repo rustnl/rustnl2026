@@ -20,7 +20,6 @@ The unconference hosts these communities:
 - Rust Embedded Working Group
 - Safety-Critical Rust Consortium
 - Rust on the GPU
-- ... your group? [Contact us!](mailto:unconf@rustnl.org)
 
 ## Joining an unconf group
 
