@@ -42,7 +42,8 @@ const { tracks, date } = Astro.props;
                         room={track.frontmatter.room}
                     />
                 )}
-                <div set:html={track.compiledContent()} />
+                <br />
+                <div class="markdown" set:html={track.compiledContent()} />
                 {track.frontmatter.detailLink && (
                     <div class="track-link">
                         <a href={track.frontmatter.detailLink}>More details</a>
@@ -55,10 +56,6 @@ const { tracks, date } = Astro.props;
                         </a>
                     </div>
                 )}
-                <div>
-                    <br />
-                    <br />
-                    <Divider />
                 </div>
             </div>
         ))

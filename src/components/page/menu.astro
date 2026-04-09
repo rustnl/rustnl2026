@@ -1,5 +1,4 @@
 ---
-
 interface Props {
   location: "header" | "footer";
 }
@@ -17,108 +16,97 @@ const { location }: Props = Astro.props;
         <!--     </li> -->
         <li class="child" role="menuitem">
           <a
-            href="/#week-schedule"
-            onclick="document.querySelector('[data-menu-toggle]').click()"
+            href="/overview"
             >Overview of the week</a
           >
         </li>
         <li class="child" role="menuitem">
-            <a href="/workshops"><span>mon</span>Workshops</a>
+          <a href="/workshops"><span>mon</span>Workshops</a>
         </li>
         <li class="child" role="menuitem">
-            <a href="/schedule/tuesday"><span>tue</span>Conference day 1</a>
+          <a href="/schedule/tuesday"><span>tue</span>Conference day 1</a>
         </li>
         <li class="child" role="menuitem">
-            <a href="/schedule/wednesday"><span>wed</span>Conference day 2</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a href="/industry">Industry Track</a>
-        </li>
-        <!--     <li> -->
-        <!--         <a href="/events/hackathon" role="menuitem"><span>fri</span>Hackathon</a> -->
-        <!--     </li> -->
-        <!--     <li class="child" role="menuitem"> -->
-        <!--       <a -->
-        <!--         href="/events/social-activities" -->
-        <!--         >All-week social activities</a -->
-        <!--       > -->
-        <!--     </li> -->
-        <!--     <li class="child" role="menuitem"> -->
-        <!--       <a -->
-        <!--         href="/overview#list" -->
-        <!--         >List of all events</a -->
-        <!--       > -->
-        <!--     </li> -->
-      </ul>
-    </li>
-    <li class="parent" role="menuitem">
-      <a
-        href="/speakers"
-      >
-        Speakers
-      </a>
-    </li>
-    <li class="parent" role="menuitem">
-      <a href="/#sponsors">Sponsors</a>
-    </li>
-    <li class="parent" role="menuitem">
-      <h2>Practical</h2>
-      <ul class="submenu" role="menu">
-        <li class="child" role="menuitem">
-          <a href="/getting-there">Getting there</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a href="/hotels">Hotels</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a href="/utrecht">About Utrecht</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a href="/kinepolis">Conference venue</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a href="/beatrixgebouw">Workshop venue</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a href="/dus">Unconf & All-Hands venue</a>
+          <a href="/schedule/wednesday"><span>wed</span>Conference day 2</a>
         </li>
         <!-- <li class="child" role="menuitem">
+          <a href="/industry">Industry Track</a>
+        </li> -->
+        <li>
+          <a href="/events/hackathon" role="menuitem"><span>thu</span>Hackathon</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a href="/events/social-activities" >Social activities</a>
+        </li>
+        <li class="child" role="menuitem">
+          <a href="/overview#list">List of all events</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <li class="parent" role="menuitem">
+    <a href="/speakers"> Speakers </a>
+  </li>
+  <li class="parent" role="menuitem">
+    <a href="/#sponsors">Sponsors</a>
+  </li>
+  <li class="parent" role="menuitem">
+    <h2>Practical</h2>
+    <ul class="submenu" role="menu">
+      <li class="child" role="menuitem">
+        <a href="/getting-there">Getting there</a>
+      </li>
+      <li class="child" role="menuitem">
+        <a href="/hotels">Hotels</a>
+      </li>
+      <li class="child" role="menuitem">
+        <a href="/utrecht">About Utrecht</a>
+      </li>
+      <li class="child" role="menuitem">
+        <a href="/kinepolis">Conference venue</a>
+      </li>
+      <li class="child" role="menuitem">
+        <a href="/beatrixgebouw">Workshop venue</a>
+      </li>
+      <li class="child" role="menuitem">
+        <a href="/dus">Unconf & All-Hands venue</a>
+      </li>
+      <!-- <li class="child" role="menuitem">
           <a href="/hotels">Hotels</a>
         </li> -->
-        <li class="child" role="menuitem">
-          <a href="/accessibility">Accessibility</a>
-        </li>
-      </ul>
-    </li>
-    <li class="parent" role="menuitem">
-      <a href="/blog">Blog</a>
-    </li>
-    <li class="parent">
-      <h2>About</h2>
-      <ul class="submenu">
-        <li class="child">
-          <a href="/about">About</a>
-        </li>
-        <li class="child" role="menuitem">
-          <a
-            href="/#sponsors"
-            onclick="document.querySelector('[data-menu-toggle]').click()"
-            >Our sponsors</a
-          >
-        </li>
-        <li class="child">
-          <a href="mailto:rustweek@rustnl.org">Contact</a>
-        </li>
-      </ul>
-    </li>
-    <!-- <li class="parent"> -->
-    <!--   <Button -->
-    <!--     link="/live" -->
-    <!--     ty="primary" -->
-    <!--     inFooter={location == "footer"}>Livestream</Button -->
-    <!--   > -->
-    <!-- </li> -->
-  </ul>
+      <li class="child" role="menuitem">
+        <a href="/accessibility">Accessibility</a>
+      </li>
+    </ul>
+  </li>
+  <li class="parent" role="menuitem">
+    <a href="/blog">Blog</a>
+  </li>
+  <li class="parent">
+    <h2>About</h2>
+    <ul class="submenu">
+      <li class="child">
+        <a href="/about">About</a>
+      </li>
+      <li class="child" role="menuitem">
+        <a
+          href="/#sponsors"
+          onclick="document.querySelector('[data-menu-toggle]').click()"
+          >Our sponsors</a
+        >
+      </li>
+      <li class="child">
+        <a href="mailto:rustweek@rustnl.org">Contact</a>
+      </li>
+    </ul>
+  </li>
+  <!-- <li class="parent"> -->
+  <!--   <Button -->
+  <!--     link="/live" -->
+  <!--     ty="primary" -->
+  <!--     inFooter={location == "footer"}>Livestream</Button -->
+  <!--   > -->
+  <!-- </li> -->
 </div>
 
 <style lang="scss">
@@ -165,8 +153,8 @@ const { location }: Props = Astro.props;
         padding: 0;
 
         h2 {
-            font-size: variables.$font-size-lg;
-            text-align: left;
+          font-size: variables.$font-size-lg;
+          text-align: left;
         }
       }
 

@@ -78,10 +78,11 @@ const {
                         </span>
                     )}
                 </div>
+                <br />
                 <slot />
                 {detailLink && (
                     <div class="track-link">
-                        <a href={detailLink}>More details</a>
+                        <a href={detailLink}>Event details</a>
                     </div>
                 )}
                 {scheduleLink && (
@@ -105,6 +106,7 @@ const {
 
     h2 {
         padding-top: 0;
+        margin: 1rem 0;
     }
 
     a h3 {
