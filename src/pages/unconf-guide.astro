@@ -16,13 +16,14 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
 <CommonLayout title="Unconf participants guide">
   <Hero title="Unconf participants guide" color="yellow">
     <HeroAnchors>
-      <a href="#venue">Venue</a>
-      <a href="#unconf-details">Unconf schedule</a>
-      <a href="#rooms">Rooms</a>
-      <a href="#all-hands">All-Hands</a>
-      <a href="#sponsors">Sponsors</a>
-      <a href="#group-leaders">Group leaders</a>
-      <a href="#travel">Travel</a>
+      <a href="#venue">Venue</a> &bullet;
+      <a href="#unconf-details">Schedule</a> &bullet;
+      <a href="#rooms">Rooms</a> &bullet;
+      <a href="#all-hands">All-Hands</a> &bullet;
+      <a href="#sponsors">Sponsors</a> &bullet;
+      <a href="#group-leaders">Group leaders</a> &bullet;
+      <a href="#grants">Grants</a> &bullet;
+      <a href="#travel">Travel</a> &bullet;
     </HeroAnchors>
   </Hero>
   <OneColumn>
@@ -31,8 +32,9 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
     <div class="markdown">
       <Note>
         <p>
-          NOTE: All information on this page is for invited participants of the unconf. If you are not invited by one of the unconf groups, please check
-          out the <a href="/">homepage</a> for all RustWeek events.
+          NOTE: All information on this page is for invited participants of the
+          unconf. If you are not invited by one of the unconf groups, please
+          check out the <a href="/">homepage</a> for all RustWeek events.
         </p>
       </Note>
       <h2 id="venue">The unconference venue</h2>
@@ -83,7 +85,7 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
         The 2-day conference is held next to the Utrecht Central Station at
         Kinepolis Jaarbeurs on Tuesday and Wednesday.
       </p>
-      <h2 id="unconf-details">Unconf (Thu, Fri and Sat)</h2>
+      <h2 id="unconf-details">Unconf Schedule (Thu, Fri and Sat)</h2>
       <p>
         <b>Covid policy:</b> Please review our <a
           href="/covid-policy-all-hands-and-unconf">covid policy</a
@@ -100,8 +102,8 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
           <li>09:00 - 09:30: Arrival and registration</li>
           <li>09:30 - 13:00: Unconf sessions</li>
           <li>13:00 - 14:00: Lunch</li>
-          <li>14:00 - 17:30: Unconf sessions</li>
-          <li>17:30 - 18:30: Drinks & departing from the venue</li>
+          <li>14:00 - 17:00: Unconf sessions</li>
+          <li>17:00 - 18:00: Drinks & departing from the venue</li>
         </ul>
       </p>
       <p>
@@ -165,16 +167,80 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
   <OneColumn>
     <div class="markdown">
       <h2 id="rooms">Room assignments</h2>
-      <br />
-      <ul>
-        <li>Bevy Engine: TBA</li>
-        <li>Linebender: TBA</li>
-        <li>Rust Embedded Working Group: TBA</li>
-        <li>Safety-Critical Rust Consortium: TBA</li>
-      </ul>
+
+      <table style="padding: 10px; text-align: center; border: 1px solid #ccc;">
+        <tr
+          style="font-weight: bold; border: 1px solid #ccc;"
+        >
+          <th>Room</th>
+          <th>Breakout</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1A, 1B</td>
+          <td>Bevy</td>
+          <td>Bevy</td>
+          <td>Bevy</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>3</td>
+          <td >Rust Embedded </td>
+          <td><i>Free</i></td>
+          <td><i>Free</i></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>Linebender</td>
+          <td>GPU</td>
+          <td><i>Free</i></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>-</td>
+          <td><i>Free</i></td>
+          <td><i>Free</i></td>
+          <td><i>Free</i></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>-</td>
+          <td>ArielOS</td>
+          <td><i>Free</i></td>
+          <td><i>Free</i></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>10</td>
+          <td>Safety-Critical</td>
+          <td>Rust Embedded </td>
+          <td>Rust Embedded </td>
+        </tr>
+      </table>
+      <style>
+        th,
+        td {
+          padding: 5px;
+          border: 1px solid #ccc; 
+          border-width;: 0px 1px;
+
+          font-size: 0.9rem;
+
+          i {
+            color: #888;
+          }
+        }
+      </style>
       <p>
-        Please note that breakout rooms 2, 3 & 6 do <strong>not</strong>
+        Please note that breakout rooms 3 and 6 do <strong>not</strong>
         have a screen.
+      </p>
+      <p>
+        Rooms 2 and 7 are reserved for RustNL.
       </p>
     </div>
   </OneColumn>
@@ -182,7 +248,7 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
   <div class="container">
     <img
       style="margin: 2rem 0rem;width:100%;"
-      src="/images/venues/dus-rooms-fri-sat.png"
+      src="/images/venues/dus-floorplan.png"
     />
   </div>
 
@@ -193,14 +259,17 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
         See the <a href="/getting-there">Getting there page</a> for details on travel
         to Utrecht.
       </p>
-      <!-- <p>
-        For hotel recommendations see our <a href="/hotels">hotels page</a>.
-      </p> -->
       <p>
-        RustNL can help cover part of cost for travel and stay for upto 5
-        participants in each unconf group. The compensation is reserved for
-        participants that are not covered by their employer or other sponsor.
-        Please contact your group's leader(s) for details.
+        For hotel recommendations see our <a href="/hotels">hotels page</a>.
+      </p>
+
+      <h2 id="grants">Grants</h2>
+      <p>
+        RustNL can help cover part of cost for travel and stay for upto 3
+        participants in each unconf group.<br /><br />The compensation is
+        reserved for participants that are not covered by their employer or
+        other sponsor, and need the support to be able to participate. The compensation is capped at EUR 500 plus a conference ticket per participant.
+        Please contact your <a href="#group-leaders">group's leader(s)</a> to be nominated for a grant.
       </p>
       <h2 id="questions">Questions?</h2>
       <p>
