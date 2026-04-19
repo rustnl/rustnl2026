@@ -7,6 +7,7 @@ import LocationDusVenue from "../components/LocationDusVenue.astro";
 import LocationDusRooms from "../components/LocationDusRooms.astro";
 import UnconfSchedule from "../components/schedule/UnconfSchedule.astro";
 import UnconfSponsors from "../components/unconf/UnconfSponsors.astro";
+import UnconfGroups from "../components/unconf/UnconfGroups.astro";
 import UnconfLeaders from "../components/unconf/UnconfLeaders.astro";
 import HeroAnchors from "src/components/HeroAnchors.astro";
 
@@ -37,6 +38,10 @@ const unconfIntro = await Astro.glob("./unconf-intro.md");
           check out the <a href="/">homepage</a> for all RustWeek events.
         </p>
       </Note>
+    </div>
+  </OneColumn>
+  <UnconfGroups />
+  <OneColumn>
       <h2 id="venue">The unconference venue</h2>
       <p>
         The unconf is held at DUS Utrecht.<br />
