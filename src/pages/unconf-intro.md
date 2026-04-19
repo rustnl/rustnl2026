@@ -20,6 +20,7 @@ The unconference hosts these communities:
 - Rust Embedded Working Group
 - Safety-Critical Rust Consortium
 - Rust on the GPU
+- Ariel OS
 
 ## Joining an unconf group
 
