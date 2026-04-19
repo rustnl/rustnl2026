@@ -1,7 +1,7 @@
 ---
 import Markdown from "../Markdown.astro";
 
-const { name, tier, link, image } = Astro.props;
+const { name, tier, link, image, showName = false } = Astro.props;
 
 let className = "size-md";
 switch (tier) {
@@ -36,12 +36,19 @@ switch (tier) {
 
 {
     image && (
+    <div class="sponsor-container">
         <a href=`${link}` class={`sponsor ${className}`}>
             <img
                 alt={name}
                 src={`/images/sponsors/${image}`}
-            />
+                />   
         </a>
+        {
+            showName && (
+                <p>{name}</p>
+            )
+        }
+    </div>
     )
 }
 {
@@ -106,5 +113,13 @@ switch (tier) {
         &.size-xs {
             max-width: 12rem;
         }
+    }
+
+    div.sponsor-container {
+        // background-color: red;
+        p {
+            padding-top: 0.5rem;    
+            font-size: variables.$font-size-md;
+        }  
     }
 </style>
