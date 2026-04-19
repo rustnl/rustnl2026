@@ -1,7 +1,7 @@
 ---
-const html = await Astro.slots.render('default')
+
 ---
 
 <div class="markdown">
-    <Fragment set:html={html} />
+    <slot />
 </div>
