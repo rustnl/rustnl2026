@@ -6,6 +6,7 @@ import Divider from "../components/Divider.astro";
 import "../styles/index.scss";
 import UnconfSponsors from "../components/unconf/UnconfSponsors.astro";
 import UnconfLeaders from "../components/unconf/UnconfLeaders.astro";
+import UnconfGroups from "../components/unconf/UnconfGroups.astro";
 import Hero from "src/components/Hero.astro";
 
 const { frontmatter } = Astro.props;
@@ -18,11 +19,12 @@ const { title } = frontmatter;
         <div class="markdown">
             <slot />
         </div>
-        <div class="py-12">
+    </OneColumn>
+    <UnconfGroups />
+    <OneColumn>
+        <div class="py-12 text-center">
             <Button link="/unconf-guide">Guide for participants</Button>
         </div>
-    </OneColumn>
-    <OneColumn >
         <Divider />
     </OneColumn>
     <UnconfSponsors />
@@ -30,4 +32,10 @@ const { title } = frontmatter;
         <Divider />
     </OneColumn>
     <UnconfLeaders />
+    <OneColumn>
+        <Divider />
+        <div class="py-12 text-center">
+            <Button link="/unconf-guide">Guide for participants</Button>
+        </div>
+    </OneColumn>
 </CommonLayout>
