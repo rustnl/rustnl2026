@@ -36,19 +36,9 @@ switch (tier) {
 
 {
     image && (
-    <div class="sponsor-container">
         <a href=`${link}` class={`sponsor ${className}`}>
-            <img
-                alt={name}
-                src={`/images/sponsors/${image}`}
-                />   
+            <img alt={name} src={`/images/sponsors/${image}`} />
         </a>
-        {
-            showName && (
-                <p>{name}</p>
-            )
-        }
-    </div>
     )
 }
 {
