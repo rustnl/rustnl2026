@@ -1,6 +1,6 @@
 ---
 tracks:
- - rust-project
+ - main
 title: "<Talk title TBA>"
 level: ""
 tags: []
