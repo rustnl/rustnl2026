@@ -1,7 +1,7 @@
 ---
 tracks: 
  - main
-title: "Untrusted data in Linux, how rust is going to save us"
+title: "Untrusted data in Linux — How Rust is going to save us"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
