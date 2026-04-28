@@ -5,7 +5,7 @@ title: "Programming Languages as a Community of Belonging"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
-day: "tuesday"
+day: "wednesday"
 ---
 
 In the last few decades, programming as an identity has gone through a tremendous amount of changes. One of the most impactful changes has been the rise of programming languages as a community of belonging.
