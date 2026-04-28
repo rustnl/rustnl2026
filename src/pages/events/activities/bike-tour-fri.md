@@ -7,6 +7,6 @@ detailLink: null
 published: true
 ---
 
-Tim Janus is organizing a bike tour on Friday May 19. If you'd like to bike along, sign up via meetup.com!
+Tim Janus is organizing a bike tour on Friday May 19.
 
-The meetup.com registration link will appear here soon.
+If you'd like to bike along, sign up via meetup.com: [https://www.meetup.com/rust-nederland/events/314523659/](https://www.meetup.com/rust-nederland/events/314523659/)
