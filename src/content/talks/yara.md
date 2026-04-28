@@ -1,7 +1,7 @@
 ---
 tracks: 
  - main
-title: "Making sound - dragging a ten year old crate into 2026"
+title: "Making sound — Dragging a ten year old crate into 2026"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min

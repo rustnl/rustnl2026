@@ -1,7 +1,7 @@
 ---
 tracks: 
  - main
-title: "Knock, knock. Race condition! Who's there? - A Refactoring Story"
+title: "Knock, knock. Race condition! Who's there? — A Refactoring Story"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min

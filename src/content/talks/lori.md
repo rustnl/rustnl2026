@@ -1,7 +1,7 @@
 ---
 tracks: 
  - industry
-title: "Rustaceans on The Move - The Global Impact of Rust"
+title: "Rustaceans on The Move — The Global Impact of Rust"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
