@@ -5,5 +5,5 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": "."
     },
-    "exclude": ["src/2025-pages/", "src/2026-draft-pages/"]
+    "exclude": []
 }
