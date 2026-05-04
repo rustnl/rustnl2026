@@ -110,7 +110,7 @@ p {
 }
 
 .markdown {
-  margin-bottom: 2lh;
+  margin-bottom: 1.5lh;
 
   @include breakpoint.wider_than(lg) {
     font-size: var(--font-size-lg);

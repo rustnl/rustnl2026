@@ -2,7 +2,7 @@
 layout: "../../layouts/EventLayout.astro"
 title: 'Social activities'
 hasActivities: true
-dates: ['2026-05-18', '2026-05-22', '2026-05-23']
+dates: ['2026-05-18', '2026-05-19', '2026-05-20', '2026-05-22', '2026-05-23']
 startTime: null 
 detailLink: null
 scheduleLink: null
