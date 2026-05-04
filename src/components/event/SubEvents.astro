@@ -1,4 +1,5 @@
 ---
+import Button from "../Button.astro";
 import Divider from "../Divider.astro";
 import EventDate from "./EventDate.astro";
 import EventLocation from "./EventLocation.astro";
@@ -46,14 +47,16 @@ const { tracks, date } = Astro.props;
                 <div class="markdown" set:html={track.compiledContent()} />
                 {track.frontmatter.detailLink && (
                     <div class="track-link">
-                        <a href={track.frontmatter.detailLink}>More details</a>
+                        <Button link={track.frontmatter.detailLink}>
+                            Details
+                        </Button>
                     </div>
                 )}
                 {track.frontmatter.scheduleLink && (
                     <div class="track-link">
-                        <a href={track.frontmatter.scheduleLink}>
+                        <Button link={track.frontmatter.scheduleLink}>
                             Find in schedule
-                        </a>
+                        </Button>
                     </div>
                 )}
                 </div>
@@ -70,6 +73,9 @@ const { tracks, date } = Astro.props;
             margin-bottom: 0.5rem;
         }
 
+        .track-link {
+            margin-block-end: 1rem;
+        }
         .track-link a {
             font-weight: bold;
             color: variables.$color-red-400;

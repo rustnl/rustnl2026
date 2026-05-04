@@ -33,6 +33,7 @@ const { title, hero = null, hasActivities, hasTracks, dates } = frontmatter;
                 {
                     dates.map((date: any) => (
                         hasActivities && (
+                            <br />
                             <Divider />
                             <SubEvents tracks={activities} date={date} />
                         )
