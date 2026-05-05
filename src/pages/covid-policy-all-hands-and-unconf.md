@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/MarkdownLayout.astro"
+layout: "../layouts/PageLayout.astro"
 title: "Covid policy for the All-Hands/Unconf"
 slug: "covid-policy-all-hands-and-unconf"
 ---
