@@ -6,13 +6,13 @@ venue:
     link: /kinepolis
 room: null
 dates: ["2026-05-18"]
-startTime: "10:00"
+startTime: "12:00"
 detailLink: null
 scheduleLink: null
 published: true
 ---
 
-If you are in town already on Monday you can come by the conference venue and pick up your conference badge. The pre-registration is from 11:00 to 14:00.
+If you are in town already on Monday you can come by the conference venue and pick up your conference badge. The pre-registration is from 12:00 to 15:00.
 
 Pre-registration is optional; you can also register on Tuesday morning, starting 8:30. If you pre-register you can skip the line on Tuesday.
 
