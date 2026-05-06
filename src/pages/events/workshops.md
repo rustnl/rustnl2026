@@ -33,11 +33,11 @@ The venue is called "Beatrixgebouw". See and [the Beatrixgebouw venue page](/bea
 
 ## What to bring
 
-Don't forget your laptop!
+**Don't forget your laptop!**
 
-Some of the workshops may have additional requirements. The trainers will contact you if that is the case. 
+Some of the workshops may have additional requirements. Please check the description of your workshop, see the [workshop list page](/workshops), for information. Additionally, the trainers may contact you for specific (setup) instructions. 
 
 ## Workshop details
 
-Details about the contents of the workshops can be found on the [workshop list page](/workshops).
+All workshops and their details can be found on the [workshop list page](/workshops).
 
