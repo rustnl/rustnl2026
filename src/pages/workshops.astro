@@ -9,6 +9,7 @@ import Hero from "../components/Hero.astro";
 import OneColumn from "../components/OneColumn.astro";
 import HeroAnchors from "../components/HeroAnchors.astro";
 import Divider from "../components/Divider.astro";
+import Note from "src/components/Note.astro";
 
 const workshops = (await getCollection("workshops")).filter((workshop) => workshop.data.published == true ? true : false)
 const trainers = await getCollection("trainers");
@@ -23,6 +24,14 @@ const trainers = await getCollection("trainers");
     </p> -->
     <HeroAnchors anchors={workshops} />
   </Hero>
+  <OneColumn>
+    <Note>
+      <p>
+        Joining the workshops? See the <strong
+        ><a href="/events/workshops">workshop event page</a></strong> for details on the location and schedule.
+      </p>
+    </Note>
+  </OneColumn>
   <div class="workshops-list">
     {
       workshops.map((workshop) => (
