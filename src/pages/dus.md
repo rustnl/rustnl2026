@@ -19,7 +19,7 @@ Note: The **conference** (Tue & Wed, May 19-20) is **not** held in this venue, b
 
 ## Getting there: the RustWeek DUS-BUS!
 
-RustWeek has arranged buses to take you from from Utrecht Central Station to DUS. We will publish the schedule for the buses later.
+RustWeek has arranged buses to take you from from Utrecht Central Station to DUS, see the [DUS-BUS](/bus) page.
 
 Other options include:
 
