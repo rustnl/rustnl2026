@@ -2,7 +2,7 @@
 name: "Aïssata Maïga"
 image: "aissata-maiga.jpg"
 title: "Software Engineer"
-org: "Ferrous Systems"
+org: ""
 url: ""
 bluesky: ""
 linkedin: ""
