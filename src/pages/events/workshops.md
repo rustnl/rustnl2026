@@ -17,8 +17,8 @@ On Thursday morning we have 8 workshops ranging from game development to embedde
 
 The time schedule for the day is:
 
-- 09:30 Badge registration at **Kinepolis**
-- 10:00 Workshop start at Beatrixgebouw
+- 09:30 Badge registration
+- 10:00 Workshop start
 - 13:00 Lunch
 - 14:30 Lunch end
 - 17:00 End
@@ -29,7 +29,7 @@ TBA
 
 ## Getting there
 
-See and [the venue page](/beatrixgebouw) for the location and options to reach the venue. 
+The venue is called "Beatrixgebouw". See and [the Beatrixgebouw venue page](/beatrixgebouw) for the location and options to reach the venue.
 
 ## What to bring
 
@@ -39,5 +39,5 @@ Some of the workshops may have additional requirements. The trainers will contac
 
 ## Workshop details
 
-Details about the content of the workshops can be found on the [workshop list page](/workshops).
+Details about the contents of the workshops can be found on the [workshop list page](/workshops).
 
