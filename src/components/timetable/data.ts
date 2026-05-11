@@ -1,6 +1,6 @@
 export const main = "Cinema 12";
-export const secondary = "Cinema 11";
-export const tertiary = "Cinema 9";
+export const secondary = "Cinema 7";
+export const tertiary = "Cinema 8";
 export const quaternary = "Reception Area";
 
 export const annotated_breaks = {
