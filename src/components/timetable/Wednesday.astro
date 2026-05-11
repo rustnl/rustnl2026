@@ -272,5 +272,14 @@ import {breaks, main, secondary, tertiary} from "./data.ts";
         duration={35}
         room={tertiary}
     />
-    <Divider start="17:40" end="19:00"> Drinks </Divider>
+    <TrackIndicator afterDivider="14:00" track="Closing" color="yellow" />
+    <Item
+        title="Closing ceremony"
+        color="yellow"
+        track={1}
+        time="17:40"
+        duration={20}
+        room={main}
+    />
+    <Divider start="18:00" end="19:00"> Drinks </Divider>
 </Timetable>

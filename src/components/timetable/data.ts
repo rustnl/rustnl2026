@@ -18,7 +18,7 @@ export const annotated_breaks = {
     "11:00 - 11:40": "Break",
     "12:45 - 14:00": "Lunch",
     "15:50 - 16:20": "Break",
-    "17:40 - 19:00": "Talks over",
+    "18:00 - 19:00": "Talks over",
   },
 };
 export const breaks = {
