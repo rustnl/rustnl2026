@@ -72,7 +72,7 @@ const end_time = `${tmp.getHours()}:${minutes}`;
         <div class="meta">
             <div>
                 <div class="icon"><Fragment set:html={clockIcon.html} /></div>
-                {time}
+                <time datetime={time}>{time}</time>
 
                 <span class="duration">({diff_m}&nbsp;min)</span>
             </div>
