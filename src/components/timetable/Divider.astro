@@ -10,7 +10,7 @@ const time_underscore = start.replace(":", "_");
 ---
 
 <div class="wide" style={`grid-row: time${time_underscore}`} data-start={start} data-end={end}>
-    <span class="time">{start} - {end}</span> <slot>Insert text</slot>
+    <span class="time"><time datetime={start}>{start}</time> - <time datetime={end}>{end}</time></span> <slot>Insert text</slot>
 </div>
 
 <style>
