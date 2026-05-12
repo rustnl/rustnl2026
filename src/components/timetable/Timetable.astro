@@ -1,13 +1,15 @@
 ---
 import { parseHTML } from 'linkedom'
+import TimeSwitcher from "./TimeSwitcher.astro"
 import { in_range, timeGenerator, lt, pad} from "./data.ts";
 
 interface Props {
     breaks: string[],
+    day: string,
     kiosk?: boolean,
 }
 
-const { breaks, kiosk = false } = Astro.props;
+const { breaks, kiosk = false, day } = Astro.props;
 
 const html = await Astro.slots.render('default')
 const { document } = parseHTML(html)
@@ -170,8 +172,11 @@ function removeBefore(document: Document, last_start: Range) {
         </div>
     })
     :
-    <div class = "schedule" style=`grid-template-rows: ${rows()}`>
-        <Fragment set:html={document} />
+    <div class="schedule-wrapper">
+        <TimeSwitcher day={day} />
+        <div class = "schedule" style=`grid-template-rows: ${rows()}`>
+            <Fragment set:html={document} />
+        </div>
     </div>
 }
 
@@ -199,6 +204,13 @@ function removeBefore(document: Document, last_start: Range) {
     <style lang="scss">
     @use "../../styles/breakpoint.scss";
     @use "../../styles/variables.scss";
+
+    .schedule-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .schedule {
         display: grid;
