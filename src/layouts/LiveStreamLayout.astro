@@ -15,20 +15,20 @@ const {day}: Props = Astro.props;
         <div class="slot">
             <div class="description" >
                 <p>
-                    These are the livestreams of the talks of Rust Week 2025 for <b>{day == "tuesday"? "Tuesday 13 May" : "Wednesday 14 May"}</b>. There are two main conference days with talks.
+                    These are the livestreams of the talks of Rust Week 2026 for <b>{day == "tuesday"? "Tuesday 19 May" : "Wednesday 20 May"}</b>. There are two main conference days with talks.
                 </p>
             </div>
 
             <div class="tabbar">
-                <a href="/live/tuesday" class:list={[day == "tuesday"?"active":"inactive"]}>Tue 13 May</a>
-                <a href="/live/wednesday" class:list={[day == "wednesday"?"active":"inactive"]}>Wed 14 May</a>
+                <a href="/live/tuesday" class:list={[day == "tuesday"?"active":"inactive"]}>Tue 19 May</a>
+                <a href="/live/wednesday" class:list={[day == "wednesday"?"active":"inactive"]}>Wed 20 May</a>
             </div>
 
             <slot />
         </div>
 
         <div class="footer-nav">
-            <span>You are currently on <b>{day == "tuesday"? "Tuesday 13 May":"Wednesday 14 May"}</b>'s stream page.</span>
+            <span>You are currently on <b>{day == "tuesday"? "Tuesday 19 May":"Wednesday 20 May"}</b>'s stream page.</span>
 
             <div class="buttons">
                 <Button link={"/schedule/" + day}>
