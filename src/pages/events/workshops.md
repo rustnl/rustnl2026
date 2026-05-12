@@ -15,7 +15,9 @@ On Thursday morning we have 8 workshops ranging from game development to embedde
 
 ## Schedule
 
-The time schedule for the day is:
+The time schedule for the day is:  
+<br />
+<code>
 
 - 09:30 Badge registration
 - 10:00 Workshop start
@@ -24,6 +26,8 @@ The time schedule for the day is:
 - 14:30 Lunch end
 - 15:45 Optional coffee & snack break
 - 17:00 End
+
+</code>
 
 The badge registration is on the 3rd floor. The workshops are held in various rooms on the 3rd and 2nd floor. 
 
