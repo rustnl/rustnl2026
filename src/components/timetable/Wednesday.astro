@@ -7,7 +7,7 @@ import TrackIndicator from "./TrackIndicator.astro";
 import {breaks, main, secondary, tertiary} from "./data.ts";
 ---
 
-<Timetable breaks={breaks["wednesday"]} {...Astro.props}>
+<Timetable breaks={breaks["wednesday"]} {...Astro.props} day="2026-05-20">
     <Divider start="8:30" end="9:30">Doors open & registration</Divider>
     <TrackIndicator afterDivider="9:30" track="Main track" color="yellow" first />
     <Item

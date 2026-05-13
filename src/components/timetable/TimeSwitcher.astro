@@ -1,0 +1,139 @@
+---
+interface Props {
+    day: string,
+}
+
+const {day} = Astro.props
+
+---
+<script define:vars={{day}}>
+    const TIME_SWITCHER_KEY = "TIME_SWITCHER";
+    const CONF_TZ = "+02:00"
+
+    function getTimezoneName(timeZone) {
+        return new Date().toLocaleTimeString("en-US", { timeZoneName: 'short', timeZone }).split(' ')[2];
+    }
+
+    function time_equal() {
+        return new Date(`${day}T09:00${CONF_TZ}`).toLocaleTimeString() === new Date(`${day}T09:00`).toLocaleTimeString()
+    }
+
+    function update() {
+        const timezone_setting = localStorage.getItem(TIME_SWITCHER_KEY) || "conference";
+        const toggle = document.getElementById("timezone-switch");
+
+        const format_timezone = new Intl.DateTimeFormat([], {
+            dateStyle: undefined,
+            timeStyle: "short",
+            timeZone: timezone_setting === "conference" ? "Europe/Amsterdam" : undefined,
+            localeMatcher: "lookup",
+        });
+
+        for (const time of document.querySelectorAll("time")) {
+            let time_attr = time.getAttribute("datetime");
+            if (!time_attr.match(/^\d\d:/)) {
+                time_attr = `0${time_attr}`;
+            }
+            const conf_datetime = Date.parse(`${day}T${time_attr}${CONF_TZ}`);
+            time.innerText = format_timezone.format(conf_datetime);
+        }
+
+        toggle.checked = timezone_setting !== "conference";
+        document.getElementById("local").innerText = `Your own (${getTimezoneName()})`;
+        // document.getElementById("conference").innerText = `Conference (${getTimezoneName("Europe/Amsterdam")})`;
+    }
+
+    function changed(event) {
+        if (event.target.checked) {
+            localStorage.setItem(TIME_SWITCHER_KEY, "local");
+        } else {
+            localStorage.setItem(TIME_SWITCHER_KEY, "conference");
+        }
+        update();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        if (!time_equal()) {
+            document.querySelector(".tz-switcher").style.display = "grid";
+        }
+
+        document.getElementById("timezone-switch").addEventListener("change", changed);
+        update();
+    });
+</script>
+<div class="tz-switcher">
+    <span id="explainer">
+        Timezone:
+    </span>
+    <span id="conference">Conference (CEST)</span>
+    <label class="switch" aria-label="change the timezone to your local time (checked is local time, unchecked is conference time)">
+        <input id="timezone-switch" type="checkbox">
+        <span class="slider"></span>
+    </label>
+    <span id="local"></span>
+</div>
+
+<style lang="scss">
+@use "../../styles/variables.scss";
+
+.tz-switcher {
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 0.5em;
+
+    display: none;
+
+    #explainer {
+        grid-column: 1/span 3;
+        text-align: center;
+    }
+}
+
+.switch {
+    position: relative;
+    display: block;
+    width: 2em;
+    height: 1.1em;
+}
+
+.switch input {
+     opacity: 1;
+     width: 0;
+     height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background: #fff;
+    transition: .4s;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px #999999;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: variables.$color-yellow-300;
+    border: 1px solid transparent;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1em);
+}
+</style>

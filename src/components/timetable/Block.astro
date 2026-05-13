@@ -70,13 +70,13 @@ const end_time = `${tmp.getHours()}:${minutes}`;
     { header && <div class="block-header">{header}</div>}
     <div class="content">
         <div class="meta">
-            <div>
+            <div class="time">
                 <div class="icon"><Fragment set:html={clockIcon.html} /></div>
                 <time datetime={time}>{time}</time>
 
                 <span class="duration">({diff_m}&nbsp;min)</span>
             </div>
-            <div>
+            <div class="location">
                 {room !== "" && (
                 <Fragment>
                     <div class="icon"><Fragment set:html={locationIcon.html} /></div>
@@ -140,7 +140,21 @@ const end_time = `${tmp.getHours()}:${minutes}`;
         font-weight: 400;
         display: flex;
         flex-direction: row;
-        gap: 1em;
+        gap: 0.25em;
+
+        .time {
+            flex-shrink: 1;
+
+            time {
+                white-space: nowrap;
+            }
+        }
+
+        .location {
+            text-align: right;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
     }
 
     .item {
