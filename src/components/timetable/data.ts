@@ -1,7 +1,7 @@
 export const main = "Cinema 12";
 export const secondary = "Cinema 7";
 export const tertiary = "Cinema 8";
-export const quaternary = "Reception room";
+export const quaternary = "Expert room";
 
 export const annotated_breaks = {
   tuesday: {
