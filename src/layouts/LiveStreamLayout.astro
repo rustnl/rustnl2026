@@ -24,6 +24,10 @@ const {day}: Props = Astro.props;
                 <a href="/live/wednesday" class:list={[day == "wednesday"?"active":"inactive"]}>Wed 20 May</a>
             </div>
 
+            <p style="text-align: center;">
+                You can find the talk schedule <a href={`/schedule/${day}?tz=user`}>here</a>
+            </p>
+
             <slot />
         </div>
 

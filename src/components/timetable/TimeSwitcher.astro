@@ -45,7 +45,7 @@ const {day} = Astro.props
 
     function changed(event) {
         if (event.target.checked) {
-            localStorage.setItem(TIME_SWITCHER_KEY, "local");
+            localStorage.setItem(TIME_SWITCHER_KEY, "user");
         } else {
             localStorage.setItem(TIME_SWITCHER_KEY, "conference");
         }
@@ -53,6 +53,16 @@ const {day} = Astro.props
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+        const searchParams = new URLSearchParams(window.location.search);
+        if (searchParams.has("tz")) {
+            const tz = searchParams.get("tz");
+            switch (tz) {
+                case "conference":
+                case "user": localStorage.setItem(TIME_SWITCHER_KEY, tz);
+                default:
+            }
+        }
+
         if (!time_equal()) {
             document.querySelector(".tz-switcher").style.display = "grid";
         }
