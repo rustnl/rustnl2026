@@ -13,6 +13,8 @@ The address of the venue is:
 > 3521CA Utrecht\
 > Nederland**
 
+Please use the **main entrance** located on the **Croeselaan**, see map below.
+
 Check out our  [Getting There](/getting-there) page for instructions for getting to the conference venue, which is located in the same area as the workshop venue.
 
 The most convenient method to get there is by train, since it's next to the train station.

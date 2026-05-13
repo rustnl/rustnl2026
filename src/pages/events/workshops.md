@@ -33,20 +33,25 @@ The badge registration is on the 3rd floor. The workshops are held in various ro
 
 ## Rooms
 
-| Room no  |  Workshop name | Capacity of room |
-|---|---|---|
-|  212 | Integrate Rust into existing C applications  | 33 |
-|  214 | How to learn hard things  | 33 |
-|  311 | Crafting errors like rustc  | 23 |
-|  312 | Bevy in Action  | 43 |
-|  314 | Embedded Development With Rust on Zephyr  | 31 |
-|  316 | Learning Embedded Rust with uFerris  | 18 |
-|  322 | Building Web applications with Diesel  | 15 |
-|  323 | Writing Better Rust  | 34 |
+| Room no  |  Workshop name | Capacity of room | Min. seats |
+|---|---|---|---|
+|  212 | Integrate Rust into existing C applications  | 33 | 24 |
+|  214 | How to learn hard things  | 33 | 24 |
+|  311 | Crafting errors like rustc  | 23 | 20 |
+|  312 | Bevy in Action  | 43 | 30 | 
+|  314 | Embedded Development With Rust on Zephyr  | 31 | 20 |
+|  316 | Learning Embedded Rust with uFerris  | 18 | 15 |
+|  322 | Building Web applications with Diesel  | 15 | 15 |
+|  323 | Writing Better Rust  | 34 | 24 |
 
 <style>
 table tr td:nth-child(3),
 table tr th:nth-child(3) {
+  display: none;
+}
+
+table tr td:nth-child(4),
+table tr th:nth-child(4) {
   display: none;
 }
 
