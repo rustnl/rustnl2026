@@ -1,6 +1,6 @@
 ---
 title: 'Guided tour of Utrecht'
-dates: ['2026-05-23']
+dates: ['2026-05-22']
 startTime: "10:00"
 venue: 
     name: 'Kinepolis'
