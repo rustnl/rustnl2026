@@ -11,7 +11,7 @@ detailLink: null
 published: true
 ---
 
-On Thursday morning we have 8 workshops ranging from game development to embedded.
+On Monday, May 18, we have 8 workshops ranging from game development to embedded.
 
 ## Schedule
 
