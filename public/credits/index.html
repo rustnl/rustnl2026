@@ -29,9 +29,11 @@
     font-style: italic;
 }
 a {
-    animation: fade 1s ease-in-out infinite;
     color: #ffff66;
     display: inline-block;
+}
+body.ready a {
+    animation: fade 1s ease-in-out infinite;
 }
 body.started {
     overflow: hidden;
@@ -221,6 +223,9 @@ onmousedown = (e) => {
         document.documentElement.requestFullscreen();
     }
 }
+onload = (e) => {
+    document.body.classList.add("ready");
+}
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
@@ -231,7 +236,7 @@ onmousedown = (e) => {
 <img src="rustweek.svg" />
 <div class="year">2026</div>
 <div class="start">
-Scroll down to see the credits or <a href="javascript:start()" class="click">click to start music and animation</a>
+Scroll down to see the credits or <a href="javascript:start()">click to start music and animation</a>.
 </div>
 </div>
 </div>
