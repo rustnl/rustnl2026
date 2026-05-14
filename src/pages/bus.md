@@ -54,10 +54,29 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
         font-family: sans-serif;
     }
 }
+.legend {
+    display: block;
+    opacity: 0.5;
+    p {
+        font-size: 0.8em;
+        padding: 0.2em;
+    }
+    img {
+        opacity: 0.8;
+        transform: scaleX(-1);
+    }
+    img.big {
+        height: 22px;
+    }
+    img.small {
+        height: 19px;
+    }
+}
 @media (min-width: 800px) {
     .busses {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         div.there {
             border-right: 1px solid #999;
             padding-right: 2em;
@@ -65,6 +84,14 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
         div.back {
             padding-left: 2em;
             padding-top: 0;
+        }
+    }
+    .legend {
+        text-align: center;
+        padding-top: 0.5em;
+        p {
+            padding: 0 0.5em;
+            display: inline-block;
         }
     }
 }
@@ -105,6 +132,11 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
 <tr class="big"><td>18:30<td><img src="/images/bus.svg" alt="big bus" />
 </table>
 </div>
+</div>
+
+<div class="legend">
+<p><img class="big" src="/images/bus.svg" alt="A big bus" /> carries 85 people.
+<p><img class="small" src="/images/bus-small.svg" alt="A small bus" /> carries 10 people.
 </div>
 
 ## Bus stop location
