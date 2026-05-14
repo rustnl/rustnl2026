@@ -34,6 +34,10 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
     }
     div.back {
         padding-top: 1em;
+        tr:last-child img {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
     td {
         vertical-align: middle;
