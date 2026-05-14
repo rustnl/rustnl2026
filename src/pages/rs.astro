@@ -1,0 +1,74 @@
+---
+import CommonLayout from "../layouts/CommonLayout.astro";
+import MainSchedule from "../components/schedule/MainSchedule.astro";
+import OneColumn from "../components/OneColumn.astro";
+import Event from "../components/event/Event.astro";
+import SubEventList from "src/components/event/SubEventList.astro";
+
+---
+
+<CommonLayout title="Overview of Today" header="Overview of RustWeek">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const now = new Date();
+            const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+            // const weekday = weekdays[now.getDay()];
+            const weekday = "tuesday";
+
+            const root = document.querySelector(".overview");
+            const all_elems = []
+
+            for (const day of weekdays) {
+                all_elems.push(...root.querySelectorAll(`.${day}`))
+            }
+
+            for (const elem of all_elems) {
+                console.log(elem, elem.classList.contains("tuesday"))
+                if (!elem.classList.contains(weekday)) {
+                    elem.style.display = "none";
+                }
+            }
+
+            root.querySelector(".description").innerText = `Today is ${weekday}, these are some links that might be useful to you today:`;
+            root.querySelector(".description").style.display = "block";
+        })
+    </script>
+    <section class="overview space-y-12">
+        <OneColumn>
+            <h1>
+                Welcome to RustWeek!
+            </h1>
+            <p class="description">
+                These are some links that may be useful to you:
+            </p>
+            <br>
+            <p>
+                <ul>
+                    <li class="monday"><a href="/events/workshops">Workshop information</a></li>
+
+                    <li class="tuesday"><a href="/schedule/tuesday">Tuesday Schedule</a></li>
+                    <li class="tuesday"><a href="/live/tuesday">Tuesday Livestream</a></li>
+
+                    <li class="wednesday"><a href="/schedule/wednesday" >Wednesday Schedule</a></li>
+                    <li class="wednesday"><a href="/live/wednesday" >Wednesday Livestream</a></li>
+
+                    <li class="thursday"><a href="/events/hackathon">Hackathon information</a></li>
+
+                    <li class="thursday friday saturday"><a href="/dus">Rust All Hands and Unconference venue</a> (note: invite only!)</li>
+
+                    <li><a href="/overview#list">General overview of events and social activities throughout the week</a></li>
+                </ul>
+            </p>
+            <br>
+            <p>
+                If you need help, look for people in yellow "RustWeek" shirts, with red badges.
+            </p>
+            <br>
+            <p>
+                Below is a high-level week schedule:
+            </p>
+        </OneColumn>
+    </section>
+
+    <MainSchedule />
+</CommonLayout>
