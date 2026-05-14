@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@keyframes scrollCredits {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-100% + 100vh)); }
+}
+@keyframes fade {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes bgSweep {
+  0% { background-position-x: 210% }
+  100% { background-position-x: 100% }
+}
+.now {
+    animation: fade 1s ease-in-out infinite;
+    font-style: italic;
+}
+a {
+    animation: fade 1s ease-in-out infinite;
+    color: #ffff66;
+    display: inline-block;
+}
+body.started {
+    overflow: hidden;
+    cursor: none;
+    .start {
+        visibility: hidden;
+    }
+}
+.start {
+    margin-top: 2em;
+}
+body.animate {
+    animation: scrollCredits 120s linear forwards;
+    animation-delay: 0s;
+    #thanks {
+        opacity: 1;
+        animation: fadeOut 1.5s ease-in-out forwards;
+        animation-delay: 135s;
+    }
+    #thanks h1 {
+        background: linear-gradient(100deg,#ffff66 0%, #ffffff 2%, #ffff66 4%);
+        display: inline-block;
+        background-size: 200%;
+        background-position-x: 210%;
+        animation: bgSweep 12s linear forwards;
+        animation-delay: 122s;
+        background-clip: text;
+        color: transparent;
+    }
+    #tomorrow {
+        opacity: 0;
+        animation:
+            fadeIn 0.2s ease-in-out forwards,
+            fadeOut 3s ease-in-out forwards;
+        animation-delay: 136.9s, 149s;
+    }
+    #tomorrow1, #tomorrow2, #tomorrow3 {
+        opacity: 0;
+        animation: fadeIn 0.2s ease-in-out forwards;
+    }
+    #tomorrow1 { animation-delay: 140.6s; }
+    #tomorrow2 { animation-delay: 144.2s; }
+    #tomorrow3 { animation-delay: 147.8s; }
+    #final {
+        opacity: 0;
+        animation:
+            fadeIn 0.5s ease-in-out forwards,
+            fadeOut 2.0s ease-in-out forwards;
+        animation-delay: 155s, 162s;
+    }
+    #next {
+        opacity: 0;
+        animation:
+            fadeIn 2s ease-in-out forwards
+            /*,fadeOut 6s ease-in-out forwards*/;
+        animation-delay: 164s/*, 172s*/;
+        .year, .details {
+            opacity: 0;
+            animation: fadeIn 0.1s ease-in-out forwards;
+            animation-delay: 166s;
+        }
+    }
+    div.page.extra {
+        margin-top: -100vh;
+    }
+}
+#tomorrow p {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+#tomorrow p span {
+    white-space: nowrap;
+}
+#next {
+    .details {
+        margin-top: 1em;
+        font-size: 1.6em;
+    }
+}
+body {
+    font-family: "Fira Sans", sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.9vh;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    color: #ffff66;
+}
+h1:first-child {
+    margin-top: 0;
+}
+p.note {
+    margin-top: 0.5em;
+    margin-bottom: 2.0em;
+    font-style: italic;
+    color: #666666;
+}
+dd, dt, h1, .gray {
+    text-transform: uppercase;
+}
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0.6em;
+    align-items: baseline;
+}
+dt, .gray {
+    color: #666666;
+    font-size: 0.8em;
+}
+dt {
+    text-align: right;
+}
+dd {
+    text-align: left;
+    margin-left: 0;
+}
+div.page {
+    height: 100vh;
+    display: grid;
+    flex-direction: column;
+}
+div.page:first-child {
+    margin-top: 0;
+}
+div.page > div {
+    align-self: center;
+}
+p.big {
+    font-size: 1.6em;
+}
+p.thanks {
+    margin-top: 6em;
+    margin-bottom: 6em;
+    line-height: 1.5em;
+    font-size: 1.4em;
+}
+img {
+    display: inline-block;
+    max-width: 25em;
+    margin: auto;
+}
+div.year {
+    font-size: 8em;
+    font-weight: bold;
+    margin-top: 0.10em;
+    font-family: "Alfa Slab One";
+}
+</style>
+<script>
+function prepare() {
+    window.scrollTo(0, 0);
+    document.body.classList.add("started");
+}
+function play() {
+    document.getElementById("audio").onplay = () => {
+        document.body.classList.add("animate");
+    };
+    document.getElementById("audio").play();
+}
+function start() {
+    prepare();
+    setTimeout(play, 2000);
+}
+onkeydown = (e) => {
+    if (e.ctrlKey || e.altKey || e.metaKey) {
+        return;
+    } else if (e.key == "f") {
+        document.documentElement.requestFullscreen();
+    } else if (e.key == "s") {
+        prepare();
+    } else if (e.key == "a") {
+        play();
+    } else {
+        return;
+    }
+    return false;
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+<div>
+<img src="rustweek.svg" />
+<div class="year">2026</div>
+<div class="start">
+Scroll down to see the credits or <a href="javascript:start()" class="click">click to start music and animation</a>
+</div>
+</div>
+</div>
+
+<h1 id="rustnl">Organized by RUSTNL</h1>
+<dl>
+<dt>Director<dd>Erik Jonkers
+<dt><dd>Mara Bos
+<dt>Volunteer organizer<dd>Laura Pircalaboiu
+<dt><dd>Jana Dönszelmann
+<dt><dd>Terts Diepraam
+<dt>Consultant<dd>Josine Kamperman (ONlive)
+</dl>
+
+<h1 id="speakers">Speakers</h1>
+<p class="note">in order of appeareance</p>
+<dl>
+<dt>Main track<dd>Taylor Cramer
+<dt><dd>Waffle
+<dt><dd>Stefan Baumgartner
+<dt><dd>Rose Peck
+<dt><dd>Andreea Costea
+<dt><dd>Cliff L. Biffle
+<dt><dd>Amos Wenger
+<dt><dd>Jack Huey
+<dt><dd>Niko Matsakis
+<dt><dd>Alice Ryhl
+<dt><dd>Greg Kroah-Hartman
+<dt><dd>Moon Davé
+<dt><dd>Yara Kleingeld
+<dt><dd>Karin Lammers
+<dt><dd>Arya Dradjica
+<dt><dd>Hazel Weakly
+<dt><dd>Alice Cecile
+<dt><dd>Josh Bowman-Matthews
+<dt><dd>Æva Black
+<dt>Compiler track<dd>Lukas Wirth
+<dt><dd>Vlad Beskrovny
+<dt><dd>Folkert de Vries
+<dt><dd>Boxy Box
+<dt><dd>Bastian Kersting
+<dt><dd>Sebastian Sydow
+<dt><dd>Jynn Nelson
+<dt><dd>Xavier Denis
+<dt><dd>Alona Enraght-Moony
+<dt><dd>Aïssata Maïga
+<dt>Applied Rust track<dd>Cosmo Bobak
+<dt><dd>Kora
+<dt><dd>Gergely Nagy
+<dt><dd>Andrew Jakubowicz
+<dt><dd>Taj Pereira
+<dt><dd>Mordecai Emmanuel Etukudo
+<dt><dd>Nico Burns
+<dt><dd>Michael Winkelmann
+<dt><dd>Harry van Haaren
+<dt><dd>Laurenz Mädje
+<dt><dd>Adam Chalmers
+<dt>Industry track<dd>Pete LeVasseur
+<dt><dd>Lori Lorusso
+<dt><dd>Jeremy Lempereur
+<dt><dd>Mark Janssen
+<dt><dd>Ron van der Pols
+<dt><dd>Matthias Endler
+<dt>Rust Project track<dd>Antonio Piraino
+<dt><dd>Oli Scherer
+<dt><dd>Nia Espera
+<dt><dd>Benno Lossin
+<dt><dd>Nadri
+<dt><dd>Aapo Alasuutari
+<dt><dd>Jakub Beránek
+<dt><dd>Teor
+<dt><dd>Michał Kostrubiec
+<dt><dd>Urgau
+<dt><dd>Alejandra González
+<dt><dd>Tyler Mandry
+</dl>
+
+<h1 id="workshops">Workshops</h1>
+<dl>
+<dt>Bevy in Action<dd>Alice Cecile
+<dt><dd>François Mockers
+<dt>Web apps with Diesel<dd>Georg Semmler
+<dt>Embedded with uFerris<dd>Omar Hiari
+<dt>Learn hard things<dd>Jynn Nelson
+<dt>Integrating Rust<dd>Christian Meusel
+<dt>Rust on Zephyr<dd>David Brown
+<dt>Crafting Errors<dd>Esteban Kuber
+<dt><dd>Jana Dönszelmann
+<dt>Using The Type System<dd>Matthias Endler
+</dl>
+
+<h1 id="industry">Industry Expert Tables</h1>
+<dl>
+<dt>Organizer<dd>Hugo van de Pol
+<dt>Table Expert<dd>Alex Garella
+<dt><dd>Julius Gustavsson
+<dt><dd>Martin Kooij
+<dt><dd>Matthias Endler
+<dt><dd>Tamme Dittrich
+<dt><dd>Till Adam
+</dl>
+
+<h1 id="programcommittee">Program Committee</h1>
+<dl>
+<dt>Main Tracks<dd>Jana Dönszelmann
+<dt><dd>Laura Pircalaboiu
+<dt><dd>Terts Diepraam
+<dt><dd>Mara Bos
+<dt><dd>Wouter Geraedts
+<dt>Industry Track<dd>Hugo van de Pol
+<dt>Rust Project Track<dd>Mara Bos
+</dl>
+
+<h1 id="mcs">MC team</h1>
+<dl>
+<dt>Head of MCs<dd>Terts Diepraam
+<dt>Main track<dd>Alex Band
+<dt><dd>Aida Verhaven
+<dt><dd>Wouter Geraedts
+<dt>Compiler track<dd>Erich Gubler
+<dt><dd>Chris Biscardi
+<dt>Industry track<dd>Hugo van de Pol
+<dt>Applied Rust track<dd>Stefan Baumgartner
+<dt><dd>Matthias Endler
+<dt>Rust Project track<dd>Adam Harvey
+</dl>
+
+<h1 id="volunteers">Volunteers</h1>
+<dl>
+<dt>Head of volunteers<dd>Laura Pircalaboiu
+<dt>Volunteer<dd>Aida Verhaven
+<dt><dd>Anne Stijns
+<dt><dd>Eric Seppanen
+<dt><dd>Folkert de Vries
+<dt><dd>George Hellouin de Menibus
+<dt><dd>Ingrid Mattinger
+<dt><dd>Jonathan Brouwer
+<dt><dd>Julia Ryan
+<dt><dd>Julius Gvozdiovas
+<dt><dd>Karin Lammers
+<dt><dd>Kate Odnokoz
+<dt><dd>Marijn Schouten
+<dt><dd>Martijn Gribnau
+<dt><dd>Reinout Melieslie
+<dt><dd>Ricardo Vogel
+<dt><dd>Sappho de Nooij
+<dt><dd>Sasha Pourcelot
+<dt><dd>Sytze
+<dt><dd>Vivian Roest
+<dt>Photographer<dd>Dany Sluijk
+</dl>
+
+<h1 id="artwork">Artwork</h1>
+<dl>
+<dt>Volunteer artist<dd>Paige Losare-Lusby
+<dt>Designer<dd>Erwin (Grafische Republiek)
+<dt><dd>Goran (Grafische Republiek)
+<dt><dd>Mara Bos
+<dt>3D artist<dd>Terts Diepraam
+</dl>
+
+<h1 id="sponsors">Sponsors</h1>
+<dl>
+<dt>Diamond<dd>Amazon Web Services
+<dt>Gold<dd>JetBrains
+<dt><dd>Zed Industries
+<dt><dd>Google
+<dt>Silver<dd>Espressif
+<dt><dd>Infineon
+<dt><dd>Oxide Computer Company
+<dt>Bronze<dd>TandemDrive
+<dt><dd>GitButler
+<dt><dd>Polars
+<dt><dd>OxidOS Automotive
+<dt><dd>ExpressVPN
+<dt>Coffee<dd>Comper
+<dt>Suporter<dd>RustJobs
+<dt><dd>Arm
+<dt><dd>Technolotion
+<dt><dd>VectorWare
+<dt><dd>NLnet Labs
+<dt><dd>Microsoft
+<dt>Rust All Hands<dd>Amazon Web Services
+<dt><dd>Google
+<dt>Unconference<dd>Ferrous Systems
+<dt><dd>VectorWare
+<dt><dd>Microsoft
+<dt><dd>Canva
+<dt><dd>Infineon
+<dt>Hackathon<dd>Zed Industries
+<dt><dd>Kiesraad
+<dt>Workshop partner<dd>GiGa infosystems
+<dt><dd>Linaro
+<dt>Organizing partner<dd>Tweede Golf
+<dt><dd>Hexcat
+</dl>
+
+<h1 id="social">Social Media</h2>
+<dl>
+<dt>Tech Marketeer<dd>Liset Roos
+<dt>Volunteer<dd>Laura Pircalaboiu
+<dt><dd>Erik Jonkers
+<dt><dd>Mara Bos
+</dl>
+
+<h1 id="partners">Partners</h1>
+<dl>
+<dt>Tickets &amp; Registration<dd>ONlive
+<dt>Venue<dd>Kinepolis Jaarbeurs Utrecht
+<dt><dd>Beatrixgebouw
+<dt>Catering<dd>Restaurant Speys
+<dt>Internet Infrastructure<dd>Citymesh
+<dt>Entertainment<dd>Schminktheater
+<dt><dd>Jongens van de Photobooth
+<dt>Coffee<dd>Barista Bandits
+<dt>Graphic designers<dd>Grafische Republiek
+<dt>Audiovisual Services<dd>Kinly
+</dl>
+
+<h1 id="specialthanks">Special Thanks</h1>
+<dl>
+<dt>ONlive<dd>Josine Kamperman
+<dt>Kinepolis<dd>Wanda Borkus
+</dl>
+<p class="thanks">
+Thanks to our partners, friends, family, and colleagues,<br>
+for their support and patience during the months of preparation.
+</p>
+<p class="thanks">
+Thanks to Emmylou, Josephine, and Martine<br>
+for giving Erik a week off from household duties. 💖
+</p>
+<p class="thanks">
+Thanks to the entire Rust community,<br>
+for making this event worth organizing.
+</p>
+
+<dl>
+<dt>Closing credits music<dd>Epic Angel Symphony by Yuri Megis
+</dl>
+<p class="gray">Credits roll made in Vim by Mara Bos</p>
+
+<div class="page" id="by">
+<div>
+<p style="font-size: 1.2em;">RustWeek 2026 is proudly organized by</p>
+<img src="rustnl-white.svg" style="max-width: 90vw; height: 20vh; margin: 3em;" />
+<p style="font-size: 1.2em; margin-bottom: 2em;">in collaboration with</p>
+<img src="tweedegolf-white.svg" style="max-width: 70vw; height: 10vh; margin: 1em 3em;" />
+<img src="hexcat-white.svg" style="max-width: 60vw; transform: translateY(1vh); height: 11.5vh; margin: 1em 3em;" />
+</div>
+</div>
+
+<div class="last page" id="thanks">
+<div>
+<h1>Thank you for attending</h1>
+</div>
+</div>
+
+<div class="extra page" id="tomorrow">
+<div>
+<h1>See you tomorrow</h1>
+<p>
+<span id="tomorrow1">At the Hackathon,</span>
+<span id="tomorrow2">Unconference,</span>
+<span id="tomorrow3">or Rust All Hands!</span>
+</p>
+</div>
+</div>
+
+<div class="extra page" id="final">
+<div>
+<img src="rustweek.svg" />
+<div class="year">2026</div>
+</div>
+</div>
+
+<div class="extra page" id="next">
+<div>
+<img src="rustweek.svg" />
+<div class="year">2027</div>
+<div class="details">
+    Utrecht, Netherlands, <!--24&ndash;29--> May 2027<br><br>
+    <!--<span class="now">Tickets available <b>NOW</b>!<span>-->
+</div>
+</div>
+</div>
+
+<audio id="audio"><source src="music.mp3" type="audio/mpeg"></audio>
+
+</body>
+</html>
