@@ -72,15 +72,15 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
 <p>From <b>NH Utrecht Hotel</b> to <b>DUS</b>:</p>
 
 <table>
-<tr class="big"><td>08:30<td><img src="images/bus.svg" alt="big bus"/><img src="images/bus.svg" height="30px" alt="big bus"/>
-<tr class="small"><td>09:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>10:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>11:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>12:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>13:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>14:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>15:00<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>16:00<td><img src="images/bus-small.svg" alt="small bus" />
+<tr class="big"><td>08:30<td><img src="/images/bus.svg" alt="big bus"/><img src="images/bus.svg" height="30px" alt="big bus"/>
+<tr class="small"><td>09:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>10:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>11:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>12:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>13:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>14:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>15:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>16:00<td><img src="/images/bus-small.svg" alt="small bus" />
 </table>
 
 </div>
@@ -89,16 +89,16 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
 <p>From <b>DUS</b> to <b>NH Utrecht Hotel</b>:</p>
 
 <table>
-<tr class="small"><td>09:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>10:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>11:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>12:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>13:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>14:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>15:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>16:30<td><img src="images/bus-small.svg" alt="small bus" />
-<tr class="big"><td>17:30<td><img src="images/bus.svg" alt="big bus" />
-<tr class="big"><td>18:30<td><img src="images/bus.svg" alt="big bus" />
+<tr class="small"><td>09:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>10:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>11:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>12:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>13:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>14:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>15:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>16:30<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="big"><td>17:30<td><img src="/images/bus.svg" alt="big bus" />
+<tr class="big"><td>18:30<td><img src="/images/bus.svg" alt="big bus" />
 </table>
 </div>
 </div>
