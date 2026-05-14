@@ -4,7 +4,7 @@ title: "DUS-BUS schedule"
 slug: "dus"
 ---
 
-<img src="/images/dus-bus.png" alt="DUS-BUS" style="height:300px;display: block; margin: auto;"/>
+<img src="/images/dus-bus.png" alt="DUS-BUS" style="height: 300px; display: block; margin: auto; border: 1px solid black;"/>
 
 RustWeek has arranged buses to take you from Utrecht city centre to [DUS](/dus).
 DUS is the venue for the [unconference](/unconf-intro) and All-Hands, from Thu May 21 to Sat May 23.
