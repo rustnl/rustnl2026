@@ -8,15 +8,13 @@ duration: 30
 day: "wednesday"
 ---
 
+Demand for Rust has grown rapidly, making it a standard choice for new projects that need reliable and efficient software. But in many of the world's largest and most active codebases, the language barrier still makes adoption extremely difficult or impossible. This presents the Rust Project with a huge opportunity and a difficult question: Can we build seamless cross-language interop without ruining Rust?
 
+To make the most of the momentum Rust has today, we need design efforts that span the language, libraries, and tooling. Rust maintainers need to understand the dynamics leading to its present success and future growth. And Rust users need to understand how the next phase of Rust adoption impacts them. We will answer:
 
-Demand for Rust is growing rapidly in codebases currently dominated by C++. This presents the Rust Project with a huge opportunity and a difficult question: Can we build fine-grained cross-language interop without ruining Rust?
-
-The forces of language adoption are running into fundamental limits of managing risk in large, heavily coupled systems. To meet this moment, Rust needs design efforts that span the language, libraries, and tooling to enable incremental migration. Rust maintainers need to understand the dynamics leading to its present success and future growth. And Rust users need to understand how the next phase of Rust adoption impacts them. We will answer:
-
-- How do we introduce expressive extension points without making Rust a union of all languages?
-- How do we establish "local soundness" in mixed Rust/C++ codebases?
-- Why is this effort worth it for Rust users who don't care about interop?
+- How does interop benefit the language for existing Rust users?
+- How do we introduce expressive interop without making Rust a union of all languages?
+- How do we establish soundness in mixed Rust/C++ codebases?
 - How should Rust Project teams govern and evaluate a wave of interop-motivated requests?
 
 This is a roadmap for how we scale Rust's adoption without compromising our core values.
