@@ -23,9 +23,9 @@ RustWeek has arranged buses to take you from from Utrecht Central Station to DUS
 
 Other options include:
 
-- By bike: the venue is a 20-min bike ride from the city centre.
+- By bike: the venue is a 15-min bike ride from the city centre.
 - By public transport: you can reach the venue by public transport. It is a 17 min bus ride from the central station and a 13 min walk from the bus stop to the venue.
-- By car: navigate to Sophialaan&nbsp;1, Utrecht; the venue has free parking.
+- By car or taxi: navigate to Sophialaan&nbsp;1, Utrecht; the venue has free parking.
 
 More information on how to get to Utrecht can be found in the [Getting there](/getting-there) page.
 
