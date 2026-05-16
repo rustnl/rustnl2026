@@ -17,7 +17,7 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
 
     function getTime() {
         return dayjs();
-        // return dayjs("15:30", time_format);
+        // return dayjs("17:56", time_format);
     }
 
     let blink_colon = false;
@@ -32,6 +32,7 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
             default:
                 // otherwise, assume it is tuesday
                 day = "tuesday";
+                // day = "wednesday";
         }
 
         document.querySelectorAll(`.${day}`).forEach(e => {
@@ -95,6 +96,10 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
 
             (marker as HTMLElement).style.gridRow = `time${now.hour()}_${pad(roundedMin, 2)}`;
         }
+
+        if (day == "wednesday" && now.isAfter(dayjs("17:55", time_format))) {
+            window.location.replace("/credits/2027.html");
+        }
     };
 
     const current_time = document.querySelectorAll('[data-current-time]');
@@ -148,6 +153,16 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
             <div class="timetable wednesday">
                 <TimetableWednesday kiosk />
             </div>
+
+            <div class="next-year-link">
+                <span>
+                Get your ticket for next year on <a href="https://event.onliveevent.nl/rustweek-2027">https://event.onliveevent.nl/rustweek-2027</a>!
+                </span>
+
+                <img src="/images/qr-code-next-year.png">
+
+                See you next year ❤️
+            </div>
         </div>
     </div>
     </div>
@@ -161,6 +176,24 @@ import TimetableWednesday from "../../components/timetable/Wednesday.astro"
 
 <style lang="scss">
     @use '../../styles/variables.scss';
+
+    .next-year-link {
+        display: none;
+
+        font-size: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        img {
+            width: 40vh;
+            height: 40vh;
+        }
+    }
 
     .outer {
         display: grid;

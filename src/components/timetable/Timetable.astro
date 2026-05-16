@@ -12,21 +12,24 @@ interface Props {
 const { breaks, kiosk = false, day } = Astro.props;
 
 const html = await Astro.slots.render('default')
-const { document } = parseHTML(html)
 
-let trackIndicatorDivider: null | string = null;
-if (kiosk) {
-    document.querySelectorAll(".track-indicator").forEach(e => {
-        const e_elem = (e as HTMLElement).dataset;
-        if (!e.classList.contains("not-first") && e_elem.time) {
-            trackIndicatorDivider = e_elem.time.replace(":", "_");
-        }
-    });
+function getTrackIndicatorDivider(document: Document): string | null {
+    let trackIndicatorDivider: null | string = null;
+    if (kiosk) {
+        document.querySelectorAll(".track-indicator").forEach(e => {
+            const e_elem = (e as HTMLElement).dataset;
+            if (!e.classList.contains("not-first") && e_elem.time) {
+                trackIndicatorDivider = e_elem.time.replace(":", "_");
+            }
+        });
+    }
+
+    return trackIndicatorDivider;
 }
 
-type Range = [number, number];
+type Time = [number, number];
 
-function calculateSegments(): [Range, Range][] {
+function calculateSegments(document: Document): [Time, Time][] {
     let talks: [string, string][] = [];
 
     document.querySelectorAll(".item,.wide").forEach(e => {
@@ -43,7 +46,7 @@ function calculateSegments(): [Range, Range][] {
 
     // the ends of all talks currently happening
     let current_talk_ends = new Set<string>();
-    let segments: [Range, Range][] = [];
+    let segments: [Time, Time][] = [];
 
     for (const [h, m, _] of timeGenerator()) {
         current_talk_ends.delete(`${h}:${pad(m, 2)}`);
@@ -85,7 +88,8 @@ function parseTime(t: string): [number, number] {
     return [parseInt(t2[0]), parseInt(t2[1])];
 }
 
-function rows(custom_start: [number, number] | null = null): string {
+function rows(document: Document, custom_start: [number, number] | null = null): string {
+    const trackIndicatorDivider = getTrackIndicatorDivider(document);
     let collapsed: [[number, number], [number, number]][] = [];
     for (const s of breaks) {
         let [start, end] = s.split("-");
@@ -130,11 +134,6 @@ function rows(custom_start: [number, number] | null = null): string {
     return times;
 }
 
-// function arraysEqual<T>(arr1: T[], arr2: T[]): boolean {
-//   if (arr1.length !== arr2.length) return false;
-//   return arr1.every((value, index) => value === arr2[index]);
-// }
-
 function removeBefore(document: Document, last_start: Range) {
     document.querySelectorAll(".item,.wide").forEach((e: any) => {
         const dataset = (e as HTMLElement).dataset;
@@ -144,24 +143,25 @@ function removeBefore(document: Document, last_start: Range) {
 
         let start = dataset.start.trim();
 
-        // console.log(parseTime(start), last_start)
-
         if (lt(parseTime(start), last_start)) {
-            // e.remove()
+            e.remove()
         }
     })
 
-    return document
+    return document;
 }
 
 
+const { document } = parseHTML(html);
 ---
 
 {
     kiosk
     ?
-    calculateSegments().map(([time, last_talk]) => {
-        return <div class = "schedule kiosk" style=`grid-template-rows: ${rows(last_talk)}; display: none;` data-time=`${time[0]}:${pad(time[1], 2)}` data-last=`${last_talk[0]}:${pad(last_talk[1], 2)}`>
+    calculateSegments(document).map(([time, last_talk]) => {
+        const { document } = parseHTML(html);
+
+        return <div class = "schedule kiosk" style=`grid-template-rows: ${rows(document, last_talk)}; display: none;` data-time=`${time[0]}:${pad(time[1], 2)}` data-last=`${last_talk[0]}:${pad(last_talk[1], 2)}`>
             <Fragment set:html={removeBefore(document, last_talk)} />
 
             <div class="kiosk-time-marker">
@@ -169,15 +169,16 @@ function removeBefore(document: Document, last_start: Range) {
             </div>
 
             <div class="kiosk-sidebar"></div>
-        </div>
+        </div>;
     })
-    :
-    <div class="schedule-wrapper">
-        <TimeSwitcher day={day} />
-        <div class = "schedule" style=`grid-template-rows: ${rows()}`>
-            <Fragment set:html={document} />
+    : (
+        <div class="schedule-wrapper">
+            <TimeSwitcher day={day} />
+            <div class = "schedule" style=`grid-template-rows: ${rows(document)}`>
+                <Fragment set:html={document} />
+            </div>
         </div>
-    </div>
+    )
 }
 
 <style is:global>
