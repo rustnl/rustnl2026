@@ -8,7 +8,7 @@ import SubEventList from "src/components/event/SubEventList.astro";
 ---
 
 <CommonLayout title="Overview of Today" header="Overview of RustWeek">
-    <script>
+    <script is:inline>
         document.addEventListener("DOMContentLoaded", () => {
             const now = new Date();
             const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
