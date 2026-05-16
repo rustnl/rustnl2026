@@ -134,7 +134,7 @@ function rows(document: Document, custom_start: [number, number] | null = null):
     return times;
 }
 
-function removeBefore(document: Document, last_start: Range) {
+function removeBefore(document: Document, last_start: Time) {
     document.querySelectorAll(".item,.wide").forEach((e: any) => {
         const dataset = (e as HTMLElement).dataset;
         if (!dataset.start || !dataset.end) {
