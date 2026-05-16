@@ -12,8 +12,8 @@ import SubEventList from "src/components/event/SubEventList.astro";
         document.addEventListener("DOMContentLoaded", () => {
             const now = new Date();
             const weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-            // const weekday = weekdays[now.getDay()];
-            const weekday = "tuesday";
+            const weekday = weekdays[now.getDay()];
+            // const weekday = "tuesday";
 
             const root = document.querySelector(".overview");
             const all_elems = []
