@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@keyframes fade {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+.now {
+    animation: fade 1s ease-in-out infinite;
+    font-style: italic;
+    color: #ffff66;
+}
+.details {
+    font-size: 2em;
+}
+.small {
+    font-size: 60%;
+}
+.code {
+    font-family: monospace;
+    border: 1px solid white;
+    padding: 0.1em 0.3em;
+    border-radius: 0.2em;
+}
+body {
+    cursor: none;
+    font-family: "Fira Sans", sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.9vh;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: inline-block;
+    max-width: 25em;
+    margin: auto;
+}
+h1 {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    color: #ffff66;
+}
+div.page {
+    height: 100vh;
+    display: grid;
+    flex-direction: column;
+}
+div.page > div {
+    align-self: center;
+}
+p.big {
+    font-size: 1.6em;
+}
+div.year {
+    font-size: 8em;
+    font-weight: bold;
+    margin-top: 0.10em;
+    font-family: "Alfa Slab One";
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page" id="next">
+<div>
+<img src="rustweek.svg" />
+<div class="year">2027</div>
+<div class="details">
+    Utrecht, Netherlands, 24&ndash;29 May 2027<br><br>
+    <span class="now">Tickets available <b>NOW</b>!</span><br><br>
+    <span class="discount">20% discount code: <span class="code">NEXTYEAR</span></span><br>
+    <span class="small">Valid only during this week. Get your tickets now!</span>
+</div>
+</div>
+</div>
+
+</body>
+</html>
