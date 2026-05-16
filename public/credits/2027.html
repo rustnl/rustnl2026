@@ -8,6 +8,18 @@
     50% { opacity: 1; }
     100% { opacity: 0.3; }
 }
+img.qr {
+    position: absolute;
+    max-height: 70vh;
+    max-width: 15vw;
+    bottom: 20vh;
+}
+img.qr.left {
+    left: 5vw;
+}
+img.qr.right {
+    right: 5vw;
+}
 .now {
     animation: fade 1s ease-in-out infinite;
     font-style: italic;
@@ -69,6 +81,8 @@ div.year {
 
 <div class="page" id="next">
 <div>
+<img class="qr left" src="2027-qr.png" alt="QR code for RustFest 2027 tickets" />
+<img class="qr right" src="2027-qr.png" alt="QR code for RustFest 2027 tickets" />
 <img src="rustweek.svg" />
 <div class="year">2027</div>
 <div class="details">
