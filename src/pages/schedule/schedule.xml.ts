@@ -104,19 +104,20 @@ function astroToXml(ast: any, dayIndex: number): string {
       item.speakers?.forEach((speaker) => {
         personsXml += `<person>${speaker.name}</person>`
       });
+      const url = item.slug ? `https://2026.rustweek.org/talks/${item.slug}` : undefined;
       rssString += `
         <event id="${id}" guid="${guid}">
           <date>${dateTimeStr(dateStr, item.time!)}</date>
           <start>${item.time?.padStart(5, "0")}</start>
           <duration>${formatDuration(item.durationMins)}</duration>
           <room>${room}</room>
-          ${item.slug ? `<url>https://2026.rustweek.org/talks/${item.slug}</url>` : ""}
+          ${url ? `<url>${url}</url>` : ""}
           <slug>rustnl2026-${slug.padEnd(4, "_")}</slug>
           <title>${escape(item.title ?? item.slug!)}</title>
           <track>${item.track}${item.ticket ? `. ${item.ticket}` : ""}</track>
           <type>talk</type>
           <abstract></abstract>
-          <description></description>
+          <description>${url ? url : ""}</description>
           <persons>${personsXml}</persons>
         </event>\n`;
     });
