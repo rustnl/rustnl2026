@@ -113,7 +113,7 @@ function astroToXml(ast: any, dayIndex: number): string {
           ${item.slug ? `<url>https://2026.rustweek.org/talks/${item.slug}</url>` : ""}
           <slug>rustnl2026-${slug.padEnd(4, "_")}</slug>
           <title>${escape(item.title ?? item.slug!)}</title>
-          <track>${item.track}</track>
+          <track>${item.track}${item.ticket ? `. ${item.ticket}` : ""}</track>
           <type>talk</type>
           <abstract></abstract>
           <description></description>
@@ -132,6 +132,7 @@ type Item = {
   title: string | undefined;
   slug: string | undefined;
   track: string;
+  ticket: string | undefined;
   time: string;
   durationMins: number;
   room: string;
@@ -142,13 +143,14 @@ function parseItem(node: any): Item {
   const title = getAttr(node, "title");
   const slug = getAttr(node, "talk_slug");
   const track = getAttr(node, "track")!;
+  const ticket = getAttr(node, "ticket");
   const time = getAttr(node, "time")!;
   const durationMins = parseInt(getAttr(node, "duration") ?? "0");
   const room = getAttr(node, "room")!;
   const speakersStr = getAttr(node, "speakers");
   const speakers = speakersStr ? parseSpeakers(speakersStr) : undefined;
   if (!slug && !title) throw new Error(`Item has neither slug nor title: ${node}`);
-  return { title, slug, track, time, durationMins, room, speakers };
+  return { title, slug, track, ticket, time, durationMins, room, speakers };
 }
 
 function getAttr(node: any, attrName: string): string | undefined {
