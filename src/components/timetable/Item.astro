@@ -49,7 +49,7 @@ const {
 }: Props = Astro.props;
 
 
-function get_talk() {
+export function get_talk(talk_slug: string) {
   let talk: any = null;
   if (talk_slug !== null) {
       const matches = import.meta.glob("../../content/talks/*.md", { eager: true });
@@ -63,7 +63,7 @@ function get_talk() {
 
   return talk
 }
-function get_speakers() {
+export function get_speakers(talk_slug: string) {
   let speakers: any[] = [];
   const matches = import.meta.glob("../../content/people/*.md", { eager: true });
   const files: any[] = Object.values(matches);
@@ -77,11 +77,11 @@ function get_speakers() {
   return speakers
 }
 
-const talk = get_talk();
+const talk = get_talk(talk_slug);
 
 const talk_title = title ? title : talk ? talk.frontmatter.title : striped? "TBA": "ERROR";
 const talk_url = url ?? (talk_slug?`/talks/${talk_slug}`:null);
-const talk_speakers = speakers ?? get_speakers();
+const talk_speakers = speakers ?? get_speakers(talk_slug);
 
 const timetable_url = `/schedule/${Astro.url.pathname.split("/").filter(i => i != "").pop()}#${talk_url?.split("/").pop()}`
 ---
