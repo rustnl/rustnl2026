@@ -15,5 +15,6 @@ export default defineConfig({
     "/schedule": "/schedule/tuesday",
     "/events": "/overview#list",
     "/live": "/live/tuesday",
+    "/ls": "/schedule/live",
   },
 });
