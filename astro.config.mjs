@@ -12,9 +12,9 @@ export default defineConfig({
     },
   },
   redirects: {
-    "/schedule": "/schedule/tuesday",
+    "/schedule": "/schedule/wednesday",
     "/events": "/overview#list",
-    "/live": "/live/tuesday",
+    "/live": "/live/wednesday",
     "/ls": "/schedule/live",
   },
 });
