@@ -1,7 +1,7 @@
 ---
 tracks: 
  - applied-rust
-title: "Shaping Tomorrow’s Software Engineers"
+title: "Shaping Tomorrow’s Software Engineers [Remote]"
 level: ""
 tags: []
 duration: 30 # 15 or 30 min
