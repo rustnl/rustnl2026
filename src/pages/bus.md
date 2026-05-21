@@ -97,11 +97,11 @@ The buses depart from the **Hotel NH Utrecht** and will take you to DUS in 20 mi
 }
 </style>
 
-<div class="busses">
-
 To go to DUS in the morning, please take the bus at <b>8:30</b>. The later buses are small buses that can carry only 10 people each.
 
 The schedule for the buses to DUS and back is as follows:
+
+<div class="busses">
 
 <div class="there">
 <p>From <b>NH Utrecht Hotel</b> to <b>DUS</b>:</p>
