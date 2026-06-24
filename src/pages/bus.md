@@ -112,7 +112,7 @@ The schedule for the buses to DUS and back is as follows:
 <tr class="small"><td>10:00<td><img src="/images/bus-small.svg" alt="small bus" />
 <tr class="small"><td>11:00<td><img src="/images/bus-small.svg" alt="small bus" />
 <tr class="small"><td>12:00<td><img src="/images/bus-small.svg" alt="small bus" />
-<tr class="small"><td>13:00<td><img src="/images/bus-small.svg" alt="small bus" />
+<tr class="small"><td>13:00<td>&nbsp;NO BUS at 13:00h!
 <tr class="small"><td>14:00<td><img src="/images/bus-small.svg" alt="small bus" />
 <tr class="small"><td>15:00<td><img src="/images/bus-small.svg" alt="small bus" />
 <tr class="small"><td>16:00<td><img src="/images/bus-small.svg" alt="small bus" />
